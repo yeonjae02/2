@@ -5,23 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지니 : 음악, 그리고 설레임</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="js/main.jss"></script>
 </head>
+
 <body>
+    <!-- 헤더 제작 -->
    <header>
        <div class="wrapper">
+           <!-- 헤더 세 번쨰 섹션 -->
            <div class="header--tertiary">
                <ul>
+                   <!-- 헤더 가장 위쪽 왼쪽 부분 -->
                    <li class="purchase_of_a_pass"> 
                        이용권 구매 
-                    </li>
+                       <span class="material-icons">
+                           box
+                       </span>
+                   </li>
                    <li class="gift_certificate_registration">
                       상품권 등록 
                    </li>
                    <li class="charge_cache">
                     캐시 충전 
                  </li>
-               </ul>
-           </div>
+                </ul>
+                <div class="player_and_app">
+                    <!-- 헤더 가장 위쪽 오른쪽 부분 -->
+                    <ul>
+                        <li class="web_player">
+                            웹플레이어
+                        </li>
+                        <li class="pc_player">
+                            PC플레이어
+                        </li>
+                        <li class="app">
+                            지니앱
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+            <div class="main">
+                <!-- 로고 넣어주기. 로고 클릭 시 홈페이지로 이동하도록 하기 -->
+                <a href="/" class="logo"
+                <img src="./images/logo.PNG"  alt="로고">
+                </a>
+            </div>
+                <div class="search">
+                <!-- 검색창 만들기 -->
+                <input id="search_box" placeholder="산책하기 딱 좋은 날, 산뜻한 플레이리스트" />
+                <span class="material-icons">
+                    search
+                </span>
+                </div>
        </div>
    </header>
     <!-- 실시간 차트 만들기 -->
