@@ -1,0 +1,37 @@
+table   {
+text-align: left;
+font-family: dotum, sans-serif, Segoe UI Symbol;
+font-size: 12px;
+font-weight: normal;
+color: #444;
+}
+
+body {
+        font-size: 12px;
+}
+
+li {
+        list-style: none;
+        text-align: center;
+}
+header {
+        color: burlywood;
+}
+header>.wrapper {
+        display: flex;
+        flex-direction: column;
+}
+header .header--tertiary {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #000;
+        box-sizing: 13px;
+        font-size: 12px;
+        display: flex;
+}
+header .header--tertiary>ul li {
+        float: left;
+        margin-right: 13px;
+}
