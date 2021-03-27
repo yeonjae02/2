@@ -4,17 +4,3 @@ body {
     font-weight: normal;
     color: rgb(68, 68,68)
 }
-
-.wrapper {
-    width: 1100px;
-    margin: 0 auto;
-    position: relative;
-}
-
-img {
-    display: block;
-}
-
-a {
-    text-decoration: none;
-}
