@@ -13,15 +13,12 @@
     <!-- 헤더 제작 -->
    <header>
        <div class="wrapper">
-           <!-- 헤더 세 번쨰 섹션 -->
-           <div class="header--tertiary">
-               <ul>
+           <!-- 헤더는 총 3개의 섹션이다. -->
+           <div class="header-first">
+               <ul class="first">
                    <!-- 헤더 가장 위쪽 왼쪽 부분 -->
                    <li class="purchase_of_a_pass"> 
                        이용권 구매 
-                       <span class="material-icons">
-                           box
-                       </span>
                    </li>
                    <li class="gift_certificate_registration">
                       상품권 등록 
@@ -45,100 +42,286 @@
                     </ul>
                 </div>   
             </div>
-            <div class="main">
-                <!-- 로고 넣어주기. 로고 클릭 시 홈페이지로 이동하도록 하기 -->
-                <a href="/" class="logo"
-                <img src="./images/logo.PNG"  alt="로고">
-                </a>
-            </div>
-                <div class="search">
-                <!-- 검색창 만들기 -->
-                <input id="search_box" placeholder="산책하기 딱 좋은 날, 산뜻한 플레이리스트" />
-                <span class="material-icons">
-                    search
-                </span>
+            <!-- 헤더 두 번쨰 파트 -->
+                <div class="header-second">
+                    <ul class="secondary">
+                        <!-- 가장 왼쪽 지니 로고 만들기 -->
+                        <li class="header__second">
+                            <div class="header__second_title">
+                                <div class = "title_logo">
+                                    <a href="/" class="logo">
+                                        <img src="./images/logo.png" alt="로고">
+                                        </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 로고 옆 검색 창 만들기 -->
+                        <li class="header__second">
+                            <div class="header__second_title">
+                                <div class="search">
+                                    <input id="search_box" placeholder="하이틴 재질 팝송 추천" /> 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 헤더 세 번째 파트 만들기 -->
+                <div class="header-third">
+                    <ul class="main">
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">지니차트</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">최신음악</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">장르음악</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">지니TV</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">추천</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">매거진</div>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_title">
+                                <div class="menu_name">뮤직허그</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
        </div>
    </header>
+   <div class="exhibititon">
+       <table>
+           <caption style="text-align: left;">최신음악</caption>
+           <thead>
+               <tr>
+                   <th class="album"></th>
+                   <th class="album"></th>
+                   <th class="album"></th> 
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                <td><img src="./images/손호영.PNG" alt="앨범커버"></td>
+                <td><img src="./images/김그림.PNG" alt="앨범커버"></td>
+                <td><img src="./images/강승윤.PNG" alt="앨범커버"></td>
+                <td><img src="./images/김성규.PNG" alt="앨범커버"></td>
+                <td><img src="./images/pH-1.PNG" alt="앨범커버"></td>
+                <td><img src="./images/김세정.PNG" alt="앨범커버"></td>
+               </tr>
+               <tr>
+                <td><img src="./images/김규종.PNG" alt="앨범커버"></td>
+                <td><img src="./images/이아람.PNG" alt="앨범커버"></td>
+                <td><img src="./images/시하.PNG" alt="앨범커버"></td>
+                <td><img src="./images/young prada.PNG" alt="앨범커버"></td>
+                <td><img src="./images/손진영.PNG" alt="앨범커버"></td>
+                <td><img src="./images/프루.PNG" alt="앨범커버"></td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+    <!-- 광고부분인데.. 블록형식태그를 사용해서 해야 할듯! 근데 지금은 어떻게 해야 할지 잘 모르겠다 -->
+    <div class="ad">
+    </div>
     <!-- 실시간 차트 만들기 -->
-   <table>
-       <caption style="text-align: left;">실시간 차트</caption>
-       <thead>
-           <tr> 
+    <div class="music_chart">
+        <table>
+            <caption style="text-align: left;">실시간 차트</caption>
+            <thead>
+            <tr> 
                <th class="ranking"> </th>
                <th class=" fluctuation"></th>
                <th class="title"> </th>
                 <th class="artist"></th>
-           </tr>
-       </thead>
-       <tbody>
-        <tr>
-            <td>1</td>
-            <td> ㅡ </td>
-            <td>라일락</td>
-            <td>아이유 (IU)</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td> ㅡ </td>
-            <td>롤린 (Rollin')</td>
-            <td>브레이브걸스 (Brave girls)</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td> ㅡ </td>
-            <td>Coin</td>
-            <td>아이유(IU)</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td> ㅡ </td>
-            <td>Celebrity</td>
-            <td>아이유(IU)</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td> ㅡ </td>
-            <td>Flu</td>
-            <td>아이유(IU)</td>
-        </tr>  
-        <tr>
-            <td>5</td>
-            <td> ㅡ </td>
-            <td>Flu</td>
-            <td>아이유(IU)</td>
-        </tr>  
-        <tr>
-            <td>6</td>
-            <td> ㅡ </td>
-            <td>봄 안녕 봄</td>
-            <td>아이유(IU)</td>
-        </tr>  
-        <tr>
-            <td>7</td>
-            <td style="color: red;"> ▲1 </td>
-            <td>아이와 나의 바다</td>
-            <td>아이유(IU)</td>
-        </tr>  
-        <tr>
-            <td>8</td>
-            <td style="color: blue;"> ▼1 </td>
-            <td>돌림노래 (Feat. DEAN)</td>
-            <td>아이유(IU)</td>
-        </tr>  
-        <tr>
-            <td>9</td>
-            <td style="color: red;"> ▲1 </td>
-            <td>On The Ground</td>
-            <td>로제 (ROSE)</td>
-        </tr>  
-        <tr>
-            <td>10</td>
-            <td style="color: blue;"> ▼1 </td>
-            <td>어푸 (Ah puh)</td>
-            <td>아이유(IU)</td>
-        </tr>  
-       </tbody>
-   </table>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td> ㅡ </td>
+                <td>라일락</td>
+                <td>아이유 (IU)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td> ㅡ </td>
+                <td>롤린 (Rollin')</td>
+                <td>브레이브걸스 (Brave girls)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td> ㅡ </td>
+                <td>Coin</td>
+                <td>아이유(IU)</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td> ㅡ </td>
+                <td>Celebrity</td>
+                <td>아이유(IU)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td> ㅡ </td>
+                <td>Flu</td>
+                <td>아이유(IU)</td>
+            </tr>  
+            <tr>
+                <td>6</td>
+                <td> ㅡ </td>
+                <td>봄 안녕 봄</td>
+                <td>아이유(IU)</td>
+            </tr>  
+            <tr>
+                <td>7</td>
+                <td style="color: red;"> ▲1 </td>
+                <td>아이와 나의 바다</td>
+                <td>아이유(IU)</td>
+            </tr>  
+            <tr>
+                <td>8</td>
+                <td style="color: blue;"> ▼1 </td>
+                <td>돌림노래 (Feat. DEAN)</td>
+                <td>아이유(IU)</td>
+            </tr>  
+            <tr>
+                <td>9</td>
+                <td style="color: red;"> ▲1 </td>
+                <td>On The Ground</td>
+                <td>로제 (ROSE)</td>
+            </tr>  
+            <tr>
+                <td>10</td>
+                <td style="color: blue;"> ▼1 </td>
+                <td>어푸 (Ah puh)</td>
+                <td>아이유(IU)</td>
+            </tr>  
+            </tbody>
+        </table>
+        <div class="hotandnew">
+            <table>
+                <caption>HOT & NEW</caption>
+                <thead>
+                    <tr> 
+                       <th class="PHOTO"> </th>
+                       <th class="info1"></th>
+                       <th class="info2"> </th>
+                        <th class="info3"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="./images/s1.PNG"></td>
+                            <td colspan="3">
+                                <p style="color: blue;">NEW ALBUM</p>
+                                <p>비밀 : 리에 Vol.3 ''Antisocial (Prod. by Mokyo)''</p>
+                                <p>pH-1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/s2.PNG"></td>
+                            <td colspan="3">
+                                <p style="color: blue;">NEW ALBUM</p>
+                                <p>I'm</p>
+                                <p>김세정</p>
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="editor_recommend">
+        <table>
+            <caption style="text-align: left;">
+                <p style="font-size: x-large;"><b>에디터 추천</b></p></caption>
+            <thead>
+                <tr>
+                    <th class="rec-1"></th>
+                    <th class="rec-2"></th>
+                    <th class="rec-3"></th>
+                    <th class="rec-4"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="./images/r-1.PNG" alt="루더밴드로스"></td>
+                    <td><img src="./images/r2.PNG" alt="sundaymoon"></td>
+                    <td><img src="./images/r3.PNG" alt="프루던스"></td>
+                    <td><img src="./images/r4.PNG" alt="체크메이트"></td>
+                </tr>
+                <tr>
+                    <td>힙알사전</td>
+                    <td>스페셜</td>
+                    <td>스페셜</td>
+                    <td>스페셜</td>
+                </tr>
+                <tr>
+                    <td>사랑의 힘을 믿었던 뮤지션, 루더</td>
+                    <td>그날의 찬란했던 마지막 순간, </td>
+                    <td>밴드 '프루던스'의 데뷔 싱글 </td>
+                    <td>두 번쨰 싱글 [YOU]로 돌아온 혼</td>
+                </tr>
+                <tr>
+                    <td>밴드로스 <br></td>
+                    <td>Sunday Moon [Golden]<br> </td>
+                    <td>[Drive My Car] <br></td>
+                    <td>성 그룹 '체크메이트<br>'</td>
+                </tr>
+                <tr>
+                    <td>알앤비 레전드</td>
+                    <td>앨범 발매 인터뷰</td>
+                    <td>프로필 이미지 촬영기</td>
+                    <td>뮤직비디오 촬영 현장</td>
+                </tr>
+                <tr>
+                    <td><img src="images/d-1.PNG"></td>
+                    <td><img src="images/d-2.PNG"></td>
+                    <td><img src="images/d-3.PNG"></td>
+                    <td><img src="images/d-4.PNG"></td>
+                </tr>
+                <tr>
+                    <td>추천선곡</td>
+                    <td>추천선곡</td>
+                    <td>추천 컬러</td>
+                    <td>추천 컬러</td>
+                </tr>
+                <tr>
+                    <td>비는 추적추적 내 몸은 꿀렁꿀렁</td>
+                    <td>지친 하루에 담담하게 건네는 위</td>
+                    <td>고개가 #스무스하게 그루브 타지</td>
+                    <td>오늘따라 유난히 #기분좋은 바이</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>로의 노래</td>
+                    <td>는 #더스티 라벤더</td>
+                    <td>브를 느끼며 #캐시미어 블루</td>
+                </tr>
+                <tr>
+                    <td><img src="images/dj.PNG"> DJ 감또   선곡미리보기^</td>
+                    <td><img src="images/dj.PNG"> DJ 자몽   선곡미리보기^</td>
+                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기^</td>
+                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기^</td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

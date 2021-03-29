@@ -1,6 +1,110 @@
+/*전체 틀에 효과 주기*/
 body {
     font-family: dotum, 돋움, sans-serif, "Segoe UI Symbol" ;
-    font-size: 12px;
     font-weight: normal;
     color: rgb(68, 68,68)
+}
+/*wrapper에 효과 주기*/
+.wrapper {
+    width: 1200px;
+    margin: 0cm;
+    position: relative;
+    display: flow-root;
+}
+/*헤더 전체에 효과 주기*/
+header {
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+}
+/*헤더 내 wrapper에 효과 주기*/
+header>.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+/*헤더 내 첫번째 파트에 효과주기*/
+header .header-first {
+    position: relative;
+    display: flex;
+}
+/*첫 번째 헤더 내 표 부분에 효과주기*/
+header .header-first>ul {
+    position: relative;
+    top: 0;
+    bottom:0;
+    left: 10px;
+    margin: auto 0;
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+/*첫 번째 헤더 내 두 번째 표 부분에 효과주기*/
+header .player_and_app>ul {
+    position: relative;
+    top: 0;
+    bottom:0;
+    left: auto;
+    margin: auto 0;
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+/*두 번째 헤더 내 표 부분에 효과주기*/
+header .header-second>ul {
+    position: relative;
+    top: 0;
+    bottom:0;
+    left: 10px;
+    margin: auto 0;
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+/*헤더 내 두번째 파트에 효과 주기*/
+header .header-second {
+    position: relative;
+    display: flex;
+}
+/*헤더 내 세 번쨰 부분에 효과주기*/
+header .header-third {
+    position: relative;
+    display: flex;
+}
+/*세 번째 헤더 내 표 부분에 효과주기*/
+header .header-third>ul {
+    list-style: none;
+    position: relative;
+    top: 0;
+    bottom:0;
+    left: 10px;
+    margin: auto 0;
+    display: flex;
+    align-items: flex-end;
+}
+/*exhibition에 효과주기*/
+.exhibition {
+    position: relative;
+    display: flex;
+    box-sizing: content-box;
+}
+/*music_chart에 효과 주기*/
+.music_chart {
+    top: 10px;
+    position: relative;
+    display: flex;
+}
+/*music_chart 실시간 차트 글씨에 효과 주기*/
+.music_chart table caption {
+    font-size: 40px;
+}
+.music_chart>ul {
+    font-size: 30px;
+}
+/*editor_recommend에 효과주기*/
+.editor_recommend {
+    position:absolute;
+    display: flex;
+    top: 800px
 }
