@@ -37,7 +37,6 @@ header .header-first>ul {
     left: 10px;
     margin: auto 0;
     display: flex;
-    align-items: flex-end;
     list-style: none;
 }
 /*첫 번째 헤더 내 두 번째 표 부분에 효과주기*/
@@ -84,14 +83,16 @@ header .header-third>ul {
     align-items: flex-end;
 }
 /*exhibition에 효과주기*/
-.exhibition {
+.exhibititon {
+    top: 5px;
+    margin-top: 10px;
+    border-top: 10px;
     position: relative;
     display: flex;
-    box-sizing: content-box;
 }
 /*music_chart에 효과 주기*/
 .music_chart {
-    top: 10px;
+    top: 30px;
     position: relative;
     display: flex;
 }
@@ -106,5 +107,5 @@ header .header-third>ul {
 .editor_recommend {
     position:absolute;
     display: flex;
-    top: 800px
+    top: 1100px
 }
