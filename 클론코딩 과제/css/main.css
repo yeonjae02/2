@@ -1,6 +1,6 @@
-/*전체 틀에 효과 주기*/
+/* Common */
 body {
-    font-family: dotum, 돋움, sans-serif, "Segoe UI Symbol" ;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: normal;
     color: rgb(68, 68,68)
 }
@@ -13,44 +13,65 @@ body {
 }
 /*헤더 전체에 효과 주기*/
 header {
+    line-height: 1.5;
     height: 100px;
     width: 100%;
-    justify-content: space-between;
-    display: flex;
-    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    background: transparent;
+    
 }
 /*헤더 내 wrapper에 효과 주기*/
 header>.wrapper {
     display: flex;
     flex-direction: column;
+    display: flex;
+    top : 1;
+    left: 5;
 }
-/*헤더 내 첫번째 파트에 효과주기*/
+/* header-first에 효과주기*/
 header .header-first {
+    width: 940px;
+    margin: 0 auto;
+    padding: 6px 0 4px;
     position: relative;
     display: flex;
 }
-/*첫 번째 헤더 내 표 부분에 효과주기*/
+
+.payment {
+    cursor: pointer;
+    padding: 26px;
+    margin-left: 0;
+
+}
+/*header-fist 내 표에 효과주기*/
 header .header-first>ul {
+    align-items: flex-end;
     position: relative;
-    top: 0;
-    bottom:0;
-    left: 10px;
     margin: auto 0;
     display: flex;
     list-style: none;
+    cursor: pointer;
 }
-/*첫 번째 헤더 내 두 번째 표 부분에 효과주기*/
+/*header-fisrt 내 play_and_app에 효과주기*/
 header .player_and_app>ul {
     position: relative;
-    top: 0;
-    bottom:0;
-    left: auto;
-    margin: auto 0;
+    margin: auto 1;
     display: flex;
-    align-items: flex-end;
     list-style: none;
 }
-/*두 번째 헤더 내 표 부분에 효과주기*/
+/*header-seond에 효과 주기*/
+header .header-second {
+    position: relative;
+    display: flex;
+}
+.logo {
+    display: block;
+}
+/*header-second 내 표에 효과주기*/
 header .header-second>ul {
     position: relative;
     top: 0;
@@ -61,17 +82,12 @@ header .header-second>ul {
     align-items: flex-end;
     list-style: none;
 }
-/*헤더 내 두번째 파트에 효과 주기*/
-header .header-second {
-    position: relative;
-    display: flex;
-}
-/*헤더 내 세 번쨰 부분에 효과주기*/
+/*header-third에 효과주기*/
 header .header-third {
     position: relative;
     display: flex;
 }
-/*세 번째 헤더 내 표 부분에 효과주기*/
+/*header-third 내 표에 효과주기*/
 header .header-third>ul {
     list-style: none;
     position: relative;
@@ -90,18 +106,19 @@ header .header-third>ul {
     position: relative;
     display: flex;
 }
-/*music_chart에 효과 주기*/
+/*music_chart 전체에 효과 주기*/
 .music_chart {
     top: 30px;
     position: relative;
     display: flex;
 }
+/* music_chart 표에 효과 주기 */
+.music_chart>ul {
+    font-size: 30px;
+}
 /*music_chart 실시간 차트 글씨에 효과 주기*/
 .music_chart table caption {
     font-size: 40px;
-}
-.music_chart>ul {
-    font-size: 30px;
 }
 /*editor_recommend에 효과주기*/
 .editor_recommend {
