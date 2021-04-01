@@ -1,31 +1,25 @@
 /* Common */
 body {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    background: transparent;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: normal;
     color: rgb(68, 68,68)
 }
 /*wrapper에 효과 주기*/
 .wrapper {
-    margin: 0;
-    padding: 0;
+    width: 1100px;
+    margin: 0 auto;
     position: relative;
-    display: flow-root;
+}
+/* 그림 하단 공백 제거 */
+img {
+    display: block;
 }
 .material-icons {
     cursor: pointer;
 }
 /*헤더 전체에 효과 주기*/
 header {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     line-height: 1.5;
     height: 100px;
     width: 100%;
@@ -33,61 +27,86 @@ header {
     font-size: 100%;
     vertical-align: middle;
     background: transparent;
-    
+    position: relative;
+    width: 100%;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #d2d2d2;
 }
-/*헤더 내 wrapper에 효과 주기*/
+/*wrapper에 효과 주기*/
 header>.wrapper {
     display: flex;
     flex-direction: column;
-    display: flex;
-    top : 1;
-    left: 1;
 }
-.line {
-    color: darkgray;
+a {
+    text-decoration: none ;
+}
+header .header-first {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 6px 0 4px;
+    box-sizing: border-box;
+    color: black;
+}
+/* payment에 효과 주기 (21.04.02. 완료) */
+.payment {
+    margin-left: 95px;
+    display: flex;
+    float: right;
+    text-align: right;
+    cursor: text;
+    color: black;
+}
+.btn.f{
+content: '';
+    display: block;
+    margin-left: 40px;
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    width: 18px;
+    height: 14px;
+    background: url(./../images/hd_5.0.png) no-repeat 0 0;
+}
+/* payment 내 이용권 구매 글씨 효과주기 (21.04.02. 완료) */
+.purchase_of_a_pass {
+    font-weight: bolder;
+}
+/* dowmload에 효과 주기 (21.04.02. 완료) */
+.player_download {
+    margin-left: 480px;
+    display: flex;
+    float: right;
+    text-align: right;
+    cursor: pointer;
+}
+/* player_download 내 웹플레이어 글씨 효과 주기 (21.04.02.완료) */
+.webplayer {
+    font-weight: bolder;
+    color: #0096FF;
+}
+.divisionline{
+    color: rgb(228, 222, 222);
     cursor: auto;
 }
-/* header-first에 효과주기*/
-header .header-first {
-    position: relative;
-    display: flex;
-}
-/* payment에효과주기 */
-.payment {
-    margin-left: 450px;
-    margin-right: 600px;
-    display: flex;
-    left: 50px;
-    cursor: pointer;
-}
-.download {
-    margin-right: 20px;
-    display: flex;
-    right: 10px;
-    cursor: pointer;
-}
-/*header-second 내 표에 효과주기*/
-header .header-second>ul {
-    position: relative;
-    top: 0;
-    bottom:0;
-    left: 10px;
-    margin: auto 0;
-    display: flex;
-    align-items: flex-end;
-    list-style: none;
-}
 .logo {
-    display: inline-block;
-    margin-top: 50px;
-    margin-left: 450px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+.search {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 600px;
 }
 /*header-third에 효과주기*/
 header .header-third {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    margin-top: 200px;
     position: relative;
     display: flex;
 }
@@ -95,18 +114,16 @@ header .header-third {
 header .header-third>ul {
     list-style: none;
     position: relative;
-    top: 0;
-    bottom:0;
     left: 10px;
-    margin: auto 0;
     display: flex;
-    align-items: flex-end;
+   
+  
 }
 /*exhibition에 효과주기*/
 .exhibititon {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 50cm;
     
 }
 /*music_chart 전체에 효과 주기*/
