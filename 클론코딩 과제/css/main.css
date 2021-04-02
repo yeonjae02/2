@@ -53,7 +53,7 @@ header .header-first {
 }
 /* payment에 효과 주기 (21.04.02. 완료) */
 .payment {
-    margin-left: 95px;
+    margin-left: 60px;
     display: flex;
     float: right;
     text-align: right;
@@ -92,10 +92,12 @@ content: '';
     color: rgb(228, 222, 222);
     cursor: auto;
 }
-.logo {
+header .header-second{
     display: flex;
+}
+.logo {
     margin-top: 10px;
-    margin-left: 400px;
+    margin-left: 60px;
 }
 .search {
     display: flex;
