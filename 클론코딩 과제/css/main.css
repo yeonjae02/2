@@ -1,13 +1,19 @@
 /* Common */
 body {
-    background: transparent;
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    min-width: 980px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: middle;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
     color: rgb(68, 68,68)
 }
 /*wrapper에 효과 주기*/
 .wrapper {
-    width: 1100px;
     margin: 0 auto;
     position: relative;
 }
@@ -20,46 +26,39 @@ img {
 }
 /*헤더 전체에 효과 주기*/
 header {
-    line-height: 1.5;
-    height: 100px;
-    width: 100%;
-    border: 0;
-    font-size: 100%;
-    vertical-align: middle;
-    background: transparent;
     position: relative;
     width: 100%;
     margin-bottom: 14px;
     border-bottom: 1px solid #d2d2d2;
+    font-size: 12px;
 }
 /*wrapper에 효과 주기*/
 header>.wrapper {
     display: flex;
     flex-direction: column;
 }
-a {
-    text-decoration: none ;
-}
+/* .header-first에 효과주기 */
 header .header-first {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    font-size: 12px;
-    margin: 0 auto;
     padding: 6px 0 4px;
-    box-sizing: border-box;
-    color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    background: transparent;  
 }
 /* payment에 효과 주기 (21.04.02. 완료) */
 .payment {
-    margin-left: 60px;
     display: flex;
     float: right;
     text-align: right;
     cursor: text;
     color: black;
+    cursor: pointer;
 }
+/* 이용권 구매 옆 박스에 효과주기 */
 .btn.f{
 content: '';
     display: block;
@@ -88,29 +87,55 @@ content: '';
     font-weight: bolder;
     color: #0096FF;
 }
+/* header-first 내 각 내용들을 분할시켜주는 선에 효과주기 */
 .divisionline{
     color: rgb(228, 222, 222);
     cursor: auto;
 }
+/* .header-second에 효과주기 */
 header .header-second{
+    justify-content:flex-start;
+    align-items: center;
     display: flex;
+    position: relative;
+    width: 990px;
+    height: 85px;
+    margin: 0 auto;
+    padding: 0 0 0 135px;
+    vertical-align: middle;
+    background: transparent;
 }
-.logo {
-    margin-top: 10px;
-    margin-left: 60px;
+/* .header-second 내 로고 효과주기 */
+.title_logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    float: left;
+    width: 318px;
+    height: 36px;
+    border: 0;
+
 }
+/* header-second 내 검색창 효과주기 */
 .search {
-    display: flex;
-    margin-top: 10px;
-    margin-left: 600px;
+    float: left;
+    width: 318px;
+    height: 36px;
+    border: 0;
+    position: relative;
+    width: 366px;
+    border-bottom: 2px solid #0096FF;
+    padding-top: 18px;
 }
+
 /*header-third에 효과주기*/
 header .header-third {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
     position: relative;
     display: flex;
+    font-size: 14px;
 }
 /*header-third 내 표에 효과주기*/
 header .header-third>ul {
