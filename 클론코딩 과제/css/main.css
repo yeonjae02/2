@@ -1,5 +1,7 @@
 /* Common */
 body {
+    justify-content: center;
+    align-items: center;
     line-height: 1.5;
     -ms-text-size-adjust: 100%;
     min-width: 980px;
@@ -28,17 +30,24 @@ img {
 header {
     position: relative;
     width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     border-bottom: 1px solid #d2d2d2;
     font-size: 12px;
 }
 /*wrapper에 효과 주기*/
 header>.wrapper {
+    width: 980px;
     display: flex;
     flex-direction: column;
 }
+a {
+    text-decoration-line: none;
+    color: black;
+}
 /* .header-first에 효과주기 */
 header .header-first {
+    font-size: 16px;
+    width: 980px;
     padding: 6px 0 4px;
     justify-content: center;
     align-items: center;
@@ -47,36 +56,34 @@ header .header-first {
     outline: 0;
     font-size: 100%;
     vertical-align: middle;
-    background: transparent;  
 }
 /* payment에 효과 주기 (21.04.02. 완료) */
 .payment {
     display: flex;
     float: right;
-    text-align: right;
-    cursor: text;
-    color: black;
+    text-align: right ;
     cursor: pointer;
 }
 /* 이용권 구매 옆 박스에 효과주기 */
-.btn.f{
-content: '';
+.purchasebox {
+    content: '';
     display: block;
-    margin-left: 40px;
     position: absolute;
     top: 0px;
+    right: 2px;
     left: 2px;
     width: 18px;
     height: 14px;
-    background: url(./../images/hd_5.0.png) no-repeat 0 0;
+    background: url(./../images/hd_5.0.png)
 }
 /* payment 내 이용권 구매 글씨 효과주기 (21.04.02. 완료) */
 .purchase_of_a_pass {
     font-weight: bolder;
+    color: #0096ff;
 }
 /* dowmload에 효과 주기 (21.04.02. 완료) */
 .player_download {
-    margin-left: 480px;
+    margin-left: 600px;
     display: flex;
     float: right;
     text-align: right;
@@ -85,8 +92,8 @@ content: '';
 /* player_download 내 웹플레이어 글씨 효과 주기 (21.04.02.완료) */
 .webplayer {
     font-weight: bolder;
-    color: #0096FF;
 }
+
 /* header-first 내 각 내용들을 분할시켜주는 선에 효과주기 */
 .divisionline{
     color: rgb(228, 222, 222);
@@ -94,63 +101,185 @@ content: '';
 }
 /* .header-second에 효과주기 */
 header .header-second{
-    justify-content:flex-start;
+    width: 980px;
     align-items: center;
     display: flex;
-    position: relative;
-    width: 990px;
     height: 85px;
     margin: 0 auto;
-    padding: 0 0 0 135px;
     vertical-align: middle;
     background: transparent;
+    margin-right: 410px;
 }
 /* .header-second 내 로고 효과주기 */
 .title_logo a{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     line-height: 0;
-    float: left;
-    width: 318px;
-    height: 36px;
+    height: 20px;
     border: 0;
-
+    position: flex;
+    top: 15px;
+    left: -5px;
+    width: 100px;
+    height: 20px;
 }
-/* header-second 내 검색창 효과주기 */
-.search {
-    float: left;
-    width: 318px;
-    height: 36px;
-    border: 0;
+/* 검색창 효과주기 */
+.search{
     position: relative;
     width: 366px;
     border-bottom: 2px solid #0096FF;
-    padding-top: 18px;
+    padding-top: 5px;
+    
 }
-
+/* header-second 내 검색창 효과주기 */
+#search_box {
+    float: left;
+    width: 318px;
+    height: 36px;
+    border: 0;
+    position: relative;
+}
 /*header-third에 효과주기*/
 header .header-third {
+    width: 980px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    vertical-align: middle;
+    /* width: 980px;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    position: relative;
-    display: flex;
-    font-size: 14px;
+    font-size: 14px; */
 }
 /*header-third 내 표에 효과주기*/
 header .header-third>ul {
-    list-style: none;
-    position: relative;
-    left: 10px;
     display: flex;
-   
-  
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    vertical-align: middle;
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+}
+/* 세 번째 헤더 내 지니차트 크기조정 */
+.menu_title_gc {
+    width: 99px;
+    height: 38px;
+}
+/* 세 번째 헤더 내 최신음악 크기조정 */
+.menu_title_lm {
+    width: 99px;
+    height: 38px;
+}
+/* 세 번째 헤더 내 장르음악 크기조정 */
+.menu_title_gm {
+    width: 99px;
+    height: 38px;
+}
+/* 세 번째 헤더 내 지니TV 크기조정 */
+.menu_title_gt {
+    width: 85.56px;
+    height: 38px;
+}
+/* 세 번째 헤더 내 추천 크기조정 */
+.menu_title_rm {
+    width: 63px;
+    height: 38px;
+}
+/* 세 번째 헤더 내 매거진 크기조정 */
+.menu_title_mz {
+    width: 81px;
+    height: 38px;
+}
+/* 세 번째 헤더 뮤직허그 크기조정 */
+.menu_title_mh {
+    width: 99px;
+    height: 38px;
+}
+/* 세 번째 헤더의 메뉴에 hober하지 않았을 때*/
+header .header-third ul.main li.menu .sub_menu {
+    display: none;
+}
+/* 세 번쨰 헤더의 메뉴에 hober했을 때 */
+header .header-third ul.main li.menu:hover .sub_menu {
+    display: block;
+}
+/* menu 에 hover 하지 않았을 때 */
+header .header-third ul.main .contents {
+    color: black;
+}
+/* menu에 hover 했을 때 */
+header .header-third ul.main .contents:hover {
+    color: #0096ff;
+}
+
+/* sub_menu 를 hover하지 않았을 때  */
+header .header-third ul.main li.menu .sub_menu  {
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+/* sub-menu를 hover했을 때 */
+header .header-third ul.main li.menu:hover .sub_menu {
+    margin-left: auto;
+    display: block;
+    padding: 5px 0px 4px;
+    color: #27282d;
+    white-space: nowrap;
+    padding: 5px 0 4px;
+    border: 1px solid #a6afb6;
+    border-top: 3px solid #0096FF;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    font-size: 12px;
+    box-sizing: border-box;
+    width: 13%;
+}
+/* sub-menu를 hover하기 전 내부 표 상태 */
+header .header-third ul.main li.menu .sub_menu>ul li {
+    padding: 6px 6px;
+    text-align: start;
+}
+/* sub-menu를 hover한 후 내부 표 상태 */
+header .header-third ul.main li.menu .sub_menu>ul li:hover {
+    padding: 6px 6px;
+    background: #f1f1ee;
+    text-align: start;
+}
+/* 로그인 회원가입 버튼 */
+.memberbtn {
+    margin-right: 20px;
+    display: flex;
+    background: none;
+    border: none;
+    width: 150px;
+}
+header .header-third .member .loginbox>.material-icons {
+    position: absolute;
+}
+header .header-third .member .loginbox .material-icons#btn--open {
+    display: block;
+}
+header .header-third .member .loginbox .material-icons#btn--close {
+    display: none;
+}
+header .header-third .member .loginbox #login--list {
+    display: none;
 }
 /*exhibition에 효과주기*/
 .exhibititon {
     display: flex;
     justify-content: center;
-    margin-top: 50cm;
+    align-content: center;
     
 }
 /*music_chart 전체에 효과 주기*/

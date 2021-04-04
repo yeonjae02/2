@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <!-- 구글폰트 : main.css보다 먼저 불러올 수 있도록 함. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">   
     <!-- Google Material Design -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- css로 연결 -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- js로 연결 -->
-    <script defer src="js/main.jss"></script>
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -31,88 +31,183 @@
             <div class="header-first">
                 <div class="header-first">
                     <ul class="payment">
-                        <img id="btn.f" src="./images/hd_5.0.png">
+                        <img id="purchasebox" src="./images/hd_5.0.png">
                         <li class="purchase_of_a_pass"> 
-                            <span>이용권 구매</span>
+                            <a href = "https://www.genie.co.kr/buy/recommend">이용권 구매</a>
                         </li>
                             <span class="divisionline">ㅣ</span>
                         <li class="gift_certificate_registration">
-                            <span>상품권 등록</span>  
+                            <a href = "https://www.genie.co.kr/member/popLogin?page_rfr=https%3A//www.genie.co.kr/buy/recommend">상품권 등록</a> 
                         </li>
                             <span class="divisionline">ㅣ</span>
                         <li class="charge_cache">
-                            <span>캐시 충전</span> 
+                            <a href = "https://www.genie.co.kr/cash/cashCharge">캐시 충전</a>
                         </li>
                     </ul>
                     <ul class="player_download">
                         <li class="webplayer"> 
-                            <span>웹플레이어</span>   
+                            <a style="color: #0096ff;">웹플레이어</a>  
                         </li>
                             <span class="divisionline">ㅣ</span>
                         <li class="pcplayer">
-                            <span>PC플레이어</span>
+                            <a>PC플레이어</a>
                         </li>
                             <span class="divisionline">ㅣ</span>
                         <li class="app">
-                            <span>지니앱</span>
+                            <a>지니앱</a>
                         </li>
                     </ul>
                 </div>     
             </div>
-        </div>
-            <!-- 헤더 두 번쨰 파트 -->
+        
+            <!-- 헤더 두 번째 파트 -->
                 <div class="header-second">
                     <div class = "title_logo">
                         <img src="./images/logo.PNG">    
                     </div>
                     <div class="search">
                         <input id="search_box" placeholder="하이틴 재질 팝송 추천" /> 
-                            <span class="material-icons">
-                                search
+                        <span class="material-icons">
+                            search
                             </span>
+                        <!-- <img src="./images/hd. search.png" alt ="검색창"> -->
                     </div>
                 </div>
                 <!-- 헤더 세 번째 파트 만들기 -->
                 <div class="header-third">
                     <ul class="main">
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">지니차트 </div>
+                            <div class="menu_title_gc">
+                                <a class="contents">지니차트 </a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>TOP200</a></li>
+                                    <li><a>장르별 차트</a></li>
+                                    <li><a>시대별 차트</a></li>
+                                    <li><a>뮤직비디오 차트</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">최신음악</div>
+                            <div class="menu_title_lm">
+                                <a class="contents">최신음악 </a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>최신 곡</a></li>
+                                    <li><a>최신 앨범</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">장르음악</div>
+                            <div class="menu_title_gm">
+                                <a class="contents">장르음악 </a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>가요</a></li>
+                                    <li><a>POP</a></li>
+                                    <li><a>OST</a></li>
+                                    <li><a>트롯</a></li>
+                                    <li><a>EDM</a></li>
+                                    <li><a>JAZZ</a></li>
+                                    <li><a>CLASSIC</a></li>
+                                    <li><a>JPOP</a></li>
+                                    <li><a>CCM</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">지니TV</div>
+                            <div class="menu_title_gt">
+                                <a class="contents">지니TV </a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>홈</a></li>
+                                    <li><a>Mnet방송</a></li>
+                                    <li><a>뮤직비디오</a></li>
+                                    <li><a>뮤지션</a></li>
+                                    <li><a>이색영상</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">추천</div>
+                            <div class="menu_title_rm">
+                                <a class="contents">추천 </a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>추천</a></li>
+                                    <li><a>인기</a></li>
+                                    <li><a>태그</a></li>
+                                    <li><a>히스토리</a></li>
+                                </ul>   
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">매거진</div>
+                            <div class="menu_title_mz">
+                                <a class="contents">매거진</a>
+                            </div>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a>클래식공감</a></li>
+                                    <li><a>스페셜</a></li>
+                                    <li><a>지니뮤직 챌린지</a></li>
+                                    <li><a>방송</a></li>
+                                    <li><a>뮤직레포트</a></li>
+                                    <li><a>이주의 앨범</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li class="menu">
-                            <div class="menu_title">
-                                <div class="menu_name">뮤직허그</div>
+                            <div class="menu_title_mh">
+                                <a class="contents">뮤직허그</a>
                             </div>
                         </li>
                     </ul>
+                    <div class="member"> 
+                        <div class="loginbox">
+                            <button type="button" class="memberbtn" style="border: none;">
+                                로그인/회원가입
+                                <!-- 열기 아이콘 -->
+                                <div id="btn--open" class="material-icons">
+                                    expand_more
+                                </div>
+                                <!-- 닫기 아이콘 -->
+                                <div id="btn--close" class="material-icons">
+                                    expand_less
+                                </div>
+                            </button>
+                            <div class="loginlist" id="login--list">
+                                <div class="loginform">
+                                    <a>
+                                        <span class="text">
+                                            로그인
+                                        </span>
+                                    </a>
+                                    <div class="account">
+                                        <span class="find-account">
+                                            <a>아이디 찾기 </a>
+                                            <span class="divisionline2"> ㅣ </span>
+                                            <a>비밀번호 찾기</a>
+                                        </span>
+                                        <span class="make-account">
+                                            <a>회원가입</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="login-list">
+                                    <li><a>카카오 로그인</a></li>
+                                    <li><a>페이스북 로그인</a></li>
+                                    <li><a>트위터 로그인</a></li>
+                                    <li><a>애플 로그인</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
+            </div>
    </header>
    <!-- 헤더 바로 아래 최신음악 전시창 만들기 -->
    <div class="exhibititon">
