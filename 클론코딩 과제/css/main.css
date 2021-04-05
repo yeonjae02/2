@@ -124,6 +124,9 @@ header .header-second{
     width: 100px;
     height: 20px;
 }
+header .header-second .search>.material-icons {
+    color: #0096ff;
+}
 /* 검색창 효과주기 */
 .search{
     position: relative;
