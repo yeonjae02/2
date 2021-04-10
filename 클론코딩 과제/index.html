@@ -63,7 +63,7 @@
             <!-- 헤더 두 번째 파트 -->
                 <div class="header-second">
                     <div class = "title_logo">
-                        <img src="./images/logo.PNG">    
+                        <a href="index.html"><img src="./images/logo.PNG"></a>
                     </div>
                     <div class="search">
                         <input id="search_box" placeholder="하이틴 재질 팝송 추천" /> 
@@ -211,133 +211,135 @@
    </header>
    <!-- 헤더 바로 아래 최신음악 전시창 만들기 -->
    <div class="exhibititon">
-       <table>
-           <caption style="text-align: left;">최신음악</caption>
-           <thead>
-               <tr>
-                   <th class="album"></th>
-                   <th class="album"></th>
-                   <th class="album"></th> 
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                <td><img src="./images/손호영.PNG" alt="앨범커버"></td>
-                <td><img src="./images/김그림.PNG" alt="앨범커버"></td>
-                <td><img src="./images/강승윤.PNG" alt="앨범커버"></td>
-                <td><img src="./images/김성규.PNG" alt="앨범커버"></td>
-                <td><img src="./images/pH-1.PNG" alt="앨범커버"></td>
-                <td><img src="./images/김세정.PNG" alt="앨범커버"></td>
-               </tr>
-               <tr>
-                <td><img src="./images/김규종.PNG" alt="앨범커버"></td>
-                <td><img src="./images/이아람.PNG" alt="앨범커버"></td>
-                <td><img src="./images/시하.PNG" alt="앨범커버"></td>
-                <td><img src="./images/young prada.PNG" alt="앨범커버"></td>
-                <td><img src="./images/손진영.PNG" alt="앨범커버"></td>
-                <td><img src="./images/프루.PNG" alt="앨범커버"></td>
-               </tr>
-           </tbody>
-       </table>
-   </div>
+       <div class="main_album">
+           <h2 id="recent-music"  style="font-weight: bolder;">최신음악</h2>
+                <ul class="exhibitionName">
+                    <li id="name1" style="color: #0096ff;">종합</li>
+                    <li id="name2">국내</li>
+                    <li id="name3">국외</li> 
+                </ul>
+        </div>
+        <div class="album"></div>
+            <table class="comprehensive_album">
+                <tbody>
+                <tr>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                </tr>
+                <tr>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     <!-- 광고부분인데.. 블록형식태그를 사용해서 해야 할듯! 근데 지금은 어떻게 해야 할지 잘 모르겠다 -->
-    <div class="ad">
-    </div>
+    <div class="ad"></div>
     <!-- 실시간 차트 만들기 -->
-    <div class="music_chart">
-        <table>
-            <caption style="text-align: left;">실시간 차트</caption>
-            <thead>
-            <tr> 
-               <th class="ranking"> </th>
-               <th class=" fluctuation"></th>
-               <th class="title"> </th>
-                <th class="artist"></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td> ㅡ </td>
-                <td>라일락</td>
-                <td>아이유 (IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td> ㅡ </td>
-                <td>롤린 (Rollin')</td>
-                <td>브레이브걸스 (Brave girls)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td> ㅡ </td>
-                <td>Coin</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td> ㅡ </td>
-                <td>Celebrity</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td> ㅡ </td>
-                <td>Flu</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            <tr>
-                <td>6</td>
-                <td> ㅡ </td>
-                <td>봄 안녕 봄</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            <tr>
-                <td>7</td>
-                <td style="color: red;"> ▲1 </td>
-                <td>아이와 나의 바다</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            <tr>
-                <td>8</td>
-                <td style="color: blue;"> ▼1 </td>
-                <td>돌림노래 (Feat. DEAN)</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            <tr>
-                <td>9</td>
-                <td style="color: red;"> ▲1 </td>
-                <td>On The Ground</td>
-                <td>로제 (ROSE)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            <tr>
-                <td>10</td>
-                <td style="color: blue;"> ▼1 </td>
-                <td>어푸 (Ah puh)</td>
-                <td>아이유(IU)</td>
-                <td><img src="./images/IMOGE.PNG"></td>
-            </tr>  
-            </tbody>
-        </table>
-        <div class="hotandnew">
+    <div class="chartandevent">
+        <div class="music_chart" id="chart_info">
+            <div class="chartinformation">
+                <h2 class="chartinfo" id="chartName">
+                    <a>실시간차트</a>
+                </h2>
+                <p id="date" class="chartinfo">21.04.11. 01:00</p>
+            </div>
+            <div class="music_chart_list" id="chart_contents">
+                <table id="musicChartContents">
+                    <thead>
+                    <tr> 
+                        <th class="ranking"> </th>
+                        <th class="fluctuation"></th>
+                        <th class="title"> </th>
+                        <th class="artist"></th>
+                        <th class="chart_music_listen"></th>
+                        <th class="chart_music_add"></th>
+                        <th class="chart_music_etc"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="chart_ranking">1</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title">라일락</td>
+                            <td class="chart_artist">아이유 (IU)</td>
+                        </tr>
+                        <tr>
+                            <td class="chart_ranking">2</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title" >롤린 (Rollin')</td>
+                            <td class="chart_artist">브레이브걸스 (Brave girls)</td>
+                        </tr>
+                        <tr>
+                            <td class="chart_ranking">3</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title" >Coin</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>
+                        <tr>
+                            <td class="chart_ranking">4</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title" >Celebrity</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>
+                        <tr>
+                            <td class="chart_ranking">5</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title">Flu</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>  
+                        <tr>
+                            <td class="chart_ranking">6</td>
+                            <td class="chart_fluctuation"> ㅡ </td>
+                            <td class="chart_title">봄 안녕 봄</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>  
+                        <tr>
+                            <td class="chart_ranking">7</td>
+                            <td class="chart_fluctuation" style="color: red;"> ▲1 </td>
+                            <td class="chart_title">아이와 나의 바다</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>  
+                        <tr>
+                            <td class="chart_ranking">8</td>
+                            <td class="chart_fluctuation" style="color: blue;"> ▼1 </td>
+                            <td class="chart_title">돌림노래 (Feat. DEAN)</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>  
+                        <tr>
+                            <td class="chart_ranking">9</td>
+                            <td class="chart_fluctuation" style="color: red;"> ▲1 </td>
+                            <td class="chart_title">On The Ground</td>
+                            <td class="chart_artist">로제 (ROSE)</td>
+                        </tr>  
+                        <tr>
+                            <td class="chart_ranking" >10</td>
+                            <td class="chart_fluctuation" style="color: blue;"> ▼1 </td>
+                            <td class="chart_title">어푸 (Ah puh)</td>
+                            <td class="chart_artist">아이유(IU)</td>
+                        </tr>  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="hotandnew" id="hot_and_new">
             <table>
                 <caption>HOT & NEW</caption>
-                <thead>
-                    <tr> 
-                       <th class="PHOTO"> </th>
-                       <th class="info1"></th>
-                       <th class="info2"> </th>
-                        <th class="info3"></th>
-                    </tr>
+                    <thead>
+                        <tr> 
+                            <th class="PHOTO"> </th>
+                            <th class="info1"></th>
+                            <th class="info2"> </th>
+                            <th class="info3"></th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -357,7 +359,7 @@
                             </td>
                         </tr>
                     </tbody>
-            </table>
+                </table>
         </div>
     </div>
     <div class="editor_recommend">

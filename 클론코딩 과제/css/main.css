@@ -49,8 +49,6 @@ header .header-first {
     font-size: 16px;
     width: 980px;
     padding: 6px 0 4px;
-    justify-content: center;
-    align-items: center;
     display: flex;
     border: 0;
     outline: 0;
@@ -112,17 +110,13 @@ header .header-second{
 }
 /* .header-second 내 로고 효과주기 */
 .title_logo a{
-    display: block;
-    width: 50%;
-    height: 50%;
     line-height: 0;
-    height: 20px;
     border: 0;
     position: flex;
-    top: 15px;
+    top: 45px;
     left: -5px;
-    width: 100px;
-    height: 20px;
+    width: 2cm;
+    height: 2cm;
 }
 header .header-second .search>.material-icons {
     color: #0096ff;
@@ -137,6 +131,8 @@ header .header-second .search>.material-icons {
 }
 /* header-second 내 검색창 효과주기 */
 #search_box {
+    font-size: 14px;
+    font-weight: bolder;
     float: left;
     width: 318px;
     height: 36px;
@@ -146,28 +142,20 @@ header .header-second .search>.material-icons {
 /*header-third에 효과주기*/
 header .header-third {
     width: 980px;
-    justify-content: center;
-    align-items: center;
     display: flex;
-    vertical-align: middle;
-    /* width: 980px;
-    justify-content: center;
-    align-items: center;
-    width: 940px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    font-size: 14px; */
+    font-size: 14px;
 }
 /*header-third 내 표에 효과주기*/
 header .header-third>ul {
+    font-weight: bolder;
     display: flex;
     border: 0;
     outline: 0;
     font-size: 18px;
     vertical-align: middle;
     position: relative;
-    width: 940px;
+    width: 980px;
     margin: 0 auto;
     list-style: none;
     display: flex;
@@ -278,32 +266,144 @@ header .header-third .member .loginbox .material-icons#btn--close {
 header .header-third .member .loginbox #login--list {
     display: none;
 }
+/* body 속성 부여 */
+
 /*exhibition에 효과주기*/
 .exhibititon {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    
-}
-/*music_chart 전체에 효과 주기*/
-.music_chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 2px;
+    width: 980px;
     margin: 0 auto;
-    width: 840px;
-    top: 30px;
-    position: relative;
+}
+/* .main_album(앨범나열창 위에 있는 글자들) 효과주기 */
+.main_album {
     display: flex;
 }
-/* music_chart 표에 효과 주기 */
-.music_chart>ul {
-    font-size: 30px;
+/* .main_album 내 최신음악 글자 효과주기 */
+#recent-music {
+    display: inline-block;
+    margin: 15px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #27282d;
+    margin-right: 20px;
 }
-/*music_chart 실시간 차트 글씨에 효과 주기*/
-.music_chart table caption {
-    font-size: 40px;
+/* .main_album 내 종합 국내 국외 글자 전체 효과주기 */
+.main_album >ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 14px;
 }
+/* .main_album 내 종합 글자 효과주기 */
+#name1 {
+    padding-right: 15px;
+}
+/* .main_album 내 국내 글자 효과주기 */
+#name2 {
+    padding-right: 15px;
+}
+.main_album >ul {
+    margin: 23px 0 0 10px;
+}
+/* 각 앨범별 테두리 설정 */
+.albumexhibiton {
+    padding: 2px;
+    border: #27282d;
+}
+/* 국내  클릭 시 등장하는 앨범들 */
+.exhibititon .album .internal_album {
+    display: none;
+}
+/* 국외 클릭 시 등장하는 앨범들 */
+.exhibititon .album .exteral_album {
+    display: none;
+}
+/* 광고창 */
+.ad {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 104px;
+    margin: 23px 0 0;
+    background-color: #e8eef3;
+}
+/* 광고창 아래 실시간차트와 hotandnew 전체 */
+.chartandevent {
+    height: 528px;
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 실시간차트 제목와 날짜 */
+.chartinformation {
+    display: flex;
+}
+/* 실시간차트 제목 설정 */
+#chartName {
+    top: 27px;
+    margin: 21px 0 9px;
+}
+/* 실시간차트 날짜 설정 */
+#date {
+    display: inline-block;
+    top: 27px;
+    margin: 21px 0 9px ;
+    right: 0;
+    color: #8b8b8b;  
+}
+/* 실시간 차트 전체 설정 */
+#chart_info, #chart_contents {
+    width: 608px;
+    float: left;
+}
+/* 실시간차트 표 전체 설정 */
+#chart_contents {
+    height: 429px;
+}
+/* 실시간차트표 세부설정 */
+#musicChartContents {
+    border-top: 1px solid #656565;
+    width: 608px;
+    table-layout: fixed;
+    width: 100%;
+    margin: 4px 0 10px;
+}
+.musicChartContents thead {
+    height: 0;
+}
+실시간차트 줄 당 새로운 class 지정해주기
+.chart_ranking {
+    width: 35px;
+    height: 39px;
+}
+.chart_fluctuation {
+    width: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+td .chart_ranking {
+    width: 35px;
+    height: 39px;
+}
+.chart_title {
+    width: 251x;
+}
+.chart_artisit {
+    width: 120px;
+}
+/* .chart_music_listen {
+    width: 33px;
+}
+.chart_music_add {
+    width: 33px;
+}
+.chart_music_etc {
+    width: 42px;
+    padding-right: 9px;
+}
+#hot_and_new {
+    width: 306px;
+    float: right;   
+} */
 /*editor_recommend에 효과주기*/
 .editor_recommend {
     display: flex;
