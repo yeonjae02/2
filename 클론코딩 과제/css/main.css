@@ -473,3 +473,6 @@ header .header-third .member .loginbox #login--list {
     left: 50%;
     margin-left: 360px;
 }
+.genietvetc {
+    display: flex;
+}
