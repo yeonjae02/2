@@ -81,7 +81,7 @@ header .header-first {
 }
 /* dowmload에 효과 주기 (21.04.02. 완료) */
 .player_download {
-    margin-left: 600px;
+    margin-left: 570px;
     display: flex;
     float: right;
     text-align: right;
@@ -328,7 +328,6 @@ header .header-third .member .loginbox #login--list {
 }
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandevent {
-    height: 528px;
     width: 980px;
     margin: 0 auto;
     overflow: hidden;
@@ -339,6 +338,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간차트 제목 설정 */
 #chartName {
+    font-weight: bold;
+    font-size: 18x;
     top: 27px;
     margin: 21px 0 9px;
 }
@@ -346,7 +347,8 @@ header .header-third .member .loginbox #login--list {
 #date {
     display: inline-block;
     top: 27px;
-    margin: 21px 0 9px ;
+    margin-top: 21px;
+    margin-left: 420px;
     right: 0;
     color: #8b8b8b;  
 }
@@ -355,58 +357,119 @@ header .header-third .member .loginbox #login--list {
     width: 608px;
     float: left;
 }
-/* 실시간차트 표 전체 설정 */
-#chart_contents {
-    height: 429px;
-}
 /* 실시간차트표 세부설정 */
-#musicChartContents {
-    border-top: 1px solid #656565;
+.musicChartContents {
+    border-top: 1px solid darkgray;
     width: 608px;
-    table-layout: fixed;
     width: 100%;
     margin: 4px 0 10px;
+    border-collapse: separate;
 }
+/* 실시간 차트 각 행 간 높이  */
+.musicChartContents  td{
+    height: 39px;
+}
+/* 실시간 차트 내 첫 번쨰 행  */
 .musicChartContents thead {
     height: 0;
 }
-실시간차트 줄 당 새로운 class 지정해주기
+/* 실시간 차트 내 순위 */
 .chart_ranking {
+    font-size: 18px;
+    border-bottom: 1px solid #e8eef3;
+    text-align: right;
+    font-weight: bold;
+    font-style: oblique;
     width: 35px;
-    height: 39px;
 }
+/* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
+    border-bottom: 1px solid #e8eef3;
+    font-weight: bolder;
+    font-size: 10px;
     width: 38px;
     text-align: center;
-    font-weight: bold;
 }
-td .chart_ranking {
-    width: 35px;
-    height: 39px;
-}
+/* 실시간 차트 내 노래 제목 */
 .chart_title {
-    width: 251x;
+    border-bottom: 1px solid #e8eef3;
+    font-size: 14px;
+    width: 251px;
 }
-.chart_artisit {
+/* 실시간 차트 내 아티스트 */
+.chart_artist {
+    border-bottom: 1px solid #e8eef3;
     width: 120px;
-}
-/* .chart_music_listen {
+    font-size: 14px;
+} 
+/* 실시간 차트 내 음악듣기 기능 */
+.chart_music_listen {
+    border-bottom: 1px solid #e8eef3;
     width: 33px;
+    color:darkgrey;
 }
+/* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
+    border-bottom: 1px solid #e8eef3;
     width: 33px;
-}
-.chart_music_etc {
-    width: 42px;
-    padding-right: 9px;
-}
-#hot_and_new {
-    width: 306px;
-    float: right;   
-} */
-/*editor_recommend에 효과주기*/
-.editor_recommend {
-    display: flex;
     justify-content: center;
     align-items: center;
+    color:darkgrey;
+}
+/* 실시간 차트 내 더보기 기능 */
+.chart_music_etc {
+    border-bottom: 1px solid #e8eef3;
+    width: 42px;
+    padding-right: 9px;
+    color:darkgrey;
+}
+.chartandevent .music_chart .music_chart_list >.material-icons {
+    position: absolute;
+}
+/* 실시간 차트 밑 음악 듣기 관련 기능 모음 */
+.listenmore{
+    display: flex;
+
+}
+.chartandevent .listenmore .entire >button {
+    color: black;
+    background: white;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+/* 전체듣기 및 전체담기 기능 속 아이콘  */
+.chartandevent .listenmore .entire >.material-icons {
+    position: absolute;
+}
+/* 실시간 차트 밑 top200 음악 듣기 기능 */
+.top200listen {
+    margin-left: 250px;
+}
+/* top200 음악 듣기 기능 옆 아이콘 */
+.chartandevent .listenmore .top200listen >.material-icons {
+    position: absolute;
+    color: black;
+}
+
+/* 실시간 차트 옆 hot and new */
+#hot_and_new {
+    margin: 21px 0 9px;
+    width: 306px;
+    float: right;   
+}
+/* 에디터 추천 */
+.editor_recommend {
+    padding-top: 30px;
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#more_editor_recommend {
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 3px;
+    left: 50%;
+    margin-left: 360px;
 }
