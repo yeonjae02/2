@@ -212,13 +212,13 @@
    <!-- 헤더 바로 아래 최신음악 전시창 만들기 -->
    <div class="exhibititon">
        <div class="main_album">
-           <h2 id="recent-music"  style="font-weight: bolder;">최신음악</h2>
+           <h2  class="main_album_" id="recent-music"  style="font-weight: bolder;">최신음악</h2>
                 <ul class="exhibitionName">
                     <li id="name1" style="color: #0096ff;">종합</li>
                     <li id="name2">국내</li>
                     <li id="name3">국외</li> 
                 </ul>
-                <div class="morealbum1">1/5
+                <div class="morealbum1">1 / 5
                     <button type="button" id="morenewalbum">
                         <span class="material-icons">
                             arrow_back
@@ -254,7 +254,11 @@
             </table>
         </div>
     <!-- 광고부분 -->
-    <div class="ad"></div>
+    <div class="ad">
+        <div class="ad_contents">
+            <a><img src="./images/미니배너.jpg" alt="Mnet사전투표"></a>
+        </div>
+    </div>
     <!-- 실시간 차트 만들기 -->
     <div class="chartandevent">
         <div class="music_chart" id="chart_info">
@@ -561,16 +565,16 @@
                     <td>브를 느끼며 #캐시미어 블루</td>
                 </tr>
                 <tr>
-                    <td><img src="images/dj.PNG"> DJ 감또   선곡미리보기 <span class="material-icons-round">
+                    <td><img src="images/dj.PNG"> DJ 감또   선곡미리보기 <span class="material-icons">
                         expand_less
                         </span></td>
-                    <td><img src="images/dj.PNG"> DJ 자몽   선곡미리보기 <span class="material-icons-round">
+                    <td><img src="images/dj.PNG"> DJ 자몽   선곡미리보기 <span class="material-icons">
                         expand_less
                         </span></td>
-                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기 <span class="material-icons-round">
+                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기 <span class="material-icons">
                         expand_less
                         </span></td>
-                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기 <span class="material-icons-round">
+                    <td><img src="images/dj.PNG"> DJ 지니   선곡미리보기 <span class="material-icons">
                         expand_less
                         </span></td>
                 </tr> 
@@ -587,42 +591,78 @@
     </div>
     <!-- 지니TV 제작 -->
     <div class="genietv">
-        <h2>지니TV</h2>
-        <ul class="genietvkind">
-            <li style="color: #0096ff;">추천</li>
-            <li>HOT</li>
-            <li>Mnet방송</li>
+        <div class="tvmenu">
+            <h2>지니TV</h2>
+            <ul class="genietvkind">
+                <li style="color: #0096ff;">추천</li>
+                <li>HOT</li>
+                <li>Mnet방송</li>
+            </ul>
+        </div>
+        <ul class="genietvcontents"> 
+            <li><a>
+                <div class="tvthumbnail"><img src="./images/지니TV 뮤비1_수정.png"></div>
+                    <div class="tvinfo">
+                        <span class="music-time">03:32</span>
+                        <span class="category">뮤비</span>
+                        <div class="tvcontents">
+                            <a>
+                                <p class="tvcontents_title">김치 (Prod. by Loky Beatz) (Live Clip)</p>
+                            </a>
+                            <a>
+                                <span class="tvcontents_artist">가오가이 (kaogaii) & EUROKO PIZZA (유로코피자)</span>
+                            </a>
+                            
+                        </div>     
+                    </div>
+            </a></li>
+            <li><a>
+                <div class="tvthumbnail"><img src="./images/지니TV 뮤비2_수정.png"></div>
+                    <div class="tvinfo">
+                        <span class="music-time">04:21</span>
+                        <span class="category">뮤비</span>
+                        <div class="tvcontents">
+                            
+                            <a>
+                                <p class="tvcontents_title">자연스러운 만남 추구</p>
+                            </a>
+                            <a>
+                                <span class="tvcontents_artist">21학번</span>
+                            </a>
+                        </div>     
+                    </div>
+            </a></li>
+            <li><a>
+                <div class="tvthumbnail"><img src="./images/지니TV 티저1_수정.png"></div>
+                    <div class="tvinfo">
+                        <span class="music-time">00:25</span>
+                        <span class="category">티저</span>
+                        <div class="tvcontents">
+                            <a>
+                                <p class="tvcontents_title">LOVE SONG (Teaser)</p>
+                            </a>
+                            <a>
+                                <span class="tvcontents_artist">윤지성</span>
+                            </a>
+                        </div>     
+                    </div>
+            </a></li>
+            <li><a>
+                <div class="tvthumbnail"><img src="./images/지니TV 티저2_수정.png"></div>
+                    <div class="tvinfo">
+                        <span class="music-time">00:27</span>
+                        <span class="category">티저</span>
+                        <div class="tvcontents">
+                            <a>
+                                <p class="tvcontents_title">water color (Teaser 2)</p>
+                            </a>
+                            <a>
+                                <span class="tvcontents_artist">휘인 (Whee In)</span>
+                            </a>
+                        </div>     
+                    </div>
+            </a></li>
         </ul>
-        <tr>
-            <td><video class="tv" src="./"></video></td>
-            <td><video class="tv" src="./"></video></td>
-            <td><video class="tv" src="./"></video></td>
-            <td><video class="tv" src="./"></video></td>
-        </tr>
-        <tr>
-            <td>뮤비</td>
-            <td>뮤비</td>
-            <td>뮤비</td>
-            <td>뮤비</td>
-        </tr>
-        <tr>
-            <td>To Me</td>
-            <td>To Me</td>
-            <td>To Me</td>
-            <td>To Me</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>비오</td>
-            <td>비오</td>
-            <td>비오</td>
-            <td>비오</td>
-        </tr>
     </div>
     <!-- 푸터 제작 -->
     <footer>

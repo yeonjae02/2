@@ -43,6 +43,7 @@ header>.wrapper {
 a {
     text-decoration-line: none;
     color: black;
+    cursor: pointer;
 }
 /* .header-first에 효과주기 */
 header .header-first {
@@ -278,6 +279,20 @@ header .header-third .member .loginbox #login--list {
 .main_album {
     display: flex;
 }
+/* .morealbum1 전체 설정 */
+.morealbum1 {
+    margin-top: 15px;
+    margin-left: 610px;
+}
+/* .morealbum1 내 버튼 설정 */
+.main_album .morealbum1 button{
+    border: 1px solid #dde0e4 ;
+    background-color:white;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+}
+
 /* .main_album 내 최신음악 글자 효과주기 */
 #recent-music {
     display: inline-block;
@@ -326,6 +341,11 @@ header .header-third .member .loginbox #login--list {
     margin: 23px 0 0;
     background-color: #e8eef3;
 }
+/* 광고 내 컨텐츠 정렬 */
+.ad .ad_contents {
+    width: 980px;
+    margin: 0 auto;
+}
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandevent {
     width: 980px;
@@ -345,10 +365,11 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간차트 날짜 설정 */
 #date {
+    font-size: 12px;
     display: inline-block;
     top: 27px;
-    margin-top: 21px;
-    margin-left: 420px;
+    margin-top: 30px;
+    margin-left: 452px;
     right: 0;
     color: #8b8b8b;  
 }
@@ -476,14 +497,117 @@ header .header-third .member .loginbox #login--list {
 }
 /* 지니TV  */
 .genietv {
+    height: 308px;
+    width: 980px;
+    margin: 0 auto;
+}
+.genietv  .tvmenu {
+    display: flex;
+}
+/* 지니TV 옆 선택지 */
+.genietv .tvmenu .genietvkind {
+    padding-left: 20px;
+    display: flex;
+}
+/* 지니TV 내용 */
+.genietv .genietvcontents {
     width: 980px;
     margin: 0 auto;
     display: flex;
 }
-/* 지니TV 옆 선택지 */
-.genietvkind {
-    display: flex;
+/* 지니TV 표 */
+.genietvcontents li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 226px;
+    height: 254px;
+    margin: 0 6px;
 }
+/* 지니TV 내 컨텐츠 썸네일 적용 */
+.tvthumbnail {
+    border: 1px solid #e5e5e5;
+    overflow: hidden; 
+    width: 226px;
+    height: 127px;
+}
+/* 지니TV 내 컨텐츠 내용 적용 */
+.tvinfo {
+    position: relative;
+    width: 228px;
+    height: 127px;
+    padding: 15px 14px 0;
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+    box-sizing: border-box;
+}
+/* 지니TV 내 컨텐츠 내용 - 카테고리 적용 */
+.genietvcontents li .tvinfo .category {
+    display: inline-block;
+    overflow: hidden;
+    height: 13px;
+    margin: 0 4px 0 0;
+    padding: 1px 2px 0;
+    border: 1px solid #8b8b8b;
+    border-radius: 2px;
+    color: #8b8b8b;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 14px;
+    letter-spacing: -1px;
+    vertical-align: top;
+}
+/* 지니TV 내 컨텐츠 내용 - 제목 적용 */
+.tvcontes_title {
+    display: block;
+    padding-top: 6px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-wrap: break-word;
+    height: 33px;
+}
+/* 지니TV 내 컨텐츠 내용 - 아티스트 적용 */
+.tvcontents_artist {
+    display: block;
+    font-size: 12px;
+    position: relative;
+    line-height: 22px;
+    height: 24px;
+    position: absolute;
+    bottom: 13px;
+    left: 14px;
+    right: 14px;
+    color: #969697;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: auto;
+    /* display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+/* 지니TV 내 컨텐츠시간 */
+.music-time {
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: -19px;
+    height: 16px;
+    padding: 2px 6px 0 5px;
+    font-size: 11px;
+    background-color: #000;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+}
+/* footer 전체 설정 */
 .footer {
     display: flex;
     width: 980px;
@@ -495,6 +619,7 @@ header .header-third .member .loginbox #login--list {
     border-top: 1px solid #d2d2d2;
     border-bottom: 1px solid darkgray;
 }
+/* footer-first 내 noticeandservice 속성 */
 .noticeandservice {
     display: flex;
     width: 980px;
@@ -531,19 +656,24 @@ header .header-third .member .loginbox #login--list {
     height: 34px;
     background-image: url(./../images/btn_fb.png);
 }
+/* .footer-second 내 정보 옆 로고 설정 */
 .logo-company {
     display: block;
     background-image: url('./../images/geniemusiccmopany.png');
 }
+/* .footer-second 내 정보 설정 */
 .company-info1 {
     display: flex;
 }
+/* .footer-second 내 사업자정보확인  */
 #check-business-information {
     cursor: pointer;
 }
+/* .음악저작권 관련 */
 #musiccopyright {
     cursor: pointer;
 }
+/* 상장들 정렬 */
 .emblem1 , .emblem2 {
     display: flex;
 }
