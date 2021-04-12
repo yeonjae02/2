@@ -304,9 +304,13 @@ header .header-third .member .loginbox #login--list {
 }
 /* .main_album 내 종합 국내 국외 글자 전체 효과주기 */
 .main_album >ul {
+    cursor: pointer;
     display: flex;
     list-style-type: none;
     font-size: 14px;
+}
+.main_album_ {
+    cursor: pointer;
 }
 /* .main_album 내 종합 글자 효과주기 */
 #name1 {
@@ -383,21 +387,23 @@ header .header-third .member .loginbox #login--list {
     border-top: 1px solid darkgray;
     width: 608px;
     width: 100%;
-    margin: 4px 0 10px;
-    border-collapse: separate;
+    margin: 4px 0 0 0;
 }
 /* 실시간 차트 각 행 간 높이  */
 .musicChartContents  td{
     height: 39px;
 }
-/* 실시간 차트 내 첫 번쨰 행  */
+.musicChartContents  tr{
+    border-bottom: 1px solid #e8eef3;
+}
+/* 실시간 차트 내 첫 번째 행  */
 .musicChartContents thead {
     height: 0;
 }
 /* 실시간 차트 내 순위 */
 .chart_ranking {
+    display: block;
     font-size: 18px;
-    border-bottom: 1px solid #e8eef3;
     text-align: right;
     font-weight: bold;
     font-style: oblique;
@@ -405,33 +411,38 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
-    border-bottom: 1px solid #e8eef3;
     font-weight: bolder;
     font-size: 10px;
     width: 38px;
     text-align: center;
 }
+.chart_musicinfo {
+    display: flex;
+}
 /* 실시간 차트 내 노래 제목 */
 .chart_title {
-    border-bottom: 1px solid #e8eef3;
+    display: block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 14px;
-    width: 251px;
 }
 /* 실시간 차트 내 아티스트 */
 .chart_artist {
-    border-bottom: 1px solid #e8eef3;
-    width: 120px;
-    font-size: 14px;
+    width: 148px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 } 
 /* 실시간 차트 내 음악듣기 기능 */
 .chart_music_listen {
-    border-bottom: 1px solid #e8eef3;
     width: 33px;
     color:darkgrey;
 }
 /* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
-    border-bottom: 1px solid #e8eef3;
     width: 33px;
     justify-content: center;
     align-items: center;
@@ -439,23 +450,27 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
-    border-bottom: 1px solid #e8eef3;
     width: 42px;
     padding-right: 9px;
     color:darkgrey;
 }
+/* 실시간 차트 내 .material-icons 관련 */
 .chartandevent .music_chart .music_chart_list >.material-icons {
     position: absolute;
 }
 /* 실시간 차트 밑 음악 듣기 관련 기능 모음 */
 .listenmore{
     display: flex;
+    border-top: 1px solid darkgray;
+}
 
+/* 실시간 차트 밑 음악 듣기 관련 기능 속 표 */
+.listenmore_entire  td{
+    height: 39px; 
 }
 .chartandevent .listenmore .entire >button {
     color: black;
     background: white;
-    border: 1px solid darkgray;
     border-radius: 5px;
 }
 /* 전체듣기 및 전체담기 기능 속 아이콘  */
@@ -464,6 +479,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 밑 top200 음악 듣기 기능 */
 .top200listen {
+    cursor: pointer;
     margin-left: 250px;
 }
 /* top200 음악 듣기 기능 옆 아이콘 */
@@ -471,7 +487,6 @@ header .header-third .member .loginbox #login--list {
     position: absolute;
     color: black;
 }
-
 /* 실시간 차트 옆 hot and new */
 #hot_and_new {
     margin: 21px 0 9px;
@@ -493,7 +508,7 @@ header .header-third .member .loginbox #login--list {
     margin: 0 auto;
     border-radius: 3px;
     left: 50%;
-    margin-left: 360px;
+    margin-left: 400px;
 }
 /* 지니TV  */
 .genietv {
@@ -588,10 +603,6 @@ header .header-third .member .loginbox #login--list {
     white-space: nowrap;
     box-sizing: border-box;
     width: auto;
-    /* display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 /* 지니TV 내 컨텐츠시간 */
 .music-time {
@@ -615,6 +626,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* footer-first 전체 속성 */
 .footer-first {
+    height: 41px;
+    margin-top: 100px;
     cursor: pointer;
     border-top: 1px solid #d2d2d2;
     border-bottom: 1px solid darkgray;
@@ -624,6 +637,45 @@ header .header-third .member .loginbox #login--list {
     display: flex;
     width: 980px;
     margin: 0 auto;
+}
+/* 공지사항 */
+.notice {
+    font-size: 14px;
+    height: 21px;
+    width: 52px;
+    display: inline-block;
+    padding-top: 2px;
+}
+/* 첫 번째 공지사항 정렬 */
+.firstnotice {
+    padding-top: 2px;
+    display: inline-block;
+}
+/* 첫 번째 공지사항 글자 정렬 */
+.fisrtnoticecontents {
+    margin-left: 30px;
+    padding-top: 2px;
+    font-size: 14px;
+    width: 225px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#morenotice , #prenotice{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+#material-icons_f1 , #material-icons_f2 {
+    font-size: 12px;
+}
+.service {
+    font-size: 14px;
+    margin-left: 290px;
+}
+.service ul li {
+    margin: 0 3px 0 3px;
 }
 /* footer-first 내 more_service 속성 */
 .more_service {
@@ -635,12 +687,26 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
+#material-icons_f3 {
+    font-size: 16px;
+}
 /* 유튜브 가기 버튼 */
 #goyoutube {
+    margin-left: 4px;
     border: none;
     width: 34px;
     height: 34px;
     background-image: url(./../images/btn_youtube.png);
+}
+.use-related-information {
+    display: flex;
+}
+.relatedinfo {
+    margin-top: 20px;
+}
+.btncluster{
+    margin-left: 30px;
+    margin-top: 15px;
 }
 /* 네이버 블로그 가기 버튼 */
 #gonaverblog {
@@ -656,24 +722,53 @@ header .header-third .member .loginbox #login--list {
     height: 34px;
     background-image: url(./../images/btn_fb.png);
 }
-/* .footer-second 내 정보 옆 로고 설정 */
+/* 푸터 내 회사 로고 */
 .logo-company {
-    display: block;
-    background-image: url('./../images/geniemusiccmopany.png');
+    margin-top: 40px;
 }
-/* .footer-second 내 정보 설정 */
+/* 회사 로고 옆 회사 정보 */
+.company-info {
+    display: flex;
+}
+/* .footer-second 내 정보1 설정 */
 .company-info1 {
     display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* .footer-second 내 정보2 설정 */
+.company-info2 {
+    display: flex;
+    margin-left: 20px;
+}
+/* .footer-second 내 정보3 설정 */
+.company-info3 {
+    display: flex;
+    margin-left: 20px;
 }
 /* .footer-second 내 사업자정보확인  */
 #check-business-information {
+    margin-top: 2x;
     cursor: pointer;
+}
+/* 사업자정보확인 옆 아이콘 크기 조정 */
+#material-icons_f4 {
+    font-size: 10px;
+    margin-top: 1px;
 }
 /* .음악저작권 관련 */
 #musiccopyright {
     cursor: pointer;
 }
+/* 전체 상장들 정렬 */
+.list-emblem {
+    margin-top: 20px;
+}
 /* 상장들 정렬 */
 .emblem1 , .emblem2 {
     display: flex;
+}
+/* 아랫단 상장 개별 정렬 */
+.emblem2 {
+    margin-top :10px
 }
