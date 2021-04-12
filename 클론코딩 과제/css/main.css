@@ -121,6 +121,7 @@ header .header-second{
 }
 header .header-second .search>.material-icons {
     color: #0096ff;
+    font-size: 40px;
 }
 /* 검색창 효과주기 */
 .search{
@@ -516,13 +517,33 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
+/* 지니TV 전체 선택지 */
 .genietv  .tvmenu {
     display: flex;
+    margin-bottom: 10px;
+}
+#titlegenietv {
+    font-weight: 800;
+    font-size: 20px;
 }
 /* 지니TV 옆 선택지 */
 .genietv .tvmenu .genietvkind {
+    padding-top: 8px;
     padding-left: 20px;
     display: flex;
+}
+#genietvrecomm {
+    font-size: 12px;
+}
+/* 지니TV 옆 선택지 속 hot선택지 */
+#tvmenuHOT {
+    font-size: 12px;
+    margin-left: 20px;
+}
+/* 지니TV 옆 선택지 속 hot선택지 */
+#mnetbrod {
+    font-size: 12px;
+    margin-left: 20px;
 }
 /* 지니TV 내용 */
 .genietv .genietvcontents {
@@ -634,25 +655,28 @@ header .header-third .member .loginbox #login--list {
 }
 /* footer-first 내 noticeandservice 속성 */
 .noticeandservice {
+    height: 41px;
     display: flex;
     width: 980px;
     margin: 0 auto;
 }
 /* 공지사항 */
 .notice {
+    height: 41px;
     font-size: 14px;
-    height: 21px;
     width: 52px;
     display: inline-block;
     padding-top: 2px;
 }
 /* 첫 번째 공지사항 정렬 */
 .firstnotice {
+    height: 41px;
     padding-top: 2px;
     display: inline-block;
 }
 /* 첫 번째 공지사항 글자 정렬 */
-.fisrtnoticecontents {
+#fisrtnoticecontents {
+    height: 41px;
     margin-left: 30px;
     padding-top: 2px;
     font-size: 14px;
@@ -666,15 +690,25 @@ header .header-third .member .loginbox #login--list {
     width: 20px;
     height: 20px;
     border-radius: 2px;
+    background: white;
 }
 #material-icons_f1 , #material-icons_f2 {
     font-size: 12px;
+    background-color: none;
+}
+#material-icons_f1 {
+    margin-left: -5px;
+}
+#material-icons_f2 {
+    margin-left: -2px;
 }
 .service {
+    height: 41px;
     font-size: 14px;
     margin-left: 290px;
 }
 .service ul li {
+    height: 41px;
     margin: 0 3px 0 3px;
 }
 /* footer-first 내 more_service 속성 */

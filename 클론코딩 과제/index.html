@@ -67,7 +67,7 @@
                     </div>
                     <div class="search">
                         <input id="search_box" placeholder="하이틴 재질 팝송 추천" /> 
-                        <span class="material-icons">
+                        <span class="material-icons" id="material-icons_h1">
                             search
                         </span>
                     </div>
@@ -615,11 +615,11 @@
     <!-- 지니TV 제작 -->
     <div class="genietv">
         <div class="tvmenu">
-            <h2>지니TV</h2>
+            <h2 id="titlegenietv">지니TV</h2>
             <ul class="genietvkind">
-                <li style="color: #0096ff;">추천</li>
-                <li>HOT</li>
-                <li>Mnet방송</li>
+                <li id="genietvrecomm" style="color: #0096ff;">추천</li>
+                <li id="tvmenuHOT">HOT</li>
+                <li id= "mnetbrod">Mnet방송</li>
             </ul>
         </div>
         <ul class="genietvcontents"> 
@@ -692,9 +692,9 @@
         <!-- 푸터의 첫 번째 파트 -->
         <div class="footer-first">
             <div class="noticeandservice">
-                <div class="notice"><a>공지사항</a></div>
+                <div class="notice"><a class="footer-first-contents">공지사항</a></div>
                 <div class="fiststnotice">
-                    <a class="fisrtnoticecontents">올해 가장 기대되는 소띠 아티스트 1위 방탄소년단 정국 스페셜 페이지</a>
+                    <a class="footer-first-contents" id="fisrtnoticecontents">올해 가장 기대되는 소띠 아티스트 1위 방탄소년단 정국 스페셜 페이지</a>
                 </div>
                 <div class="button_2">
                     <button type="button" id="morenotice">
@@ -710,10 +710,10 @@
                 </div>
                 <div class="service">
                     <ul class="more_service">
-                        <li><a>이벤트</a></li>
-                        <li><a>고객센터</a></li>
-                        <li><a>이용안내</a></li>
-                        <li><a style="font-weight: bold;">서비스 전체보기</a>
+                        <li><a class="footer-first-contents">이벤트</a></li>
+                        <li><a class="footer-first-contents">고객센터</a></li>
+                        <li><a class="footer-first-contents">이용안내</a></li>
+                        <li><a class="footer-first-contents" style="font-weight: bold;">서비스 전체보기</a>
                         <span class="material-icons" id="material-icons_f3">
                             navigate_next
                         </span>
