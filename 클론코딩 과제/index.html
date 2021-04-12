@@ -70,7 +70,6 @@
                         <span class="material-icons">
                             search
                         </span>
-                        <!-- <img src="./images/hd. search.png" alt ="검색창"> -->
                     </div>
                 </div>
                 <!-- 헤더 세 번째 파트 만들기 -->
@@ -209,6 +208,7 @@
                 </div>
             </div>
    </header>
+   <!-- 헤더 제작 완료 -->
    <!-- 헤더 바로 아래 최신음악 전시창 만들기 -->
    <div class="exhibititon">
        <div class="main_album">
@@ -219,24 +219,28 @@
                     <li id="name3">국외</li> 
                 </ul>
                 <div class="morealbum1">1/5
-                    <span class="material-icons-round">
-                        arrow_back
-                        </span>
-                    <span class="material-icons-round">
-                        arrow_forward
-                        </span>
+                    <button type="button" id="morenewalbum">
+                        <span class="material-icons">
+                            arrow_back
+                            </span> 
+                    </button>
+                    <button type="button" id="prenewalbum">
+                        <span class="material-icons">
+                            arrow_forward
+                            </span>
+                    </button>   
                 </div>
         </div>
         <div class="album"></div>
             <table class="comprehensive_album">
                 <tbody>
                 <tr>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
-                <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
+                    <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
                 </tr>
                 <tr>
                     <td class="albumexhibiton"><img src="./images/뎁트.PNG" alt="앨범커버"></td>
@@ -447,14 +451,15 @@
                     </div>
                     <div class="top200listen">
                         TOP200 바로가기
-                        <span class="material-icons-outlined">
+                        <span class="material-icons">
                             chevron_right
-                            </span>
+                        </span>
                     </div>
                 </div>
                 
             </div>
         </div>
+        <!-- 실시간차트 옆 hot and new 제작 -->
         <div class="hotandnew" id="hot_and_new">
             <h2>HOT AND NEW</h2>
             <table>
@@ -487,6 +492,7 @@
                 </table>
         </div>
     </div>
+    <!-- 에디터 추천 -->
     <div class="editor_recommend">
         <table>
             <caption style="text-align: left;">
@@ -573,16 +579,17 @@
         <div id="more_editor_recommend">
             <button type="button" id="morecontents">
                 컨텐츠 더보기
-                <span class="material-icons-outlined">
+                <span class="material-icons">
                     expand_more
-                    </span>
+                </span>
             </button>
         </div>
     </div>
-    <div class="genieTV">
+    <!-- 지니TV 제작 -->
+    <div class="genietv">
         <h2>지니TV</h2>
-        <ul class="genietvetc">
-            <li>추천</li>
+        <ul class="genietvkind">
+            <li style="color: #0096ff;">추천</li>
             <li>HOT</li>
             <li>Mnet방송</li>
         </ul>
@@ -617,8 +624,103 @@
             <td>비오</td>
         </tr>
     </div>
+    <!-- 푸터 제작 -->
     <footer>
-        <div>공지사항</div>
+        <!-- 푸터의 첫 번째 파트 -->
+        <div class="footer-first">
+            <div class="noticeandservice">
+                <div class="notice"><a>공지사항</a></div>
+                <div><a>올해 가장 기대되는 소띠 아티스트 1위 방탄소년단 정국 스페셜 페이지</a></div>
+                <button type="button" id="morenotice">
+                    <span class="material-icons">
+                        chevron_left
+                    </span>
+                </button>
+                <button type="button" id="prenotice">
+                    <span class="material-icons">
+                        chevron_right
+                    </span>
+                </button>
+                <div class="service">
+                    <ul class="more_service">
+                        <li><a>이벤트</a></li>
+                        <li><a>고객센터</a></li>
+                        <li><a>이용안내</a></li>
+                        <li><a>서비스 전체보기</a>
+                        <span class="material-icons">
+                            navigate_next
+                        </span>
+                        </li>
+                    </ul>
+                </div>   
+            </div> 
+        </div>
+        <!-- 푸터의 두 번쨰 파트 제작 -->
+        <footer class="footer-second">
+            <div class="use-related-information">
+                <a>회사 소개</a>
+                <span class="divisionline">ㅣ</span>
+                <a>이용약관</a>
+                <span class="divisionline">ㅣ</span>
+                <a style="font-weight: bold;">개인정보처리방침</a>
+                <span class="divisionline">ㅣ</span>
+                <a>청소년보호정책</a>
+                <span class="divisionline">ㅣ</span>
+                <a>위치기반 서비스 이용약관</a>
+                <span class="divisionline">ㅣ</span>
+                <a>이메일주소무단수집거부</a>
+                <span class="divisionline">ㅣ</span>
+                <a>서비스 이용문의</a>
+                <span class="divisionline">ㅣ</span>
+                <a>제휴문의</a>
+                <button type="button" id="goyoutube"></button>
+                <button type="button" id="gonaverblog"></button>
+                <button type="button" id="gofacebook"></button>
+            </div>
+            <div class="company-info">
+                <h3 class="logo-company"></h3>
+                <dl class="company-info1">
+                    <span>대표이사 조훈
+                        <span class="divisionline">ㅣ</span>
+                    </span>
+                    <span>서울 강남구 테헤란로415 (L7HOTELS강남타워 6,7,8층)</span>
+                        <span class="divisionline">ㅣ</span>
+                    <span>사업자등록번호 314-81-03453</span>
+                        <span class="divisionline">ㅣ</span>
+                    <span>통신판매일신고 2013-서울강남-01302</span>
+                </dl>
+                <dl class="company-info2">
+                    <span>개인정보관리책임자 김태훈 본부장</span>
+                        <span class="divisionline">ㅣ</span>
+                    <span>문의전화 1577-5337</span>
+                    <a style="font-weight: bold;" id="check-business-information">사업자정보확인
+                        <span class="material-icons">
+                            navigate_next
+                        </span></a>
+                        <span class="divisionline">ㅣ</span>
+                    <span>호스팅 제공자: (주)지니뮤직</span>
+                        <span class="divisionline">ㅣ</span>
+                </dl>
+                <dl class="company-info3">
+                    <span>COPYRIGHTⓒGENIE MUSIC CORP ALL RIGHTS RESERVED.</span>
+                </dl>
+            </div>
+            <!-- 푸터 맨 아래의 엠블럼 표시 부분 제작 -->
+            <div class="list-emblem">
+                <ul class="emblem1">
+                    <li id="muisccopyright"><img src="./images/음악저작권이용허락인증.png" alt="음악저작권이용허락인증"><a></a></li>
+                    <li><img src="./images/저작권ok.png" alt="저작권ok"></li>
+                    <li><img src="./images/2016amoawards.png" alt="2016AMOAwards Best Mobile Music App" ></li>
+                    <li><img src="./images/소비자가 뽑은 한국의 영향력 있는 브랜드대상.png" alt="소비자가뽑은한국의영향력있는브랜드대상"></li>
+                    <li><img src="./images/2018고객사랑브랜드대상.png" alt="2018고객사랑브랜드대상"></li>
+                </ul>
+                <ul class="emblem2">
+                    <li><img src="./images/2017소비자의선택.png" alt="2017소비자의선택"></li>
+                    <li><img src="./images/2016소비자가선정한품질만족대상.png" alt="2016소비자가선정한품질만족대상"></li>
+                    <li><img src="./images/유무선음악포털서비스운영.png" alt="유무선음악포털서비스운영"></li>
+                </ul>
+            </div>
+        </footer>
     </footer>
 </body>
 </html>

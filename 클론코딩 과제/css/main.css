@@ -464,6 +464,7 @@ header .header-third .member .loginbox #login--list {
     margin: 0 auto;
     overflow: hidden;
 }
+/* 에디터 추천 밑에 있는 버튼 */
 #more_editor_recommend {
     padding-top: 30px;
     align-items: center;
@@ -473,6 +474,76 @@ header .header-third .member .loginbox #login--list {
     left: 50%;
     margin-left: 360px;
 }
-.genietvetc {
+/* 지니TV  */
+.genietv {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+}
+/* 지니TV 옆 선택지 */
+.genietvkind {
+    display: flex;
+}
+.footer {
+    display: flex;
+    width: 980px;
+    margin: 0 auto; 
+}
+/* footer-first 전체 속성 */
+.footer-first {
+    cursor: pointer;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid darkgray;
+}
+.noticeandservice {
+    display: flex;
+    width: 980px;
+    margin: 0 auto;
+}
+/* footer-first 내 more_service 속성 */
+.more_service {
+    display: flex;
+}
+/* footer-second 전체 속성 */
+.footer-second {
+    font-size: 12px;
+    width: 980px;
+    margin: 0 auto;
+}
+/* 유튜브 가기 버튼 */
+#goyoutube {
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url(./../images/btn_youtube.png);
+}
+/* 네이버 블로그 가기 버튼 */
+#gonaverblog {
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url(./../images/btn_blog.png);
+}
+/* 페이스북 가기 버튼 */
+#gofacebook {
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url(./../images/btn_fb.png);
+}
+.logo-company {
+    display: block;
+    background-image: url('./../images/geniemusiccmopany.png');
+}
+.company-info1 {
+    display: flex;
+}
+#check-business-information {
+    cursor: pointer;
+}
+#musiccopyright {
+    cursor: pointer;
+}
+.emblem1 , .emblem2 {
     display: flex;
 }
