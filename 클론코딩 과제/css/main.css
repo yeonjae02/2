@@ -202,7 +202,7 @@ header .header-third>ul {
 header .header-third ul.main li.menu .sub_menu {
     display: none;
 }
-/* 세 번쨰 헤더의 메뉴에 hober했을 때 */
+/* 세 번째 헤더의 메뉴에 hober했을 때 */
 header .header-third ul.main li.menu:hover .sub_menu {
     display: block;
 }
@@ -346,8 +346,31 @@ header .header-third .member .loginbox #login--list {
     margin: 23px 0 0;
     background-color: #e8eef3;
 }
+/* 광고 rolling 창 각각 광고마다 정렬 */
+#banner2 {
+    display: none;
+}
+#banner3 {
+    display: none;
+}
+#banner4 {
+    display: none;
+}
+#banner5 {
+    display: none;
+}
+#banner6 {
+    display: none;
+}
+#banner7 {
+    display: none;
+}
+#banner8 {
+    display: none;
+}
 /* 광고 내 컨텐츠 정렬 */
-.ad .ad_contents {
+.ad_contents {
+    display: flex;
     width: 980px;
     margin: 0 auto;
 }
@@ -408,10 +431,11 @@ header .header-third .member .loginbox #login--list {
     text-align: right;
     font-weight: bold;
     font-style: oblique;
-    width: 35px;
+    width: 30px;
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
+    padding-left: 10px;
     font-weight: bolder;
     font-size: 10px;
     width: 38px;
@@ -422,16 +446,20 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 내 노래 제목 */
 .chart_title {
+    padding-left: 10px;
+    padding-right: 80px;
+    font-size: 13.5px;
     display: block;
-    width: 250px;
+    width: 252px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 14px;
 }
 /* 실시간 차트 내 아티스트 */
 .chart_artist {
-    width: 148px;
+    color: rgb(136, 133, 133);
+    font-size: 13.5px;
+    width: 120px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -439,19 +467,17 @@ header .header-third .member .loginbox #login--list {
 } 
 /* 실시간 차트 내 음악듣기 기능 */
 .chart_music_listen {
-    width: 33px;
+    font-size: 33px;
     color:darkgrey;
 }
 /* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
-    width: 33px;
     justify-content: center;
     align-items: center;
     color:darkgrey;
 }
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
-    width: 42px;
     padding-right: 9px;
     color:darkgrey;
 }
@@ -494,6 +520,16 @@ header .header-third .member .loginbox #login--list {
     width: 306px;
     float: right;   
 }
+/* 에디터 추천 제목 */
+#er {
+    font-weight: 800;
+    font-size: 20px;
+    display: inline-block;
+    margin: 15px 0 15px;
+    color: #27282d;
+    vertical-align: baseline;
+    padding-left: 6px;
+}
 /* 에디터 추천 */
 .editor_recommend {
     padding-top: 30px;
@@ -501,15 +537,118 @@ header .header-third .member .loginbox #login--list {
     margin: 0 auto;
     overflow: hidden;
 }
+/* 에디터 추천 2단 단체 정렬 */
+.editiorRecommendContents_1 , .editiorRecommendContents_2 {
+    display: flex;
+}
+/* 에디터 추천 1번째 줄 */
+.editiorRecommendContents_1 li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 224px;
+    height: 276px;
+    margin: 0 7px 13px 6px;
+}
+/* 에디터 추천 2번째 줄 */
+.editiorRecommendContents_2 li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 224px;
+    height: 276px;
+    margin: 0 7px 13px 6px;
+}
+#material-icons_ed1, #material-icons_ed2, #material-icons_ed3, #material-icons_ed4 {
+    font-size: 14px;
+    color: darkgray;
+}
+/* 에디터 추천 사진 */
+.er_photo {
+    border: 1px solid #e5e5e5;
+    position: relative;
+    width: 100%;
+    height: 147px;
+}
+/* 에디터 추천 이벤트 */
+.er_ci_event {
+    position: absolute;
+    top: 131px;
+    left: 0;
+    line-height: 15px;
+    background-color: #ff5b62;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 3px 0;
+    display: inline-block;
+}
+/* 에디터 추천 사진 제외 */
+.er_ci {
+    position: relative;
+    width: 228px;
+    height: 127px;
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+    box-sizing: border-box;
+    padding: 18px  0;
+    padding-left: 2px;
+}
+/* 에디터 추천 카테고리 */
+.er_ci_category {
+    padding-left: 10px;
+    font-size: 11px;
+    color: #969697;
+}
+/* 에디터 추천 내용 */
+.er_ci_title {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em;
+    height: 2.4em;
+}
+/* 에디터 추천 하단 부제 */
+.er_ci_subci {
+    display: flex;
+    margin-top: 12px;
+    position: absolute;
+    left: 0;
+    padding: 0 13px;
+    font-size: 11px;
+    color: #969697;
+}
+/* 에디터 추천 하단 부제 내 왼쪽 정렬 */
+.er_ci_subci_left {
+    display: flex;
+}
+/* 에디터 추천 하단 부제 내 오른쪽 정렬 */
+.er_ci_subci_right {
+    margin-left: 45px;
+}
 /* 에디터 추천 밑에 있는 버튼 */
-#more_editor_recommend {
-    padding-top: 30px;
+#morecontents {
+    border-color: none;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     border-radius: 3px;
     left: 50%;
     margin-left: 400px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+/* dj 뱃지 */
+.djicon {
+    margin-right: 10px;
+}
+/* 컨텐츠 더 보기 아이콘 */
+#material-icons_ed5 {
+    font-size: 20px;
 }
 /* 지니TV  */
 .genietv {
@@ -522,6 +661,7 @@ header .header-third .member .loginbox #login--list {
     display: flex;
     margin-bottom: 10px;
 }
+/* 지니TV 제목 */
 #titlegenietv {
     font-weight: 800;
     font-size: 20px;
