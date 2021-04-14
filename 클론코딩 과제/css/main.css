@@ -172,6 +172,7 @@ header .header-third>ul {
 .menu_title_lm {
     width: 99px;
     height: 38px;
+
 }
 /* 세 번째 헤더 내 장르음악 크기조정 */
 .menu_title_gm {
@@ -187,6 +188,7 @@ header .header-third>ul {
 .menu_title_rm {
     width: 63px;
     height: 38px;
+    z-index: 6;
 }
 /* 세 번째 헤더 내 매거진 크기조정 */
 .menu_title_mz {
@@ -212,6 +214,7 @@ header .header-third ul.main .contents {
 }
 /* menu에 hover 했을 때 */
 header .header-third ul.main .contents:hover {
+    z-index: 2;
     color: #0096ff;
 }
 
@@ -293,7 +296,6 @@ header .header-third .member .loginbox #login--list {
     height: 30px;
     width: 30px;
 }
-
 /* .main_album 내 최신음악 글자 효과주기 */
 #recent-music {
     display: inline-block;
@@ -310,6 +312,7 @@ header .header-third .member .loginbox #login--list {
     list-style-type: none;
     font-size: 14px;
 }
+/*main_album  */
 .main_album_ {
     cursor: pointer;
 }
@@ -321,21 +324,42 @@ header .header-third .member .loginbox #login--list {
 #name2 {
     padding-right: 15px;
 }
+/* 국내 국외 리스트 */
 .main_album >ul {
     margin: 23px 0 0 10px;
 }
 /* 각 앨범별 테두리 설정 */
 .albumexhibiton {
-    padding: 2px;
-    border: #27282d;
+    margin-left: 3px;
+    border: 1px solid  #e8eef3;
 }
-/* 국내  클릭 시 등장하는 앨범들 */
-.exhibititon .album .internal_album {
-    display: none;
+/* 최신앨범- 종합 전체   */
+.comprehensive_album {
+    width: 980px;
+    margin: 0 auto;
 }
-/* 국외 클릭 시 등장하는 앨범들 */
-.exhibititon .album .exteral_album {
-    display: none;
+.caphoto {
+    position: relative;
+}
+.ca1 , .ca2 {
+    box-sizing: border-box;
+    margin-left: 2px;
+    width: 151px;
+    margin-right: 2px;
+    height: 153px;
+}
+/* 최신앨범-종합 1단 */
+.ca1 {
+    display: flex;
+    margin-bottom: 5px;
+}
+/* 최신앨범-종합 2단 */
+.ca2 {
+    display: flex;
+}
+.caartist {
+    position: absolute;
+    top: 460px;
 }
 /* 광고창 */
 .ad {
@@ -343,7 +367,8 @@ header .header-third .member .loginbox #login--list {
     overflow: hidden;
     width: 100%;
     height: 104px;
-    margin: 23px 0 0;
+    margin-top: 23px;
+    margin-bottom: 30px;
     background-color: #e8eef3;
 }
 /* 광고 rolling 창 각각 광고마다 정렬 */
@@ -387,8 +412,8 @@ header .header-third .member .loginbox #login--list {
 /* 실시간차트 제목 설정 */
 #chartName {
     font-weight: bold;
-    font-size: 18x;
-    top: 27px;
+    font-size: 20px;
+    top: 25px;
     margin: 21px 0 9px;
 }
 /* 실시간차트 날짜 설정 */
@@ -397,37 +422,33 @@ header .header-third .member .loginbox #login--list {
     display: inline-block;
     top: 27px;
     margin-top: 30px;
-    margin-left: 452px;
+    margin-left: 430px;
     right: 0;
     color: #8b8b8b;  
 }
 /* 실시간 차트 전체 설정 */
 #chart_info, #chart_contents {
-    width: 608px;
+    height: 527px;
+    width: 610px;
     float: left;
 }
 /* 실시간차트표 세부설정 */
 .musicChartContents {
     border-top: 1px solid darkgray;
     width: 608px;
-    width: 100%;
-    margin: 4px 0 0 0;
-}
-/* 실시간 차트 각 행 간 높이  */
-.musicChartContents  td{
-    height: 39px;
 }
 .musicChartContents  tr{
     border-bottom: 1px solid #e8eef3;
 }
 /* 실시간 차트 내 첫 번째 행  */
 .musicChartContents thead {
-    height: 0;
+    display: none;
 }
 /* 실시간 차트 내 순위 */
 .chart_ranking {
-    display: block;
-    font-size: 18px;
+    vertical-align: middle;
+    align-content: center;
+    font-size: 13px;
     text-align: right;
     font-weight: bold;
     font-style: oblique;
@@ -435,28 +456,37 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
+    vertical-align: middle;
     padding-left: 10px;
     font-weight: bolder;
     font-size: 10px;
     width: 38px;
     text-align: center;
 }
+/* 차트 속 곡명과 아티스트 명 배열 */
 .chart_musicinfo {
     display: flex;
 }
+.chartandevent .music_chart .music_chart_list .musicChartContents tr {
+    height: 45.3px;
+}
+td .chart_ranking {
+    height: 39px;
+}
 /* 실시간 차트 내 노래 제목 */
 .chart_title {
+    width: 200px;
     padding-left: 10px;
-    padding-right: 80px;
+    padding-right: 50px;
     font-size: 13.5px;
     display: block;
-    width: 252px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 /* 실시간 차트 내 아티스트 */
 .chart_artist {
+    padding-top: 2px;
     color: rgb(136, 133, 133);
     font-size: 13.5px;
     width: 120px;
@@ -467,33 +497,34 @@ header .header-third .member .loginbox #login--list {
 } 
 /* 실시간 차트 내 음악듣기 기능 */
 .chart_music_listen {
-    font-size: 33px;
+    font-size: 2px;
     color:darkgrey;
 }
 /* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
+    font-size: 2px;
     justify-content: center;
     align-items: center;
     color:darkgrey;
 }
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
+    font-size: 5px;
     padding-right: 9px;
     color:darkgrey;
 }
-/* 실시간 차트 내 .material-icons 관련 */
+/* 실시간 차트 내 .material-icons 관련*/
 .chartandevent .music_chart .music_chart_list >.material-icons {
     position: absolute;
-}
+} 
 /* 실시간 차트 밑 음악 듣기 관련 기능 모음 */
 .listenmore{
     display: flex;
     border-top: 1px solid darkgray;
 }
-
 /* 실시간 차트 밑 음악 듣기 관련 기능 속 표 */
 .listenmore_entire  td{
-    height: 39px; 
+    height: 12px; 
 }
 .chartandevent .listenmore .entire >button {
     color: black;
@@ -515,10 +546,74 @@ header .header-third .member .loginbox #login--list {
     color: black;
 }
 /* 실시간 차트 옆 hot and new */
-#hot_and_new {
-    margin: 21px 0 9px;
+/* #hot_and_new {
+    font-weight: bold;
+    font-size: 20px;
+    top: 20px;
+    margin: 20px 0 2px;
     width: 306px;
     float: right;   
+} */
+#hot_and_new {
+    width: 308px;
+    font-weight: bold;
+    font-size: 20px;
+    top: 20px;
+    margin: 20px 0 2px;
+    float: right;
+}
+/* hot and new 상단 첫번째 그림 */
+#hanf1 {
+    margin-top: 10px;
+}
+/* hot and new 상단 scroll 그림 처리 */
+#hanf2, #hanf3, #hanf4, #hanf5 {
+    display: none;
+} 
+/* hot and new 2번째 표 정리 */
+.han_s_ul {
+    display: block;
+    position: relative;
+}
+/* hot and new 2번째 표 내 사진 정리 */
+.hansphoto {
+    margin-top: 15px;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #000;
+}
+/* hot and new 2번째 표 내 줄 정리 */
+.han_s_ul li {
+    height: 90px;
+}
+/* hot and new 2번째 표 내 컨텐츠 정리 */
+.han_s_ulcontents {
+    display: flex;
+    border-bottom: 1px solid #dedede;
+}
+/* hot and new 표 내 정보 정리 */
+.hanscategory, .hansalbumtitle {
+    font-size: 12px;
+    font-weight: bold;
+}
+/* hot and new 표 내 정보 정리 */
+.hansinfo {
+    display: block;
+    position: relative;
+    height: 69px;
+    padding: 10px 20px 0 20px;
+}
+/* hot and new 앨범 카테고리 정리 */
+.hanscategory {
+    margin-top: 12px;
+}
+/* hot and new 정보 내 앨범 정리 */
+.hansalbumtitle {
+    margin-top: 5px;
+}
+/* hot and new 정보  내 아티스트 정리 */
+.hansartist {
+    font-size: 12px;
 }
 /* 에디터 추천 제목 */
 #er {
@@ -532,7 +627,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 에디터 추천 */
 .editor_recommend {
-    padding-top: 30px;
+    padding-top: 50px;
     width: 980px;
     margin: 0 auto;
     overflow: hidden;
