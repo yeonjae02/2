@@ -338,8 +338,10 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
-.caphoto {
-    position: relative;
+#material-icons_e1, #material-icons_e2 {
+    font-weight: bolder;
+    font-size: 15px;
+    vertical-align: middle;
 }
 .ca1 , .ca2 {
     box-sizing: border-box;
@@ -466,6 +468,8 @@ header .header-third .member .loginbox #login--list {
 /* 차트 속 곡명과 아티스트 명 배열 */
 .chart_musicinfo {
     display: flex;
+    vertical-align: middle;
+    margin-top: 10px;
 }
 .chartandevent .music_chart .music_chart_list .musicChartContents tr {
     height: 45.3px;
@@ -475,9 +479,8 @@ td .chart_ranking {
 }
 /* 실시간 차트 내 노래 제목 */
 .chart_title {
-    width: 200px;
-    padding-left: 10px;
-    padding-right: 50px;
+    width: 250px;
+    padding-right: 70px;
     font-size: 13.5px;
     display: block;
     white-space: nowrap;
@@ -497,11 +500,13 @@ td .chart_ranking {
 } 
 /* 실시간 차트 내 음악듣기 기능 */
 .chart_music_listen {
+    vertical-align: middle;
     font-size: 2px;
     color:darkgrey;
 }
 /* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
+    vertical-align: middle;
     font-size: 2px;
     justify-content: center;
     align-items: center;
@@ -509,6 +514,7 @@ td .chart_ranking {
 }
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
+    vertical-align: middle;
     font-size: 5px;
     padding-right: 9px;
     color:darkgrey;
@@ -524,36 +530,60 @@ td .chart_ranking {
 }
 /* 실시간 차트 밑 음악 듣기 관련 기능 속 표 */
 .listenmore_entire  td{
-    height: 12px; 
+    height: 14px; 
 }
 .chartandevent .listenmore .entire >button {
     color: black;
     background: white;
-    border-radius: 5px;
+    border-radius: 15px;
 }
-/* 전체듣기 및 전체담기 기능 속 아이콘  */
-.chartandevent .listenmore .entire >.material-icons {
-    position: absolute;
+/*실시간 차트 아래 전체듣기 전체추가 버튼  */
+#musicentirelisten, #musicentireadd {
+    width: 78px;
+    height: 24px;
+    margin-right: 1px;
+    padding: 0 2px 0 2px;
+    border: 1px solid #a6afb6;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 23px;
+    color: #27282d;
+}
+#musicentirelisten {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* 실시간 차트 아래 전체듣기 전체추가 버튼 속 아이콘 */
+#material-icons_c1, #material-icons_c2 {
+    vertical-align: middle;
+    font-size: 15px;
 }
 /* 실시간 차트 밑 top200 음악 듣기 기능 */
 .top200listen {
+    vertical-align: middle;
+    font-size: 14px;
     cursor: pointer;
-    margin-left: 250px;
+    margin-left: 290px;
 }
 /* top200 음악 듣기 기능 옆 아이콘 */
 .chartandevent .listenmore .top200listen >.material-icons {
     position: absolute;
     color: black;
+    vertical-align: middle;
+
 }
-/* 실시간 차트 옆 hot and new */
-/* #hot_and_new {
-    font-weight: bold;
-    font-size: 20px;
-    top: 20px;
-    margin: 20px 0 2px;
-    width: 306px;
-    float: right;   
+/* sub-menu를 hover하기 전 내부 표 상태
+header .header-third ul.main li.menu .sub_menu>ul li {
+    padding: 6px 6px;
+    text-align: start;
+}
+sub-menu를 hover한 후 내부 표 상태
+header .header-third ul.main li.menu .sub_menu>ul li:hover {
+    padding: 6px 6px;
+    background: #f1f1ee;
+    text-align: start;
 } */
+/* .chartandevent .music_chart .music_chart_list .musicChartContents  .chartChart */
 #hot_and_new {
     width: 308px;
     font-weight: bold;
@@ -744,6 +774,7 @@ td .chart_ranking {
 /* 컨텐츠 더 보기 아이콘 */
 #material-icons_ed5 {
     font-size: 20px;
+    vertical-align: middle;
 }
 /* 지니TV  */
 .genietv {
@@ -900,20 +931,20 @@ td .chart_ranking {
     height: 41px;
     font-size: 14px;
     width: 52px;
-    display: inline-block;
-    padding-top: 2px;
+    /* display: inline-block; */;
+    padding-top: 10px;
 }
 /* 첫 번째 공지사항 정렬 */
 .firstnotice {
     height: 41px;
-    padding-top: 2px;
+    padding-top: 10px;
     display: inline-block;
 }
 /* 첫 번째 공지사항 글자 정렬 */
 #fisrtnoticecontents {
+    padding-top: 10px;
     height: 41px;
     margin-left: 30px;
-    padding-top: 2px;
     font-size: 14px;
     width: 225px;
     display: block;
@@ -921,23 +952,32 @@ td .chart_ranking {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#morenotice , #prenotice{
+#morenotice1, #morenotice2 {
+    margin-left: 10px;
+    border: 0.1px solid #aab1b8;
+    margin-top: 10px;
+    vertical-align: middle;
     width: 20px;
     height: 20px;
     border-radius: 2px;
     background: white;
 }
+#morenotice2 {
+    margin-left: -5px;
+}
 #material-icons_f1 , #material-icons_f2 {
+    vertical-align: middle;
     font-size: 12px;
     background-color: none;
 }
 #material-icons_f1 {
-    margin-left: -5px;
+    margin-left: -3px;
 }
 #material-icons_f2 {
     margin-left: -2px;
 }
 .service {
+    margin-top: 10px;
     height: 41px;
     font-size: 14px;
     margin-left: 290px;
