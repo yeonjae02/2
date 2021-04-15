@@ -1,9 +1,6 @@
 /* Common */
 body {
-    justify-content: center;
-    align-items: center;
     line-height: 1.5;
-    -ms-text-size-adjust: 100%;
     min-width: 980px;
     margin: 0;
     padding: 0;
@@ -46,7 +43,7 @@ a {
     cursor: pointer;
 }
 /* .header-first에 효과주기 */
-header .header-first {
+header .headerFirstLeft {
     font-size: 16px;
     width: 980px;
     padding: 6px 0 4px;
@@ -56,7 +53,7 @@ header .header-first {
     font-size: 100%;
     vertical-align: middle;
 }
-/* payment에 효과 주기 (21.04.02. 완료) */
+/* payment에 효과 주기  */
 .payment {
     display: flex;
     float: right;
@@ -65,7 +62,7 @@ header .header-first {
 }
 /* 이용권 구매 옆 박스에 효과주기 */
 .purchasebox {
-    content: '';
+    margin-right: 2px;
     display: block;
     position: absolute;
     top: 0px;
@@ -73,22 +70,21 @@ header .header-first {
     left: 2px;
     width: 18px;
     height: 14px;
-    background: url(./../images/hd_5.0.png)
 }
-/* payment 내 이용권 구매 글씨 효과주기 (21.04.02. 완료) */
+/* payment 내 이용권 구매 글씨 효과주기  */
 .purchase_of_a_pass {
     font-weight: bolder;
     color: #0096ff;
 }
 /* dowmload에 효과 주기 (21.04.02. 완료) */
 .player_download {
-    margin-left: 570px;
+    margin-left: 600px;
     display: flex;
     float: right;
     text-align: right;
     cursor: pointer;
 }
-/* player_download 내 웹플레이어 글씨 효과 주기 (21.04.02.완료) */
+/* player_download 내 웹플레이어 글씨 효과 주기 */
 .webplayer {
     font-weight: bolder;
 }
@@ -129,7 +125,6 @@ header .header-second .search>.material-icons {
     width: 366px;
     border-bottom: 2px solid #0096FF;
     padding-top: 5px;
-    
 }
 /* header-second 내 검색창 효과주기 */
 #search_box {
@@ -172,7 +167,6 @@ header .header-third>ul {
 .menu_title_lm {
     width: 99px;
     height: 38px;
-
 }
 /* 세 번째 헤더 내 장르음악 크기조정 */
 .menu_title_gm {
@@ -201,31 +195,31 @@ header .header-third>ul {
     height: 38px;
 }
 /* 세 번째 헤더의 메뉴에 hober하지 않았을 때*/
-header .header-third ul.main li.menu .sub_menu {
+header .header-third ul.headrThirdMain li.menu .sub_menu {
     display: none;
 }
 /* 세 번째 헤더의 메뉴에 hober했을 때 */
-header .header-third ul.main li.menu:hover .sub_menu {
+header .header-third ul.headrThirdMain li.menu:hover .sub_menu {
     display: block;
 }
 /* menu 에 hover 하지 않았을 때 */
-header .header-third ul.main .contents {
+header .header-third ul.headrThirdMain .contents {
     color: black;
 }
 /* menu에 hover 했을 때 */
-header .header-third ul.main .contents:hover {
+header .header-third ul.headrThirdMain .contents:hover {
     z-index: 2;
     color: #0096ff;
 }
 
 /* sub_menu 를 hover하지 않았을 때  */
-header .header-third ul.main li.menu .sub_menu  {
+header .header-third ul.headrThirdMain li.menu .sub_menu  {
     position: absolute;
     box-sizing: border-box;
     display: none;
 }
 /* sub-menu를 hover했을 때 */
-header .header-third ul.main li.menu:hover .sub_menu {
+header .header-third ul.headrThirdMain li.menu:hover .sub_menu {
     margin-left: auto;
     display: block;
     padding: 5px 0px 4px;
@@ -241,29 +235,35 @@ header .header-third ul.main li.menu:hover .sub_menu {
     width: 13%;
 }
 /* sub-menu를 hover하기 전 내부 표 상태 */
-header .header-third ul.main li.menu .sub_menu>ul li {
+header .header-third ul.headrThirdMain li.menu .sub_menu>ul li {
     padding: 6px 6px;
     text-align: start;
 }
 /* sub-menu를 hover한 후 내부 표 상태 */
-header .header-third ul.main li.menu .sub_menu>ul li:hover {
+header .header-third ul.headrThirdMain li.menu .sub_menu>ul li:hover {
     padding: 6px 6px;
     background: #f1f1ee;
     text-align: start;
 }
 /* 로그인 회원가입 버튼 */
 .memberbtn {
-    margin-right: 20px;
+    align-items: flex-end;
     display: flex;
     background: none;
     border: none;
     width: 150px;
 }
-header .header-third .member .loginbox>.material-icons {
+.member {
+    width: 128px;
+}
+header .header-third .member .loginbox .material-icons {
+    vertical-align: middle;
+    margin-left: 100px;
     position: absolute;
 }
 header .header-third .member .loginbox .material-icons#btn--open {
     display: block;
+    top: 114px;
 }
 header .header-third .member .loginbox .material-icons#btn--close {
     display: none;
@@ -271,6 +271,7 @@ header .header-third .member .loginbox .material-icons#btn--close {
 header .header-third .member .loginbox #login--list {
     display: none;
 }
+
 /* body 속성 부여 */
 
 /*exhibition에 효과주기*/
@@ -279,24 +280,25 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
-/* .main_album(앨범나열창 위에 있는 글자들) 효과주기 */
-.main_album {
+/* .albumKind효과주기 */
+.albumKind {
     display: flex;
+    cursor: pointer;
 }
-/* .morealbum1 전체 설정 */
-.morealbum1 {
+/* .moreNewAlbum 전체 설정 */
+.moreNewAlbum {
     margin-top: 15px;
     margin-left: 610px;
 }
-/* .morealbum1 내 버튼 설정 */
-.main_album .morealbum1 button{
+/* .moreNewAlbum 내 버튼 설정 */
+.albumKind .moreNewAlbum button{
     border: 1px solid #dde0e4 ;
     background-color:white;
     border-radius: 100%;
     height: 30px;
     width: 30px;
 }
-/* .main_album 내 최신음악 글자 효과주기 */
+/* albumKind 내 최신음악 글자 효과주기 */
 #recent-music {
     display: inline-block;
     margin: 15px 0 10px;
@@ -306,35 +308,29 @@ header .header-third .member .loginbox #login--list {
     margin-right: 20px;
 }
 /* .main_album 내 종합 국내 국외 글자 전체 효과주기 */
-.main_album >ul {
+.albumKind >ul {
     cursor: pointer;
     display: flex;
     list-style-type: none;
     font-size: 14px;
 }
-/*main_album  */
-.main_album_ {
-    cursor: pointer;
-}
-/* .main_album 내 종합 글자 효과주기 */
-#name1 {
-    padding-right: 15px;
-}
-/* .main_album 내 국내 글자 효과주기 */
-#name2 {
+/* .main_album 내 종합, 국내 효과주기 */
+#name1, #name2 {
     padding-right: 15px;
 }
 /* 국내 국외 리스트 */
-.main_album >ul {
+.albumKind >ul {
     margin: 23px 0 0 10px;
 }
 /* 각 앨범별 테두리 설정 */
 .albumexhibiton {
-    margin-left: 3px;
     border: 1px solid  #e8eef3;
+    margin: 0 5px;
 }
 /* 최신앨범- 종합 전체   */
 .comprehensive_album {
+    margin-left: 20px;
+    margin-right: 20px;
     width: 980px;
     margin: 0 auto;
 }
@@ -344,10 +340,9 @@ header .header-third .member .loginbox #login--list {
     vertical-align: middle;
 }
 .ca1 , .ca2 {
+    width: 980px;
     box-sizing: border-box;
-    margin-left: 2px;
     width: 151px;
-    margin-right: 2px;
     height: 153px;
 }
 /* 최신앨범-종합 1단 */
@@ -373,26 +368,8 @@ header .header-third .member .loginbox #login--list {
     margin-bottom: 30px;
     background-color: #e8eef3;
 }
-/* 광고 rolling 창 각각 광고마다 정렬 */
-#banner2 {
-    display: none;
-}
-#banner3 {
-    display: none;
-}
-#banner4 {
-    display: none;
-}
-#banner5 {
-    display: none;
-}
-#banner6 {
-    display: none;
-}
-#banner7 {
-    display: none;
-}
-#banner8 {
+/* 광고 rolling 요소 각각 정렬 */
+#banner2, #banner3, #banner4, #banner5, #banner6, #banner7, #banner8  {
     display: none;
 }
 /* 광고 내 컨텐츠 정렬 */
@@ -430,7 +407,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 실시간 차트 전체 설정 */
 #chart_info, #chart_contents {
-    height: 527px;
+    height: 528x;
     width: 610px;
     float: left;
 }
@@ -438,8 +415,11 @@ header .header-third .member .loginbox #login--list {
 .musicChartContents {
     border-top: 1px solid darkgray;
     width: 608px;
+    height: 463px;
 }
+/* 실시간 차트 각 행 */
 .musicChartContents  tr{
+    height: 10px;
     border-bottom: 1px solid #e8eef3;
 }
 /* 실시간 차트 내 첫 번째 행  */
@@ -456,6 +436,12 @@ header .header-third .member .loginbox #login--list {
     font-style: oblique;
     width: 30px;
 }
+/* 호버 했을 때 순위의 변화 */
+.musicChartContents tr:hover td.chart_ranking {
+    height: 50px;
+    font-size: 30px;
+    padding-left: 4px;
+}
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
     vertical-align: middle;
@@ -465,17 +451,33 @@ header .header-third .member .loginbox #login--list {
     width: 38px;
     text-align: center;
 }
+/* 호버 했을 때 순위변동의 변화 */
+.musicChartContents tr:hover td.chart_fluctuation {
+    height: 50px;
+}
+/* 실시간 차트 내 앨범사진 */
+.chart_music_photo {
+    display: none;
+}
+.musicChartContents tr:hover td.chart_music_photo{
+    display: block;
+    padding-top: 5px;
+    margin-left: 60px;
+    height: 50px;
+}
+
 /* 차트 속 곡명과 아티스트 명 배열 */
 .chart_musicinfo {
     display: flex;
     vertical-align: middle;
     margin-top: 10px;
 }
-.chartandevent .music_chart .music_chart_list .musicChartContents tr {
-    height: 45.3px;
-}
-td .chart_ranking {
-    height: 39px;
+.musicChartContents tr:hover td.chart_musicinfo {
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-left: 60px;
+    display: block;
+    height: 50px;
 }
 /* 실시간 차트 내 노래 제목 */
 .chart_title {
@@ -504,6 +506,15 @@ td .chart_ranking {
     font-size: 2px;
     color:darkgrey;
 }
+/* 호버 했을 때 음악듣기 기능아이콘의 변화 */
+.musicChartContents tr:hover td.chart_music_listen {
+    height: 50px;
+}
+/* 음악듣기 아이콘을 호버했을 때의 변화 */
+.musicChartContents td.chart_music_listen:hover {
+    height: 50px;
+    color: black;
+}
 /* 실시간 차트 내 음악 담기 기능 */
 .chart_music_add {
     vertical-align: middle;
@@ -512,12 +523,30 @@ td .chart_ranking {
     align-items: center;
     color:darkgrey;
 }
+/* 호버 했을 때 음악담기 아이콘의 변화 */
+.musicChartContents tr:hover td.chart_music_add {
+    height: 50px;
+}
+/* 음악담기 아이콘을 호버했을 때의 변화 */
+.musicChartContents td.chart_music_add:hover {
+    height: 50px;
+    color: black;
+}
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
     vertical-align: middle;
     font-size: 5px;
     padding-right: 9px;
     color:darkgrey;
+}
+/* 호버 했을 때 음악정보 더보기아이콘의 변화 */
+.musicChartContents tr:hover td.chart_music_etc {
+    height: 50px;
+}
+/* 더보기 아이콘을 호버했을 때의 변화 */
+.musicChartContents td.chart_music_etc:hover {
+    height: 50px;
+    color: black;
 }
 /* 실시간 차트 내 .material-icons 관련*/
 .chartandevent .music_chart .music_chart_list >.material-icons {
@@ -530,7 +559,7 @@ td .chart_ranking {
 }
 /* 실시간 차트 밑 음악 듣기 관련 기능 속 표 */
 .listenmore_entire  td{
-    height: 14px; 
+    height: 20px; 
 }
 .chartandevent .listenmore .entire >button {
     color: black;
@@ -570,20 +599,7 @@ td .chart_ranking {
     position: absolute;
     color: black;
     vertical-align: middle;
-
 }
-/* sub-menu를 hover하기 전 내부 표 상태
-header .header-third ul.main li.menu .sub_menu>ul li {
-    padding: 6px 6px;
-    text-align: start;
-}
-sub-menu를 hover한 후 내부 표 상태
-header .header-third ul.main li.menu .sub_menu>ul li:hover {
-    padding: 6px 6px;
-    background: #f1f1ee;
-    text-align: start;
-} */
-/* .chartandevent .music_chart .music_chart_list .musicChartContents  .chartChart */
 #hot_and_new {
     width: 308px;
     font-weight: bold;
@@ -646,7 +662,7 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
     font-size: 12px;
 }
 /* 에디터 추천 제목 */
-#er {
+#editorRecommend {
     font-weight: 800;
     font-size: 20px;
     display: inline-block;
@@ -665,6 +681,9 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
 /* 에디터 추천 2단 단체 정렬 */
 .editiorRecommendContents_1 , .editiorRecommendContents_2 {
     display: flex;
+    
+    width: 980px;
+    margin: 0 auto;
 }
 /* 에디터 추천 1번째 줄 */
 .editiorRecommendContents_1 li {
@@ -756,6 +775,10 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
 }
 /* 에디터 추천 밑에 있는 버튼 */
 #morecontents {
+    background-color: #f7f8f9;
+    border: lpx solid #f7f8f9;
+    width: 168px;
+    height: 40px;
     border-color: none;
     align-items: center;
     justify-content: center;
@@ -773,7 +796,7 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
 }
 /* 컨텐츠 더 보기 아이콘 */
 #material-icons_ed5 {
-    font-size: 20px;
+    font-size: 30px;
     vertical-align: middle;
 }
 /* 지니TV  */
@@ -806,7 +829,7 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
     font-size: 12px;
     margin-left: 20px;
 }
-/* 지니TV 옆 선택지 속 hot선택지 */
+/* 지니TV 옆 선택지 속 mnet방송 선택지 */
 #mnetbrod {
     font-size: 12px;
     margin-left: 20px;
@@ -848,7 +871,7 @@ header .header-third ul.main li.menu .sub_menu>ul li:hover {
     display: inline-block;
     overflow: hidden;
     height: 13px;
-    margin: 0 4px 0 0;
+    margin: 0 4px 0 4px;
     padding: 1px 2px 0;
     border: 1px solid #8b8b8b;
     border-radius: 2px;
