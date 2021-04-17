@@ -21,7 +21,6 @@
     <!-- js로 연결 -->
     <script defer src="./js/main.js"></script>
 </head>
-
 <body>
     <!-- 헤더 제작 -->
    <header>
@@ -210,6 +209,7 @@
    <!-- 헤더 제작 완료 -->
    <!-- 헤더 바로 아래 최신음악 전시창 만들기 -->
    <div class="exhibititon">
+       <!-- 최신음악 전시창 위 최신음악, 종합, 국내, 국외 글씨 만들기 -->
        <div class="albumKind">
            <h2  class="main_album_kind" id="recent-music"  style="font-weight: bolder;">최신음악</h2>
                 <ul class="exhibitionName">
@@ -230,6 +230,7 @@
                     </button>   
                 </div>
         </div>
+        <!-- 최신앨범 표시 -->
         <div class="album"></div>
             <div class="comprehensive_album">
                 <ul class="ca1">
@@ -410,6 +411,7 @@
     <!-- 광고부분 -->
     <div class="ad">
         <div class="ad_contents">
+            <!-- 시간에 따라 변하는 광고 -->
             <div class="ad_contents_rolling">
                 <img id="banner1" src="./images/banner1.jpg">
                 <img id="banner2" src="./images/banner2.png">
@@ -420,13 +422,15 @@
                 <img id="banner7" src="./images/banner7.jpg">
                 <img id="banner8" src="./images/banner8.jpg">
             </div>
+            <!-- 고정된 광고  -->
             <div class="ad_contents_mini">
                 <a><img src="./images/미니배너.jpg" alt="Mcountdown"></a>
             </div>
         </div>
     </div>
-    <!-- 실시간 차트 만들기 -->
-    <div class="chartandevent">
+    <!-- 실시간 차트와 HOT & NEW 만들기 -->
+    <div class="chartandhan">
+        <!-- 실시간차트 -->
         <div class="music_chart" id="chart_info">
             <div class="chartinformation">
                 <h2 class="chartinfo" id="chartName">
@@ -652,7 +656,7 @@
         </div>
         <!-- 실시간차트 옆 hot and new 제작 -->
         <div class="hotandnew" id="hot_and_new">
-            <h2>HOT AND NEW</h2>
+            <h2>HOT & NEW</h2>
                     <ul class="han_f_ul">
                         <li class="han_f_ulcontents" id="hanf1"><img src="./images/event_1.jpg"></li>
                         <li class="han_f_ulcontents" id="hanf2"><img src="./images/event_2.jpg"></li>

@@ -338,7 +338,7 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
-/* 초신앨범 위 양쪽화살표 처리 */
+/* 최신앨범 위 양쪽화살표 처리 */
 #material-icons_e1, #material-icons_e2 {
     font-weight: bolder;
     font-size: 15px;
@@ -500,7 +500,7 @@ header .header-third .member .loginbox #login--list {
     margin-left: 100px;
 }
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
-.chartandevent {
+.chartandhan {
     width: 980px;
     margin: 0 auto;
     overflow: hidden;
@@ -683,7 +683,7 @@ header .header-third .member .loginbox #login--list {
     color: black;
 }
 /* 실시간 차트 내 .material-icons 관련*/
-.chartandevent .music_chart .music_chart_list >.material-icons {
+.chartandhan .music_chart .music_chart_list >.material-icons {
     position: absolute;
 } 
 /* 실시간 차트 밑 음악 듣기 관련 기능 모음 */
@@ -695,7 +695,7 @@ header .header-third .member .loginbox #login--list {
 .listenmore_entire  td{
     height: 20px; 
 }
-.chartandevent .listenmore .entire >button {
+.chartandhan .listenmore .entire >button {
     color: black;
     background: white;
     border-radius: 15px;
@@ -729,7 +729,7 @@ header .header-third .member .loginbox #login--list {
     margin-left: 290px;
 }
 /* top200 음악 듣기 기능 옆 아이콘 */
-.chartandevent .listenmore .top200listen >.material-icons {
+.chartandhan .listenmore .top200listen >.material-icons {
     position: absolute;
     color: black;
     vertical-align: middle;
@@ -786,7 +786,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* hot and new 앨범 카테고리 정리 */
 .hanscategory {
-    margin-top: 12px;
+    margin-top: 4px;
 }
 /* hot and new 정보 내 앨범 정리 */
 .hansalbumtitle {
