@@ -210,8 +210,9 @@ header .header-third ul.headrThirdMain .contents:hover {
     z-index: 2;
     color: #0096ff;
 }
+/* 메뉴가 최신앨범보다 위에 뜰 수 있도록 설정 */
 .sub_menu {
-    z-index: 40;
+    z-index: 4;
 }
 /* sub_menu 를 hover하지 않았을 때  */
 header .header-third ul.headrThirdMain li.menu .sub_menu  {
@@ -223,10 +224,9 @@ header .header-third ul.headrThirdMain li.menu .sub_menu  {
 header .header-third ul.headrThirdMain li.menu:hover .sub_menu {
     margin-left: auto;
     display: block;
-    padding: 5px 0px 4px;
+    padding: 5px 0px 4px ;
     color: #27282d;
     white-space: nowrap;
-    padding: 5px 0 4px;
     border: 1px solid #a6afb6;
     border-top: 3px solid #0096FF;
     border-radius: 0 0 4px 4px;
@@ -237,12 +237,12 @@ header .header-third ul.headrThirdMain li.menu:hover .sub_menu {
 }
 /* sub-menu를 hover하기 전 내부 표 상태 */
 header .header-third ul.headrThirdMain li.menu .sub_menu>ul li {
-    padding: 6px 6px;
+    padding: 6px 15px;
     text-align: start;
 }
 /* sub-menu를 hover한 후 내부 표 상태 */
 header .header-third ul.headrThirdMain li.menu .sub_menu>ul li:hover {
-    padding: 6px 6px;
+    padding: 6px 15px;
     background: #f1f1ee;
     text-align: start;
 }
@@ -254,27 +254,30 @@ header .header-third ul.headrThirdMain li.menu .sub_menu>ul li:hover {
     border: none;
     width: 150px;
 }
+/* 로그인 회원가입 전체 크기조정 */
 .member {
     width: 128px;
 }
+/* 클릭 시 나오는 로그인 창  */
 header .header-third .member .loginbox .material-icons {
     vertical-align: middle;
     margin-left: 100px;
     position: absolute;
 }
+/* 클릭 시 나오는 로그인 창 내 열림버튼 */
 header .header-third .member .loginbox .material-icons#btn--open {
     display: block;
     top: 114px;
 }
+/* 클릭 시 나오는 로그인 창 내 닫힘버튼  */
 header .header-third .member .loginbox .material-icons#btn--close {
     display: none;
 }
+/* 클릭 시 나오는 로그인 창 내 버튼클릭 시 나오는 로그인리스트*/
 header .header-third .member .loginbox #login--list {
     display: none;
 }
-
 /* body 속성 부여 */
-
 /*exhibition에 효과주기*/
 .exhibititon {
     padding-top: 2px;
@@ -328,16 +331,6 @@ header .header-third .member .loginbox #login--list {
     border: 1px solid  #e8eef3;
     margin: 0 5px;
 }
-/*각각의 앨범을 호버했을 때 발생하는 변화 수정하기 */
-.comprehensive_album .albumexhibiton:hover{
-    opacity: 0.8;
-}
-.comprehensive_album .albumexhibiton:hover .caartist{
-    display: none;
-}
-.comprehensive_album .albumexhibiton:hover .caartist2{
-    display: none;
-}
 /* 최신앨범- 종합 전체   */
 .comprehensive_album {
     margin-left: 20px;
@@ -367,15 +360,19 @@ header .header-third .member .loginbox #login--list {
 .ca2 {
     display: flex;
 }
+/* 최신앨범 1단 내 존재하는 앨범의 아티스트 */
 .caartist{
-    top: 339px;
-    height: 35px;
+    top: 340px;
+    height: 32px;
 }
+/* 최신앨범 2단 내 존재하는 앨범의 아티스트 */
 .caartist2 {
     top: 491px;
-    height: 40.2px;
+    height: 40px;
 }
+/* 최신앨범  내 존재하는 앨범의 아티스트 */
 .caartist , .caartist2 {
+    z-index: 2;
     position: absolute;
     color: white;
     display: inline-block;
@@ -385,9 +382,95 @@ header .header-third .member .loginbox #login--list {
     width: 151px;
     text-align: center;
     border: none;
-    vertical-align: bottom;
     font-size: 13.9px;
-    background-color: rgba(red, green, blue, alpha);
+    background: linear-gradient(transparent, black);
+}
+/* 앨범정보 */
+.newAlbumInfo1 {
+    width: 151px;
+    height: 151px;
+    position: absolute;
+    top: 221px;
+    background: black;
+    text-align: center;
+    display: none;
+    vertical-align: middle;
+}
+/* 앨범 정보 내 앨범명 */
+.albumtitle1 {
+    position: absolute;
+    display: block;
+    top: 44px;
+    width: 100%;
+    height: 51px;
+    padding: 0 8px;
+    color: #d2d2d2;
+    box-sizing: border-box
+}
+/* 앨범정보 */
+.newAlbumInfo2 {
+    width: 151px;
+    height: 151px;
+    position: absolute;
+    top: 380px;
+    background: black;
+    text-align: center;
+    display: none;
+    vertical-align: middle;
+}
+/* 앨범 정보 내 앨범명 */
+.albumtitle2 {
+    position: absolute;
+    display: block;
+    top: 44px;
+    width: 100%;
+    height: 51px;
+    padding: 0 8px;
+    color: #d2d2d2;
+    box-sizing: border-box
+}
+.newAlbumExperience{
+    position: absolute;
+    display: block;
+    top: 110px;
+    width: 100%;
+    height: 51px;
+    padding: 0 8px;
+    color: #d2d2d2;
+    box-sizing: border-box
+}
+.newAlbumExperience>.material-icons {
+    font-size: 30px;
+    font-weight: lighter;
+}
+/*각각의 앨범을 호버했을 때  아티스트 변화 */
+.comprehensive_album .albumexhibiton:hover .caartist {
+    font-weight: bold;
+    top: 230px;
+    background: transparent;
+    text-shadow: 0px 9px 1px gray;
+}
+/*각각의 앨범을 호버했을  아티스트 변화 */
+.comprehensive_album .albumexhibiton:hover .caartist2 {
+    margin: 0 3px;
+    top: 388px;
+    font-weight: bold;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: transparent;
+    text-shadow: 0px 9px 1px gray;
+}
+/*각각의 앨범을 호버했을  앨범정보 변화 */
+.comprehensive_album .albumexhibiton:hover .newAlbumInfo1 {
+    display: block;
+    background: rgba(0,0,0,0.8);
+}
+/*각각의 앨범을 호버했을  앨범정보 변화 */
+.comprehensive_album .albumexhibiton:hover .newAlbumInfo2 {
+    display: block;
+    background: rgba(0,0,0,0.8);
 }
 /* 광고창 */
 .ad {
@@ -1037,18 +1120,20 @@ header .header-third .member .loginbox #login--list {
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    border-radius: 2px;
     background: white;
 }
 #morenotice2 {
-    margin-left: -2px;
+    margin-left: -3px;
 }
 #material-icons_f1 , #material-icons_f2 {
+    font-weight: bold;
     vertical-align: middle;
     font-size: 12px;
     background-color: none;
 }
 #material-icons_f1 {
+    font-weight: bold;
+    color: #8b8b8b;
     margin-left: -3px;
 }
 #material-icons_f2 {
@@ -1117,7 +1202,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 푸터 내 회사 로고 */
 .logo-company {
-    margin-top: 40px;
+    margin-top: 32px;
+    margin-right: 20px;
 }
 /* 회사 로고 옆 회사 정보 */
 .company-info {
@@ -1130,12 +1216,14 @@ header .header-third .member .loginbox #login--list {
     display: flex;
     margin-left: 20px;
     margin-top: 20px;
+    margin-bottom: 4px;
 }
 /* .footer-second 내 정보2 설정 */
 .company-info2 {
     width: 811px;
     display: flex;
     margin-left: 20px;
+    margin-bottom: 4px;
 }
 /* .footer-second 내 정보3 설정 */
 .company-info3 {
@@ -1159,7 +1247,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 전체 상장들 정렬 */
 .list-emblem {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 /* 상장들 정렬 */
 .emblem1 , .emblem2 {
