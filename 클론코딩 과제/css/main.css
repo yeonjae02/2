@@ -289,7 +289,7 @@ header .header-third .member .loginbox #login--list {
 /* .moreNewAlbum 전체 설정 */
 .moreNewAlbum {
     margin-top: 15px;
-    margin-left: 610px;
+    margin-left: 660px;
 }
 /* .moreNewAlbum 내 버튼 설정 */
 .albumKind .moreNewAlbum button{
@@ -330,8 +330,7 @@ header .header-third .member .loginbox #login--list {
 }
 /*각각의 앨범을 호버했을 때 발생하는 변화 수정하기 */
 .comprehensive_album .albumexhibiton:hover{
-    opacity: 0.1;
-    background-color: royalblue;
+    opacity: 0.8;
 }
 .comprehensive_album .albumexhibiton:hover .caartist{
     display: none;
@@ -346,11 +345,13 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
+/* 초신앨범 위 양쪽화살표 처리 */
 #material-icons_e1, #material-icons_e2 {
     font-weight: bolder;
     font-size: 15px;
     vertical-align: middle;
 }
+/* 단마다 주는 효과 */
 .ca1 , .ca2 {
     width: 980px;
     box-sizing: border-box;
@@ -411,6 +412,10 @@ header .header-third .member .loginbox #login--list {
     width: 980px;
     margin: 0 auto;
 }
+/* rolling ad 옆 ad */
+.ad_contents_mini {
+    margin-left: 100px;
+}
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandevent {
     width: 980px;
@@ -441,7 +446,7 @@ header .header-third .member .loginbox #login--list {
 /* 실시간 차트 전체 설정 */
 #chart_info, #chart_contents {
     height: 528x;
-    width: 610px;
+    width: 624px;
     float: left;
 }
 /* 실시간차트표 세부설정 */
@@ -495,6 +500,7 @@ header .header-third .member .loginbox #login--list {
 .musicChartContents tr:hover .chart_photo {
     display: block;
     margin : 10px 13px 0 10px;
+    border: .5px solid #8b8b8b;
 }
 /* 차트 속 곡명과 아티스트 명 배열 */
 .chart_musicinfo {
@@ -651,6 +657,7 @@ header .header-third .member .loginbox #login--list {
     font-size: 20px;
     top: 20px;
     margin: 20px 0 2px;
+    padding-right: 10px;
     float: right;
 }
 /* hot and new 상단 첫번째 그림 */
@@ -726,12 +733,12 @@ header .header-third .member .loginbox #login--list {
 /* 에디터 추천 2단 단체 정렬 */
 .editiorRecommendContents_1 , .editiorRecommendContents_2 {
     display: flex;
-    
     width: 980px;
     margin: 0 auto;
 }
 /* 에디터 추천 1번째 줄 */
 .editiorRecommendContents_1 li {
+    padding-right: 9px;
     display: block;
     float: left;
     position: relative;
@@ -741,6 +748,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 에디터 추천 2번째 줄 */
 .editiorRecommendContents_2 li {
+    padding-right: 9px;
     display: block;
     float: left;
     position: relative;
@@ -887,7 +895,8 @@ header .header-third .member .loginbox #login--list {
     display: flex;
 }
 /* 지니TV 표 */
-.genietvcontents li {
+.genietvcontents>li {
+    padding-right: 7.2px;
     display: block;
     float: left;
     position: relative;
@@ -918,7 +927,7 @@ header .header-third .member .loginbox #login--list {
     overflow: hidden;
     height: 13px;
     margin: 0 4px 0 4px;
-    padding: 1px 2px 0;
+    padding: 1px 2px 2px 1px;
     border: 1px solid #8b8b8b;
     border-radius: 2px;
     color: #8b8b8b;
@@ -1032,7 +1041,7 @@ header .header-third .member .loginbox #login--list {
     background: white;
 }
 #morenotice2 {
-    margin-left: -5px;
+    margin-left: -2px;
 }
 #material-icons_f1 , #material-icons_f2 {
     vertical-align: middle;
@@ -1049,11 +1058,11 @@ header .header-third .member .loginbox #login--list {
     margin-top: 10px;
     height: 41px;
     font-size: 14px;
-    margin-left: 290px;
+    margin-left: 319px;
 }
 .service ul li {
     height: 41px;
-    margin: 0 3px 0 3px;
+    margin: 0 6px 0 6px;
 }
 /* footer-first 내 more_service 속성 */
 .more_service {
@@ -1066,28 +1075,33 @@ header .header-third .member .loginbox #login--list {
     margin: 0 auto;
 }
 #material-icons_f3 {
-    font-size: 16px;
+    font-size: 14px;
 }
-/* 유튜브 가기 버튼 */
-#goyoutube {
-    margin-left: 4px;
-    border: none;
-    width: 34px;
-    height: 34px;
-    background-image: url(./../images/btn_youtube.png);
-}
+/* 두 번째 헤더 내 약관정보 */
 .use-related-information {
     display: flex;
 }
+/* 두 번째 헤더 내 약관정보  세부사항*/
 .relatedinfo {
     margin-top: 20px;
+    font-size: 13.3px;
 }
 .btncluster{
     margin-left: 30px;
     margin-top: 15px;
 }
+/* 유튜브 가기 버튼 */
+#goyoutube {
+    cursor: pointer;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url(./../images/btn_youtube.png);
+}
+
 /* 네이버 블로그 가기 버튼 */
 #gonaverblog {
+    cursor: pointer;
     border: none;
     width: 34px;
     height: 34px;
@@ -1095,6 +1109,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 페이스북 가기 버튼 */
 #gofacebook {
+    cursor: pointer;
     border: none;
     width: 34px;
     height: 34px;
@@ -1106,21 +1121,25 @@ header .header-third .member .loginbox #login--list {
 }
 /* 회사 로고 옆 회사 정보 */
 .company-info {
+    color: #969697;
     display: flex;
 }
 /* .footer-second 내 정보1 설정 */
 .company-info1 {
+    width: 811px;
     display: flex;
     margin-left: 20px;
     margin-top: 20px;
 }
 /* .footer-second 내 정보2 설정 */
 .company-info2 {
+    width: 811px;
     display: flex;
     margin-left: 20px;
 }
 /* .footer-second 내 정보3 설정 */
 .company-info3 {
+    width: 811px;
     display: flex;
     margin-left: 20px;
 }
@@ -1149,4 +1168,8 @@ header .header-third .member .loginbox #login--list {
 /* 아랫단 상장 개별 정렬 */
 .emblem2 {
     margin-top :10px
+}
+/* 상장들 간 간격 조절 */
+.emblem1 >li , .emblem2>li {
+    margin-right: 20px;
 }
