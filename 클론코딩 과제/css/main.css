@@ -362,8 +362,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 최신앨범 1단 내 존재하는 앨범의 아티스트 */
 .caartist{
-    top: 340px;
-    height: 32px;
+    top: 337px;
+    height: 35px;
 }
 /* 최신앨범 2단 내 존재하는 앨범의 아티스트 */
 .caartist2 {
@@ -372,6 +372,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 최신앨범  내 존재하는 앨범의 아티스트 */
 .caartist , .caartist2 {
+    display: flex;
+    vertical-align: bottom;
     z-index: 2;
     position: absolute;
     color: white;
@@ -382,8 +384,8 @@ header .header-third .member .loginbox #login--list {
     width: 151px;
     text-align: center;
     border: none;
-    font-size: 13.9px;
-    background: linear-gradient(transparent, black);
+    font-size: 12px;
+    background: linear-gradient(transparent, rgb(41, 37, 37));
 }
 /* 앨범정보 */
 .newAlbumInfo1 {
@@ -398,6 +400,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 앨범 정보 내 앨범명 */
 .albumtitle1 {
+    font-size: 12px;
     position: absolute;
     display: block;
     top: 44px;
@@ -420,6 +423,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 앨범 정보 내 앨범명 */
 .albumtitle2 {
+    font-size: 12px;
     position: absolute;
     display: block;
     top: 44px;
@@ -445,14 +449,19 @@ header .header-third .member .loginbox #login--list {
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist {
+    width: 110px;
     font-weight: bold;
     top: 230px;
+    margin-left: 20px;
     background: transparent;
     text-shadow: 0px 9px 1px gray;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist2 {
-    margin: 0 3px;
     top: 388px;
     font-weight: bold;
     display: block;
@@ -536,7 +545,7 @@ header .header-third .member .loginbox #login--list {
 .musicChartContents {
     border-top: 1px solid darkgray;
     width: 620px;
-    height: 463px;
+    height: 429px;
 }
 /* 실시간 차트 각 행 */
 .musicChartContents  tr{
@@ -561,7 +570,7 @@ header .header-third .member .loginbox #login--list {
 /* 호버 했을 때 순위의 변화 */
 .musicChartContents tr:hover td.chart_ranking {
     height: 50px;
-    font-size: 30px;
+    font-size: px;
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
@@ -583,7 +592,7 @@ header .header-third .member .loginbox #login--list {
 .musicChartContents tr:hover .chart_photo {
     display: block;
     margin : 10px 13px 0 10px;
-    border: .5px solid #8b8b8b;
+    border: .1px solid #d8d6d6;
 }
 /* 차트 속 곡명과 아티스트 명 배열 */
 .chart_musicinfo {
@@ -615,6 +624,10 @@ header .header-third .member .loginbox #login--list {
     display: flex;
     width: 300px;
 }
+/* 타이틀 명 호버 시 생기는 변화  */
+.musicChartContents .chart_title:hover {
+    text-decoration: underline;
+}
 /* 실시간 차트 내 아티스트 */
 .chart_artist {
     padding-top: 2px;
@@ -633,6 +646,10 @@ header .header-third .member .loginbox #login--list {
     margin-left: .01px;
     display: flex;
     width: 250px;
+}
+/* 아티스트 명 호버 시 생기는 변화 */
+.musicChartContents .chart_artist:hover {
+    text-decoration: underline;
 }
 /* 실시간 차트 내 음악듣기 기능 */
 .chart_music_listen {
@@ -688,20 +705,18 @@ header .header-third .member .loginbox #login--list {
 } 
 /* 실시간 차트 밑 음악 듣기 관련 기능 모음 */
 .listenmore{
+    height: 40px;
     display: flex;
-    border-top: 1px solid darkgray;
+    border: 1px solid #f7f9fc;
+    background-color: #f7f9fc;
 }
 /* 실시간 차트 밑 음악 듣기 관련 기능 속 표 */
 .listenmore_entire  td{
     height: 20px; 
 }
-.chartandhan .listenmore .entire >button {
-    color: black;
-    background: white;
-    border-radius: 15px;
-}
 /*실시간 차트 아래 전체듣기 전체추가 버튼  */
 #musicentirelisten, #musicentireadd {
+    margin-top: 7px;
     width: 78px;
     height: 24px;
     margin-right: 1px;
@@ -710,11 +725,18 @@ header .header-third .member .loginbox #login--list {
     border-radius: 4px;
     font-size: 11px;
     line-height: 23px;
-    color: #27282d;
+    background-color: white;
+    cursor: pointer;
 }
 #musicentirelisten {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 5px;
+}
+#musicentirelisten:hover {
+    border: 1px solid black;
+}
+#musicentireadd:hover {
+    border: 1px solid black;
 }
 /* 실시간 차트 아래 전체듣기 전체추가 버튼 속 아이콘 */
 #material-icons_c1, #material-icons_c2 {
@@ -724,9 +746,10 @@ header .header-third .member .loginbox #login--list {
 /* 실시간 차트 밑 top200 음악 듣기 기능 */
 .top200listen {
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     margin-left: 290px;
+    margin-top: 8px;
 }
 /* top200 음악 듣기 기능 옆 아이콘 */
 .chartandhan .listenmore .top200listen >.material-icons {
@@ -758,14 +781,15 @@ header .header-third .member .loginbox #login--list {
 }
 /* hot and new 2번째 표 내 사진 정리 */
 .hansphoto {
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 66px;
     height: 66px;
-    border: 1px solid #000;
+    border: 1px solid rgb(202, 202, 202);
 }
 /* hot and new 2번째 표 내 줄 정리 */
 .han_s_ul li {
-    height: 90px;
+    height: 80px;
 }
 /* hot and new 2번째 표 내 컨텐츠 정리 */
 .han_s_ulcontents {
@@ -782,7 +806,7 @@ header .header-third .member .loginbox #login--list {
     display: block;
     position: relative;
     height: 69px;
-    padding: 10px 20px 0 20px;
+    padding: 8px 20px 0 10px;
 }
 /* hot and new 앨범 카테고리 정리 */
 .hanscategory {
@@ -794,6 +818,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* hot and new 정보  내 아티스트 정리 */
 .hansartist {
+    color: rgb(136, 133, 133);
     font-size: 12px;
 }
 /* 에디터 추천 제목 */
@@ -828,6 +853,92 @@ header .header-third .member .loginbox #login--list {
     width: 224px;
     height: 276px;
     margin: 0 7px 13px 6px;
+    cursor: pointer;
+}
+/* 에디터 추천 클릭 시 등장하는 음악듣기 */
+.gotolisten {
+    background: #000;
+    width: 224px;
+    height: 145px;
+    margin-top: -145px;
+    display: block;
+    display: none;
+}
+.editor_recommend li:hover .musicsnumber {
+    display: block;
+}
+.musicsnumber {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    color: white;
+    display: none;
+}
+#recommendlist1 .material-icons , #recommendlist2 .material-icons, #recommendlist3 .material-icons {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 45%;
+    color: white;
+    display: none;
+}
+.editor_recommend li:hover #recommendlist1 .material-icons {
+    display: block;
+}
+.editor_recommend li:hover #recommendlist2 .material-icons {
+    display: block;
+}
+.editor_recommend li:hover #recommendlist3 .material-icons {
+    display: block;
+}
+/* 에디터 추천선곡,컬러 첫 번째 칸 색 지정 */
+#recommendlist1 {
+    background-color: #c4a9b6;
+}
+/* 에디터 추천선곡, 컬러 두 번째 칸 색 지정 */
+#recommendlist2 {
+    background-color: #b1b5b6;
+}
+/* 에디터 추천선곡, 컬러 세 번째 칸 색 지정 */
+#recommendlist3 {
+    background-color: #a7beba;
+}
+/* 에디터 추천 내 음악 추천 커버정리 */
+.recommendAlbumCover {
+    display: flex;
+    width: 226px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 147px;
+}
+/* 에디터 추천 중앙커버 */
+.er_photo .recommendAlbumCover .recommendlist_center {
+    top: 20px;
+    left: 58px;
+    width: 108px;
+    height: 108px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+/* 에디터 추천 왼쪽 커버 */
+.er_photo .recommendAlbumCover .recommendlist_left {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    width: 88px;
+    height: 88px;
+    z-index: -4;
+}
+/* 에디터 추천 오른쪽 커버 */
+.er_photo .recommendAlbumCover .recommendlist_right {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    width: 88px;
+    height: 88px;
+    margin-left: 167px;
+    display: block;
 }
 /* 에디터 추천 2번째 줄 */
 .editiorRecommendContents_2 li {
@@ -838,6 +949,7 @@ header .header-third .member .loginbox #login--list {
     width: 224px;
     height: 276px;
     margin: 0 7px 13px 6px;
+    cursor: pointer;
 }
 #material-icons_ed1, #material-icons_ed2, #material-icons_ed3, #material-icons_ed4 {
     font-size: 14px;
@@ -849,11 +961,12 @@ header .header-third .member .loginbox #login--list {
     position: relative;
     width: 100%;
     height: 147px;
+    z-index: -1;
 }
 /* 에디터 추천 이벤트 */
 .er_ci_event {
     position: absolute;
-    top: 131px;
+    top: 134px;
     left: 0;
     line-height: 15px;
     background-color: #ff5b62;
@@ -882,9 +995,9 @@ header .header-third .member .loginbox #login--list {
 }
 /* 에디터 추천 내용 */
 .er_ci_title {
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 25px;
     padding-top: 6px;
     font-weight: bold;
     overflow: hidden;
@@ -994,6 +1107,34 @@ header .header-third .member .loginbox #login--list {
     overflow: hidden; 
     width: 226px;
     height: 127px;
+    background: black;
+}
+/* 호버 시 나타나는 재생이동화면 */
+.gomovie {
+    width: 226px;
+    height: 129px;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    margin-top: -129px;
+    display: none;
+}
+/* 호버 시 나타나는 재생이동화면 내 유튜브 아이콘 */
+.gomovie img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 47px;
+    display: none;
+}
+/* 썸네일을 호버했을 때 나타나는 재생창 */
+.genietvcontents .tvthumbnail:hover .gomovie {
+    display: block;
+    opacity: 0.7;
+}
+/* 썸네일을 호버했을 때 나타나는 재생창 내 이미지 */
+.genietvcontents .tvthumbnail:hover .gomovie img {
+    display: block;
 }
 /* 지니TV 내 컨텐츠 내용 적용 */
 .tvinfo {
@@ -1010,8 +1151,8 @@ header .header-third .member .loginbox #login--list {
     display: inline-block;
     overflow: hidden;
     height: 13px;
-    margin: 0 4px 0 4px;
-    padding: 1px 2px 2px 1px;
+    margin: 0 2px 0 0px;
+    padding: 1px 3px 2px 2px;
     border: 1px solid #8b8b8b;
     border-radius: 2px;
     color: #8b8b8b;
@@ -1024,16 +1165,14 @@ header .header-third .member .loginbox #login--list {
 /* 지니TV 내 컨텐츠 내용 - 제목 적용 */
 .tvcontes_title {
     display: block;
-    padding-top: 6px;
-    font-size: 13px;
-    line-height: 17px;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    word-wrap: break-word;
-    height: 33px;
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: bold;
 }
 /* 지니TV 내 컨텐츠 내용 - 아티스트 적용 */
 .tvcontents_artist {
@@ -1060,8 +1199,8 @@ header .header-third .member .loginbox #login--list {
     position: absolute;
     right: 0;
     top: -19px;
-    height: 16px;
-    padding: 2px 6px 0 5px;
+    height: 14px;
+    padding: 1px 6px 3px 5px;
     font-size: 11px;
     background-color: #000;
     background: rgba(0,0,0,0.7);
@@ -1231,6 +1370,7 @@ header .header-third .member .loginbox #login--list {
     width: 811px;
     display: flex;
     margin-left: 20px;
+    padding: 0 0 22px 0px;
 }
 /* .footer-second 내 사업자정보확인  */
 #check-business-information {
@@ -1245,10 +1385,6 @@ header .header-third .member .loginbox #login--list {
 /* .음악저작권 관련 */
 #musiccopyright {
     cursor: pointer;
-}
-/* 전체 상장들 정렬 */
-.list-emblem {
-    margin-top: 40px;
 }
 /* 상장들 정렬 */
 .emblem1 , .emblem2 {
