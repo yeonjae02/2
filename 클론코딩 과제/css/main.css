@@ -8,7 +8,7 @@ body {
     outline: 0;
     font-size: 100%;
     vertical-align: middle;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: dotum, '돋움', sans-serif, Segoe UI Symbol;
     color: rgb(68, 68,68)
 }
 /*wrapper에 효과 주기*/
@@ -25,6 +25,7 @@ img {
 }
 /*헤더 전체에 효과 주기*/
 header {
+    padding-top: 4px;
     position: relative;
     width: 100%;
     margin-bottom: 12px;
@@ -46,7 +47,7 @@ a {
 header .headerFirstLeft {
     font-size: 16px;
     width: 980px;
-    padding: 6px 0 4px;
+    padding: 6px 0 0px;
     display: flex;
     border: 0;
     outline: 0;
@@ -78,7 +79,7 @@ header .headerFirstLeft {
 }
 /* dowmload에 효과 주기 (21.04.02. 완료) */
 .player_download {
-    margin-left: 600px;
+    margin-left: 500px;
     display: flex;
     float: right;
     text-align: right;
@@ -149,7 +150,7 @@ header .header-third>ul {
     display: flex;
     border: 0;
     outline: 0;
-    font-size: 18px;
+    font-size: 15px;
     vertical-align: middle;
     position: relative;
     width: 980px;
@@ -305,8 +306,8 @@ header .header-third .member .loginbox #login--list {
 /* albumKind 내 최신음악 글자 효과주기 */
 #recent-music {
     display: inline-block;
-    margin: 15px 0 10px;
-    font-size: 20px;
+    margin: 15px 0 15px;
+    font-size: 16px;
     font-weight: bold;
     color: #27282d;
     margin-right: 20px;
@@ -359,6 +360,7 @@ header .header-third .member .loginbox #login--list {
 /* 최신앨범-종합 2단 */
 .ca2 {
     display: flex;
+    padding-top: 5px;
 }
 /* 최신앨범 1단 내 존재하는 앨범의 아티스트 */
 .caartist{
@@ -367,8 +369,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 최신앨범 2단 내 존재하는 앨범의 아티스트 */
 .caartist2 {
-    top: 491px;
-    height: 40px;
+    top: 500px;
+    height: 35px;
 }
 /* 최신앨범  내 존재하는 앨범의 아티스트 */
 .caartist , .caartist2 {
@@ -392,7 +394,7 @@ header .header-third .member .loginbox #login--list {
     width: 151px;
     height: 151px;
     position: absolute;
-    top: 221px;
+    top: 220px;
     background: black;
     text-align: center;
     display: none;
@@ -405,7 +407,7 @@ header .header-third .member .loginbox #login--list {
     display: block;
     top: 44px;
     width: 100%;
-    height: 51px;
+    height: 49px;
     padding: 0 8px;
     color: #d2d2d2;
     box-sizing: border-box
@@ -415,7 +417,7 @@ header .header-third .member .loginbox #login--list {
     width: 151px;
     height: 151px;
     position: absolute;
-    top: 380px;
+    top: 383px;
     background: black;
     text-align: center;
     display: none;
@@ -426,7 +428,7 @@ header .header-third .member .loginbox #login--list {
     font-size: 12px;
     position: absolute;
     display: block;
-    top: 44px;
+    top: 40px;
     width: 100%;
     height: 51px;
     padding: 0 8px;
@@ -874,7 +876,7 @@ header .header-third .member .loginbox #login--list {
     color: white;
     display: none;
 }
-#recommendlist1 .material-icons , #recommendlist2 .material-icons, #recommendlist3 .material-icons {
+#material-icons_p1 ,#material-icons_p2, #material-icons_p3 {
     position: absolute;
     font-size: 40px;
     top: 50%;
@@ -882,13 +884,13 @@ header .header-third .member .loginbox #login--list {
     color: white;
     display: none;
 }
-.editor_recommend li:hover #recommendlist1 .material-icons {
+.editor_recommend li:hover #recommendlist1 #material-icons_p1 {
     display: block;
 }
-.editor_recommend li:hover #recommendlist2 .material-icons {
+.editor_recommend li:hover #recommendlist2 #material-icons_p2 {
     display: block;
 }
-.editor_recommend li:hover #recommendlist3 .material-icons {
+.editor_recommend li:hover #recommendlist3 #material-icons_p3 {
     display: block;
 }
 /* 에디터 추천선곡,컬러 첫 번째 칸 색 지정 */
@@ -951,9 +953,11 @@ header .header-third .member .loginbox #login--list {
     margin: 0 7px 13px 6px;
     cursor: pointer;
 }
-#material-icons_ed1, #material-icons_ed2, #material-icons_ed3, #material-icons_ed4 {
-    font-size: 14px;
+#material-icons_ed1, #material-icons_ed2, #material-icons_ed3 {
+    font-size: 20px;
     color: darkgray;
+    margin-top: 4.3px;
+    margin-left: -5px;
 }
 /* 에디터 추천 사진 */
 .er_photo {
@@ -995,7 +999,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 에디터 추천 내용 */
 .er_ci_title {
-    font-size: 14px;
+    font-size: 13px;
     padding-left: 10px;
     padding-right: 25px;
     padding-top: 6px;
@@ -1011,8 +1015,8 @@ header .header-third .member .loginbox #login--list {
     margin-top: 12px;
     position: absolute;
     left: 0;
-    padding: 0 13px;
-    font-size: 11px;
+    padding: 0 11px;
+    font-size: 10px;
     color: #969697;
 }
 /* 에디터 추천 하단 부제 내 왼쪽 정렬 */
@@ -1021,7 +1025,8 @@ header .header-third .member .loginbox #login--list {
 }
 /* 에디터 추천 하단 부제 내 오른쪽 정렬 */
 .er_ci_subci_right {
-    margin-left: 45px;
+    margin-left: 50px;
+    margin-top: -15px;
 }
 /* 에디터 추천 밑에 있는 버튼 */
 #morecontents {
@@ -1043,6 +1048,8 @@ header .header-third .member .loginbox #login--list {
 /* dj 뱃지 */
 .djicon {
     margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
 /* 컨텐츠 더 보기 아이콘 */
 #material-icons_ed5 {
@@ -1230,8 +1237,8 @@ header .header-third .member .loginbox #login--list {
 /* 공지사항 */
 .notice {
     height: 41px;
-    font-size: 14px;
-    width: 52px;
+    font-size: 12px;
+    width: 54px;
     /* display: inline-block; */;
     padding-top: 10px;
 }
@@ -1245,8 +1252,8 @@ header .header-third .member .loginbox #login--list {
 #fisrtnoticecontents {
     padding-top: 10px;
     height: 41px;
-    margin-left: 30px;
-    font-size: 14px;
+    margin-left: 10px;
+    font-size: 12px;
     width: 225px;
     display: block;
     overflow: hidden;
@@ -1263,7 +1270,8 @@ header .header-third .member .loginbox #login--list {
     background: white;
 }
 #morenotice2 {
-    margin-left: -3px;
+    margin-top: -49px;
+    margin-left: 29px;
 }
 #material-icons_f1 , #material-icons_f2 {
     font-weight: bold;
@@ -1281,9 +1289,9 @@ header .header-third .member .loginbox #login--list {
 }
 .service {
     margin-top: 10px;
-    height: 41px;
-    font-size: 14px;
-    margin-left: 319px;
+    height: 50px;
+    font-size: 12px;
+    margin-left: 320px;
 }
 .service ul li {
     height: 41px;
@@ -1291,6 +1299,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* footer-first 내 more_service 속성 */
 .more_service {
+    width: 300px;
     display: flex;
 }
 /* footer-second 전체 속성 */
@@ -1305,11 +1314,12 @@ header .header-third .member .loginbox #login--list {
 /* 두 번째 헤더 내 약관정보 */
 .use-related-information {
     display: flex;
+    font-size: 12px;
 }
 /* 두 번째 헤더 내 약관정보  세부사항*/
 .relatedinfo {
     margin-top: 20px;
-    font-size: 13.3px;
+    font-size: 12px;
 }
 .btncluster{
     margin-left: 30px;
@@ -1317,6 +1327,7 @@ header .header-third .member .loginbox #login--list {
 }
 /* 유튜브 가기 버튼 */
 #goyoutube {
+    margin-left: -10px;
     cursor: pointer;
     border: none;
     width: 34px;
