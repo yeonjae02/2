@@ -270,12 +270,14 @@ header .header-third .member .loginbox .material-icons {
 }
 /* 클릭 시 나오는 로그인 창 내 열림버튼 */
 header .header-third .member .loginbox .material-icons#btn--open {
-    display: block;
-    top: 114px;
+    top: 110px;
+    vertical-align: middle;
 }
 /* 클릭 시 나오는 로그인 창 내 닫힘버튼  */
 header .header-third .member .loginbox .material-icons#btn--close {
     display: none;
+    top: 110px;
+    vertical-align: middle;
 }
 /* 클릭 시 나오는 로그인 창 내 버튼클릭 시 나오는 로그인리스트*/
 header .header-third .member .loginbox #login--list {
