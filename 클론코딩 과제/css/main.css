@@ -127,6 +127,8 @@ header .header-second .search>.material-icons {
     border-bottom: 2px solid #0096FF;
     padding-top: 5px;
 }
+/* 검색창 클릭 시 생기는 테두리 없애기 */
+input:focus{outline:none;}
 /* header-second 내 검색창 효과주기 */
 #search_box {
     font-size: 14px;
@@ -285,7 +287,7 @@ header .header-third .member .loginbox .material-icons#btn--close {
     height: 369px;
     background: #fff;
     position: absolute;
-    display: block;
+    display: none;
     left: auto;
     right: 0;
     padding: 0;
@@ -423,11 +425,12 @@ header .header-third .member .loginbox .material-icons#btn--close {
     height: 28px;
     background: url(//image.genie.co.kr/imageg/web/blt/login_200407.png) no-repeat -133px 0; 
 }
-.close-btn {
+header .header-third .member .close-btn {
     float: right;
     margin: 12px 13px 16px 0;
     border: 0;
-    background: none transparent;
+    background:  transparent;
+    cursor: pointer;
 }
 /* body 속성 부여 */
 /*exhibition에 효과주기*/
