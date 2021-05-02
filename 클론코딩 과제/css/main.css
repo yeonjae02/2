@@ -257,6 +257,7 @@ header .header-third ul.headrThirdMain li.menu .sub_menu>ul li:hover {
     background: none;
     border: none;
     width: 150px;
+    margin-top: 15px;
 }
 /* 로그인 회원가입 전체 크기조정 */
 .member {
@@ -270,18 +271,163 @@ header .header-third .member .loginbox .material-icons {
 }
 /* 클릭 시 나오는 로그인 창 내 열림버튼 */
 header .header-third .member .loginbox .material-icons#btn--open {
-    top: 110px;
+    top: 123px;
     vertical-align: middle;
 }
 /* 클릭 시 나오는 로그인 창 내 닫힘버튼  */
 header .header-third .member .loginbox .material-icons#btn--close {
     display: none;
-    top: 110px;
+    top: 123px;
     vertical-align: middle;
 }
 /* 클릭 시 나오는 로그인 창 내 버튼클릭 시 나오는 로그인리스트*/
-header .header-third .member .loginbox #login--list {
-    display: none;
+#login--list {
+    height: 369px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    left: auto;
+    right: 0;
+    padding: 0;
+    width: 308px;
+    border: 1px solid #d2d2d2;
+    border-radius: 0;
+    white-space: normal;
+    z-index: 100;
+    top: 157px;
+}
+/* 기본 로그인폼 */
+.loginform {
+    top: 37px;
+    left: auto;
+    right: 0;
+    width: 306px;
+    padding: 0;
+    border-radius: 0;
+    white-space: normal;
+    color: #fff;
+    border-bottom: 1px solid #d2d2d2;
+}
+/* 지니 로그인 */
+#genielogin {    
+    position: relative;
+    display: block;
+    height: 27px;
+    margin: 20px 20px 10px 20px;
+    padding: 15px 19px 6px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0096FF;
+    background-color: #0096FF;
+}
+/* 지니 로그인 내 로고  */
+#genieloginlogo {
+    position: absolute;
+    top: 12px;
+    left: 80px;
+    width: 50px;
+    height: 25px;
+    background: url(//image.genie.co.kr/imageg/web/blt/login_201222.png) no-repeat 0 -50px;
+    background-size: 94px 73px;
+}
+/* 지니 로그인 내 글씨체  */
+.loginform .text {
+    height: 37px;
+    font-weight: bolder;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 55px;
+}
+/* 지니 로그인 아래 계정 관련 선택지 */
+.loginform .account {
+    color: #666;
+    margin-left: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+/* 계정 선택지 내 분할선 색 */
+.loginform .account .divisionline2 {
+    color: black;
+}
+/* 계정 선택지 호버 시 색 변화 */
+#find-id:hover ,#find-pw:hover , .make-account a:hover {
+    color:#444;
+}
+/* 아이디 찾기 */
+#find-id {
+    margin-right: -3px;
+}
+/* 비밀번호 찾기 */
+#find-pw {
+    margin-left: -3px;
+}
+/* 회원가입 */
+.make-account {
+    margin-left: 56px;
+}
+/* 회원가입 글자 */
+.make-account a {
+    color: #666;
+    font-weight: bold;
+}
+/* 자사 계정 비이용 로그인 */
+.login-list {
+    height: 198px;
+    margin: 20px 19px 0;
+}
+/* 타사이트 계정 로그인 리스트 */
+.login-list>li {
+    margin-bottom: 6px;
+    padding: 0 0 0 48px;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    line-height: 40px;
+}
+/* 카카오 로그인 로고 */
+#kakao-login-logo {
+    display: block;
+    position: absolute;
+    top: 136px;
+    left: 30px;
+    width: 28px;
+    height: 28px;
+    background: url(//image.genie.co.kr/imageg/web/blt/login_200407.png) no-repeat 0 0;
+}
+/* 페이스북 로그인 로고 */
+#facebook-login-logo {
+    display: block;
+    position: absolute;
+    top: 184px;
+    left: 30px;
+    width: 28px;
+    height: 28px;
+    background: url(//image.genie.co.kr/imageg/web/blt/login_200407.png) no-repeat -33px 0;
+}
+/* 트위터 로그인 로고 */
+#twitter-login-logo {
+    display: block;
+    position: absolute;
+    top: 233px;
+    left: 30px;
+    width: 28px;
+    height: 28px;
+    background: url(//image.genie.co.kr/imageg/web/blt/login_200407.png) no-repeat -66px 0; 
+}
+/* 애플 로그인 로고 */
+#apple-login-logo {
+    display: block;
+    position: absolute;
+    top: 280px;
+    left: 30px;
+    width: 28px;
+    height: 28px;
+    background: url(//image.genie.co.kr/imageg/web/blt/login_200407.png) no-repeat -133px 0; 
+}
+.close-btn {
+    float: right;
+    margin: 12px 13px 16px 0;
+    border: 0;
+    background: none transparent;
 }
 /* body 속성 부여 */
 /*exhibition에 효과주기*/
