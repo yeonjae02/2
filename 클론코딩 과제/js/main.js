@@ -49,7 +49,9 @@ popularbtn.addEventListener("click", function(){
     searchmenuEl.style.height= "357px"
     closepopular.style.top= '320px'
     popularbtn.style.backgroundColor = '#fff'
+    popularbtn.style.borderBottom = '0'
     recentbtn.style.backgroundColor = '#f2f2f2'
+    recentbtn.style.borderBottom = '1px solid #d2d2d2'
 })
 recentbtn.addEventListener("click", function(){
     popularcontents.style.display= 'none'
@@ -58,43 +60,9 @@ recentbtn.addEventListener("click", function(){
     closepopular.style.top= '170px'
     remove.style.top= '170px'
     recentbtn.style.backgroundColor = '#fff'
-    popularbtn.style.backgroundColor = 'red'
+    recentbtn.style.borderBottom = '0'
+    popularbtn.style.backgroundColor = '#f2f2f2'
+    popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
-const clickcolor = "#fff"
-const notclickcolor = "#F2F2F2"
-
-function popularbtnclick() {
-    const currentcolor = popularbtn.style.backgroundColor;
-    if (currentcolor == clickcolor) {
-        popularbtn.style.backgroundColor = notclickcolor;
-    }
-    else {
-        popularbtn.style.backgroundColor = clickcolor;
-    }
-}
-
-function popular_init() {
-    popularbtn.style.backgroundColor = clickcolor;
-    popularbtn.addEventListener("click", popularbtnclick )
-}
-
-
-function recentbtnclick() {
-    const currentcolor = recentbtn.style.backgroundColor;
-    if (currentcolor == clickcolor) {
-        recentbtn.style.backgroundColor = notclickcolor;
-    }
-    else {
-        recentbtn.style.backgroundColor = clickcolor;
-    }
-}
-
-function recent_init() {
-    recentbtn.style.backgroundColor = notclickcolor;
-    recnetbtn.addEventListener("click", recentbtnclick )
-}
-
-popular_init()
-recent_init()
 
 
