@@ -118,7 +118,7 @@ header .header-second{
 }
 header .header-second .search>.material-icons {
     color: #0096ff;
-    font-size: 40px;
+    font-size: 30px;
 }
 /* 검색창 효과주기 */
 .search{
@@ -127,6 +127,10 @@ header .header-second .search>.material-icons {
     border-bottom: 2px solid #0096FF;
     padding-top: 5px;
 }
+#search_box {
+    position: absolute;
+    top: -1px;
+}
 /* 검색창 옆에 생기는 x 없애기 */
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-decoration{
@@ -134,6 +138,7 @@ input::-webkit-search-results-decoration{
 }
 /* 검색창 클릭 시 아래 나타나는 검색어목록 */
 .search_word {
+    display: none;
     border-left: 1px solid #d2d2d2;
     border-right: 1px solid #d2d2d2;
     border-bottom: 1px solid #d2d2d2;
@@ -141,7 +146,7 @@ input::-webkit-search-results-decoration{
     z-index: 40;
     background: #fff;
     position: absolute;
-    top: 94px;
+    top: 89px;
     left: 134px;
     width: 364.2px;
     height: 357px;
@@ -154,30 +159,71 @@ input::-webkit-search-results-decoration{
     width: 181px;
     height: 35px;
     border-right: 1px solid #d2d2d2;
+    cursor: pointer;
 }
 .popularSearchWordList {
+    overflow: hidden;
     width: 364.2px;
     padding-top: 10px;
+    cursor: pointer;
 }
-.popularSearchWordList ol {
-    list-style: nosne;
-    margin-left: 20px;
-    counter-reset: initial;
+.popularSearchWordList ol{
+    width: 363px;
+}
+.pswl_contents> div {
+    margin-left: 40px;
+    width: 300px;
+}
+.pswl_contents .ranking {
+    position: absolute;
+    left: 20px;
+}
+.contentstype {
+    z-index: 60;
+    position: absolute;
+    left: 330px;
 }
 .popularSearchWordList ol> li {
     position: relative;
-    counter-increment: custom;
-    content: counter(custom);
+    cursor: pointer;
+}
+.popularSearchWordList ol> li:hover {
+    background: #d2d2d2;;
+}
+#closeSearchWordList {
+    font-size: 12px;
+    left: 312px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 320px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#removeAllSearchWord {
+    border: 0;
+    background-color: transparent;
+    font-size: 12px;
+    position: absolute;
+    top: 320px;
 }
 .recentSearchWord {
     display: none;
 }
 #recent button {
+    cursor: pointer;
     color: #969697;
     border: 0;
     width: 183px;
     height: 35px;
     border-bottom: 1px solid #d2d2d2;
+}
+#recenetListContents {
+    margin-top: 50px;
+    text-align: center;
+}
+#recenetListContents ::after {
+    color: #fff;
 }
 /* header-second 내 검색창 효과주기 */
 #search_box {

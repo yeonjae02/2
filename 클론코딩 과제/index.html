@@ -63,60 +63,52 @@
                 <div class = "title_logo">
                     <a href="index.html"><img src="./images/logo.PNG"></a>
                 </div>
-                <div class="search">
-                    <input id="search_box" type="search" placeholder="들으면 당장 여행 떠나고 싶어지는 플레이리스트" onfocus="this.placeholder=''" onblur="this.placeholder='들으면 당장 여행 떠나고 싶어지는 플레이리스트'" /> 
-                    <span class="material-icons">
-                    search
-                    </span>
+                <div id="searchAll">
+                    <div class="search">
+                        <input id="search_box" type="search" placeholder="들으면 당장 여행 떠나고 싶어지는 플레이리스트" onfocus="this.placeholder=''" onblur="this.placeholder='들으면 당장 여행 떠나고 싶어지는 플레이리스트'" /> 
+                        <span class="material-icons">
+                        search
+                        </span>
+                        </div>
                     </div>
-                </div>
-                <div class="search_word">
-                    <div class="searchWord">
-                        <h3 id="popular"><button type="button">인기검색어</button></h3>
-                        <h3 id="recent"><button type="button">최근검색어</button></h3>
-                        <div class="popularSearchWordList">
-                            <ol>
-                                <li class="pswl_contents">하이라이트
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">아이유
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">SG워너비
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">yesung
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">인형
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">예성
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">블랙핑크
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">방탄소년단
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">있지
-                                    <span>▲7</span>
-                                </li>
-                                <li class="pswl_contents">불어온다
-                                    <span>▲7</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="popularSearchBtn">
-                            <button type="button" id="closePopularSearchWordList">닫기</button>
-                        </div>
-                        <div class="recentSearchWord">
-                            <div>최근 검색어가 없습니다. </div>
-                            <div class="recentSearchBtn">
-                                <button type="button" id="removeAllSearchWord">최근검색어 전체 삭제 </button>
-                                <button type="button" id="closeRecentSearchWordList">닫기</button>
+                    <div id="searchContents" class="search_word" onblur="this" >
+                        <div class="searchWord">
+                            <h3 id="popular"><button type="button">인기검색어</button></h3>
+                            <h3 id="recent"><button type="button">최근검색어</button></h3>
+                            <div id="popularList" class="popularSearchWordList">
+                                <ol>
+                                    <li class="pswl_contents"><div><span class="ranking">1</span>하이라이트<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">2</span>아이유<span class="contentstype">▲7</span></div> 
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">3</span>SG워너비<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">4</span>yesung<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">5</span>인형<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">6</span>예성<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">7</span>블랙핑크<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">8</span>방탄소년단<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">9</span>있지<span class="contentstype">▲7</span></div>
+                                    </li>
+                                    <li class="pswl_contents"><div><span class="ranking">10</span>불어온다<span class="contentstype">▲7</span></div>
+                                    </li>
+                                </ol>
                             </div>
+                            <div id="recentList" class="recentSearchWord">
+                                <div id="recenetListContents">최근 검색어가 없습니다. </div>
+                                <div class="recentSearchBtn">
+                                    <button type="button" id="removeAllSearchWord">최근검색어 전체 삭제 </button>
+                                </div>
+                            </div>
+                            <div  class="popularSearchBtn">
+                                <button type="button" id="closeSearchWordList">닫기</button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
