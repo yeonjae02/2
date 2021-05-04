@@ -246,6 +246,30 @@ input::-webkit-search-results-decoration{
     border: 0;
     position: relative;
 }
+/* 다크모드 & 라이트모드 */
+.btn-darkmode, .btn-lightmode {
+    margin-left: 870px;
+    width: 103px;
+    border-radius: 3px;
+    border: #969697;
+    position: absolute;
+    color: white;
+    display: flex;
+    top: 60px;
+}
+/* 다크모드 버튼 */
+.btn-darkmode {
+    background-color: black;
+}
+/* 다크모드 버튼 내 아이콘 */
+.btn-darkmode>.material-icons, .btn-lightmode>.material-icons {
+    color: yellow;
+}
+/* 라이트모드 버튼 */
+.btn-lightmode {
+    display: none;
+    background-color: #0096ff;
+}
 /*header-third에 효과주기*/
 header .header-third {
     width: 980px;
@@ -1083,6 +1107,26 @@ header .header-third .member .close-btn {
 .hansartist {
     color: rgb(136, 133, 133);
     font-size: 12px;
+}
+/* srcoll to top */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.btn-scrollToTop {
+    position: fixed;
+    bottom: 10px;
+    width: 80px;
+    right: calc((100% - 980px)/2 - 100px);
+    cursor: pointer;
+    animation: float 6s ease infinite;
 }
 /* 에디터 추천 제목 */
 #editorRecommend {

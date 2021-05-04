@@ -1,3 +1,17 @@
+// 다크모드 라이트모드 관련 js
+const darkModeBtn = document.getElementById('darkModeBtn')
+const lightModeBtn = document.getElementById('lightModeBtn')
+
+darkModeBtn.addEventListener("click", function(){
+    darkModeBtn.style.display = 'none'
+    lightModeBtn.style.display = 'block'
+})
+
+lightModeBtn.addEventListener("click", function(){
+    lightModeBtn.style.display = 'none'
+    darkModeBtn.style.display = 'block'
+})
+
 // 로그인 회원가입 관련 js 
 const menuopenEl = document.getElementById('btn--open')
 const menucloseEl = document.getElementById('btn--close')
@@ -65,4 +79,16 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
 
+// srcoll to top 
+const scrollToTop = () => {
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}
+// scroll to top 버튼
+const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 
+// 윈도우에 스크롤 이벤트가 발생 시 작동하는 익명의 함수
+window.addEventListener("scroll",function(){
+    Window.scrollY > 0
+    ? srcollToTopBtn.style.display = 'none'
+    : srcollToTopBtn.style.display = 'block'
+})

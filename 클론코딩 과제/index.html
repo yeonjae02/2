@@ -111,6 +111,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- 다크모드 & 라이트모드 버튼 -->
+                <button type="button" class="btn-darkmode" id="darkModeBtn"><span class="material-icons">nightlight_round</span>다크모드</button>
+                <button type="button" class="btn-lightmode" id="lightModeBtn"><span class="material-icons">light_mode</span>라이트모드</button>
             <!-- 헤더 세 번째 파트 만들기 -->
             <div class="header-third">
                 <ul class="headrThirdMain">
@@ -701,33 +704,35 @@
         <!-- 실시간차트 옆 hot & new 제작 -->
         <div class="hotandnew" id="hot_and_new">
             <h2 id="hotandnewtitle">HOT & NEW</h2>
-                    <ul class="han_f_ul">
-                        <li class="han_f_ulcontents" id="hanf1"><img src="./images/event_1.jpg"></li>
-                        <li class="han_f_ulcontents" id="hanf2"><img src="./images/event_2.jpg"></li>
-                        <li class="han_f_ulcontents" id="hanf3"><img src="./images/event-3.jpg"></li>
-                        <li class="han_f_ulcontents" id="hanf4"><img src="./images/event-4.jpg"></li>
-                        <li class="han_f_ulcontents" id="hanf5"><img src="./images/event-5.png"></li>
-                    </ul>
-                    <ul class="han_s_ul">
-                        <li class="han_s_ulcontents">
-                            <img class="hansphoto" src="./images/event_s_1.jpg">
-                            <div class="hansinfo">
-                                <p class="hanscategory" style="color: #0096ff;">NEW ALBUM</p>
-                                <p class="hansalbumtitle">수면등</p>
-                                <p class="hansartist">렉스디 (REX.D)</p>
-                            </div>
-                        </li>
-                        <li class="han_s_ulcontents">
-                            <img class="hansphoto" src="./images/event_s_2.jpg">
-                            <div class="hansinfo">
-                                <p class="hanscategory" style="color: #0096ff;">NEW ALBUM</p>
-                                <p class="hansalbumtitle">빈 집</p>
-                                <p class="hansartist">전유빈</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>      
-            </div>
+                <ul class="han_f_ul">
+                    <li class="han_f_ulcontents" id="hanf1"><img src="./images/event_1.jpg"></li>
+                    <li class="han_f_ulcontents" id="hanf2"><img src="./images/event_2.jpg"></li>
+                    <li class="han_f_ulcontents" id="hanf3"><img src="./images/event-3.jpg"></li>
+                    <li class="han_f_ulcontents" id="hanf4"><img src="./images/event-4.jpg"></li>
+                    <li class="han_f_ulcontents" id="hanf5"><img src="./images/event-5.png"></li>
+                </ul>
+                <ul class="han_s_ul">
+                    <li class="han_s_ulcontents">
+                        <img class="hansphoto" src="./images/event_s_1.jpg">
+                        <div class="hansinfo">
+                            <p class="hanscategory" style="color: #0096ff;">NEW ALBUM</p>
+                            <p class="hansalbumtitle">수면등</p>
+                            <p class="hansartist">렉스디 (REX.D)</p>
+                        </div>
+                    </li>
+                    <li class="han_s_ulcontents">
+                        <img class="hansphoto" src="./images/event_s_2.jpg">
+                        <div class="hansinfo">
+                            <p class="hanscategory" style="color: #0096ff;">NEW ALBUM</p>
+                            <p class="hansalbumtitle">빈 집</p>
+                            <p class="hansartist">전유빈</p>
+                        </div>
+                    </li>
+                </ul>
+        </div>      
+    </div>
+    <!-- scroll to top -->
+    <img class="btn-scrollToTop" onclick="scrollToTop()" src="./images/scrolltotop.jpg" alt="음악아이콘" />
     <!-- 에디터 추천 -->
     <div class="editor_recommend">
         <h2 id="editorRecommend">에디터추천 </h2>
