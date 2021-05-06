@@ -149,9 +149,10 @@ input::-webkit-search-results-decoration{
     top: 89px;
     left: 134px;
     width: 364.2px;
-    height: 357px;
+    height: 358px;
     overflow: hidden;
 }
+
 /* 인기검색어 버튼 */
 #popular {
     float: left;
@@ -1161,19 +1162,22 @@ header .header-third .member .close-btn {
     margin: 0 7px 13px 6px;
     cursor: pointer;
 }
-/* 에디터 추천 클릭 시 등장하는 음악듣기 */
-.gotolisten {
-    background: #000;
+.makeblack {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 5;
     width: 224px;
-    height: 145px;
-    margin-top: -145px;
-    display: block;
+    height: 147px;
+    margin-left: -168px;
     display: none;
+}
+.editor_recommend li:hover .makeblack {
+    display: block;
 }
 .editor_recommend li:hover .musicsnumber {
     display: block;
 }
 .musicsnumber {
+    z-index: 10;
     position: absolute;
     top: 30%;
     left: 45%;
@@ -1181,6 +1185,7 @@ header .header-third .member .close-btn {
     display: none;
 }
 #material-icons_p1 ,#material-icons_p2, #material-icons_p3 {
+    z-index: 10;
     position: absolute;
     font-size: 40px;
     top: 50%;

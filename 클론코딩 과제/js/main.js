@@ -1,6 +1,7 @@
 // 다크모드 라이트모드 관련 js
 const darkModeBtn = document.getElementById('darkModeBtn')
 const lightModeBtn = document.getElementById('lightModeBtn')
+const body = document.getElementById('body')
 
 darkModeBtn.addEventListener("click", function(){
     darkModeBtn.style.display = 'none'
@@ -11,6 +12,7 @@ lightModeBtn.addEventListener("click", function(){
     lightModeBtn.style.display = 'none'
     darkModeBtn.style.display = 'block'
 })
+
 
 // 로그인 회원가입 관련 js 
 const menuopenEl = document.getElementById('btn--open')
@@ -23,7 +25,6 @@ menuopenEl.addEventListener("click", function() {
     menucloseEl.style.display = 'block'
     menuEl.style.display = 'block'
 })
-
 menucloseEl.addEventListener("click", function() {
     menuopenEl.style.display = 'block'
     menucloseEl.style.display = 'none'
@@ -40,13 +41,13 @@ menucloseEl2.addEventListener("click", function() {
 // const search_contents = document.getElementById('searchAll') 
 const searchmenuEl = document.getElementById('searchContents')
 const search = document.getElementById('search_box')
-const closepopular = document.getElementById('closeSearchWordList')      
+const closepopular = document.getElementById('closeSearchWordList') 
+const searchmenu = document.getElementById('search-info')     
 
 
 search.addEventListener("click", function() {
     searchmenuEl.style.display ='block'
 })
-
 closepopular.addEventListener("click", function(){
     searchmenuEl.style.display = 'none'
 })
