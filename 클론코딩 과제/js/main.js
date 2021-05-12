@@ -60,6 +60,7 @@ const popularcontents = document.getElementById('popularList')
 const recentcontents = document.getElementById('recentList')
 const remove = document.getElementById('removeAllSearchWord')
 
+// 인기검색어 버튼 클릭 시 발생하는 효과
 popularbtn.addEventListener("click", function(){
     popularcontents.style.display= 'block'
     recentcontents.style.display= 'none'
@@ -70,6 +71,7 @@ popularbtn.addEventListener("click", function(){
     recentbtn.style.backgroundColor = '#f2f2f2'
     recentbtn.style.borderBottom = '1px solid #d2d2d2'
 })
+// 최근검색어 버튼 클릭 시 발생하는 효과
 recentbtn.addEventListener("click", function(){
     popularcontents.style.display= 'none'
     recentcontents.style.display= 'block'
@@ -89,9 +91,46 @@ const scrollToTop = () => {
 // scroll to top 버튼
 const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 
-// 윈도우에 스크롤 이벤트가 발생 시 작동하는 익명의 함수
-window.addEventListener("scroll",function(){
-    Window.scrollY > 0
-    ? srcollToTopBtn.style.display = 'none'
-    : srcollToTopBtn.style.display = 'block'
+// 푸터 내 공지사항 관련 JS
+const backnoticebtn = document.getElementById('morenotice1') 
+const nextnoticebtn = document.getElementById('morenotice2')
+const notice1 = document.getElementById('firstnoticecontents1')
+const notice2 = document.getElementById('firstnoticecontents2')
+const notice3 = document.getElementById('firstnoticecontents3')
+const back = document.getElementById('material-icons_f1')
+const next = document.getElementById('material-icons_f2')
+ 
+backnoticebtn.addEventListener("click", function() {
+    if (notice3.style.display === 'block') {
+        notice3.style.display = 'none'
+        notice2.style.display = 'block'
+        next.style.color = '#8b8b8b'
+        back.style.color = 'black'
+    } else if (notice2.style.display === 'block') {
+        notice2.style.display = 'none'
+        notice1.style.display = 'block'
+        back.style.color = '#8b8b8b'
+        next.style.color = 'black'
+    } else {
+        notice1.style.display = 'block'
+        back.style.color = '#8b8b8b'
+        next.style.color = 'black'
+    }
+})
+nextnoticebtn.addEventListener("click", function() {
+    if (notice1.style.display === 'block') {
+        notice1.style.display = 'none'
+        notice2.style.display = 'block'
+        next.style.color = 'black'
+        back.style.color = '#8b8b8b'
+    } else if (notice2.style.display === 'block') {
+        notice2.style.display = 'none'
+        notice3.style.display = 'block'
+        next.style.color = '#8b8b8b'
+        back.style.color = 'black'
+    } else {
+        notice3.style.display = 'block'
+        next.style.color = '#8b8b8b'
+        back.style.color = 'black'
+    }
 })
