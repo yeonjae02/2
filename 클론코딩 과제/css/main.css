@@ -1565,6 +1565,7 @@ header .header-third .member .close-btn {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+/* 공지사항 옆 이동버튼 */
 #morenotice1, #morenotice2 {
     margin-left: 10px;
     border: 0.1px solid #aab1b8;
@@ -1574,30 +1575,36 @@ header .header-third .member .close-btn {
     height: 20px;
     background: white;
 }
+/* 공지사항 내 다음 이동 버튼 */
 #morenotice2 {
     margin-top: -49px;
     margin-left: 29px;
 }
+/* 공지사항 이동버튼 내 화살표들 */
 #material-icons_f1 , #material-icons_f2 {
     font-weight: bold;
     vertical-align: middle;
     font-size: 12px;
     background-color: none;
 }
+/* 공지사항 이전 이동 버튼 내 화살표 */
 #material-icons_f1 {
     font-weight: bold;
     color: #8b8b8b;
     margin-left: -3px;
 }
+/* 공지사항 다음 이동 버튼 내 화살표 */
 #material-icons_f2 {
     margin-left: -2px;
 }
+/* 이벤트, 고객센터, 이용안내  */
 .service {
     margin-top: 10px;
     height: 50px;
     font-size: 12px;
     margin-left: 320px;
 }
+/* 이벤트, 고객센터, 이용안내 표 */
 .service ul li {
     height: 41px;
     margin: 0 6px 0 6px;
@@ -1613,6 +1620,7 @@ header .header-third .member .close-btn {
     width: 980px;
     margin: 0 auto;
 }
+/* 전체 서비스 보기 */
 #material-icons_f3 {
     font-size: 14px;
 }
@@ -1626,6 +1634,7 @@ header .header-third .member .close-btn {
     margin-top: 20px;
     font-size: 12px;
 }
+/* 지니 유튜브, 네이버블로그, 페이스북  보러가기 */
 .btncluster{
     margin-left: 30px;
     margin-top: 15px;
@@ -1639,7 +1648,6 @@ header .header-third .member .close-btn {
     height: 34px;
     background-image: url(./../images/btn_youtube.png);
 }
-
 /* 네이버 블로그 가기 버튼 */
 #gonaverblog {
     cursor: pointer;

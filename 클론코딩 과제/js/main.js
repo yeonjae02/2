@@ -6,11 +6,13 @@ const body = document.getElementById('body')
 darkModeBtn.addEventListener("click", function(){
     darkModeBtn.style.display = 'none'
     lightModeBtn.style.display = 'block'
+    body.style.backgroundColor = 'black'
 })
 
 lightModeBtn.addEventListener("click", function(){
     lightModeBtn.style.display = 'none'
     darkModeBtn.style.display = 'block'
+    body.style.backgroundColor = 'transparent'
 })
 
 
