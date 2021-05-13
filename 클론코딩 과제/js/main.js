@@ -1,19 +1,19 @@
 // 다크모드 라이트모드 관련 js
-const darkModeBtn = document.getElementById('darkModeBtn')
-const lightModeBtn = document.getElementById('lightModeBtn')
-const body = document.getElementById('body')
+// const darkModeBtn = document.getElementById('darkModeBtn')
+// const lightModeBtn = document.getElementById('lightModeBtn')
+// const body = document.getElementById('body')
 
-darkModeBtn.addEventListener("click", function(){
-    darkModeBtn.style.display = 'none'
-    lightModeBtn.style.display = 'block'
-    body.style.backgroundColor = 'black'
-})
+// darkModeBtn.addEventListener("click", function(){
+//     darkModeBtn.style.display = 'none'
+//     lightModeBtn.style.display = 'block'
+//     body.style.backgroundColor = 'black'
+// })
 
-lightModeBtn.addEventListener("click", function(){
-    lightModeBtn.style.display = 'none'
-    darkModeBtn.style.display = 'block'
-    body.style.backgroundColor = 'transparent'
-})
+// lightModeBtn.addEventListener("click", function(){
+//     lightModeBtn.style.display = 'none'
+//     darkModeBtn.style.display = 'block'
+//     body.style.backgroundColor = 'transparent'
+// })
 
 
 // 로그인 회원가입 관련 js 
@@ -84,6 +84,82 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
 
+// 헤더 아래 최신음악 전시창 js
+const number1 = document.getElementById('btnresult1')
+const number2 = document.getElementById('btnresult2')
+const number3 = document.getElementById('btnresult3')
+const number4 = document.getElementById('btnresult4')
+const number5 = document.getElementById('btnresult5')
+const afteralbum = document.getElementById('preenewalbum')
+const beforealbum = document.getElementById('morenewalbum')
+
+beforealbum.addEventListener("click", function() {
+    if (number1.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'block'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    } else if (number2.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'block'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    } else if (number3.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'block'
+        number5.style.display = 'none'
+    } else if (number4.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = 'block'
+    } else {
+        number1.style.display = 'block'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    }
+})
+
+afteralbum.addEventListener("click", function() {
+    if (number1.style.display === 'block'){
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = ' block'
+    } else if (number2.style.display ==='block') {
+        number1.style.display = 'block'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    } else if (number3.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'block'
+        number3.style.display = 'none'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    } else if (number4.style.display === 'block') {
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'block'
+        number4.style.display = 'none'
+        number5.style.display = 'none'
+    } else {
+        number1.style.display = 'none'
+        number2.style.display = 'none'
+        number3.style.display = 'none'
+        number4.style.display = 'block'
+        number5.style.display = 'none'
+    }
+}) 
 // srcoll to top 
 const scrollToTop = () => {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
@@ -91,6 +167,26 @@ const scrollToTop = () => {
 // scroll to top 버튼
 const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 
+// 에디터 추천 컨텐츠 더보기 버튼 관련 js 
+const er_more = document.getElementById('morecontents')
+const er_close = document.getElementById('closecontents')
+const line3 = document.getElementById('editorRm3')
+const line4 = document.getElementById('editorRm4')
+
+er_more.addEventListener("click", function() {
+    line3.style.display = 'block'
+    line4.style.display = 'block'
+    er_more.style.display = 'none'
+    er_close.style.display = 'block'
+})
+
+er_close.addEventListener("click", function() {
+    line3.style.display = 'none'
+    line4.style.display = 'none'
+    er_more.style.display = 'block'
+    er_close.style.display = 'none'
+
+})
 // 푸터 내 공지사항 관련 JS
 const backnoticebtn = document.getElementById('morenotice1') 
 const nextnoticebtn = document.getElementById('morenotice2')
@@ -121,14 +217,18 @@ nextnoticebtn.addEventListener("click", function() {
     if (notice1.style.display === 'block') {
         notice1.style.display = 'none'
         notice2.style.display = 'block'
+        notice3.style.display = 'none'
         next.style.color = 'black'
         back.style.color = '#8b8b8b'
     } else if (notice2.style.display === 'block') {
+        notice1.style.display = 'none'
         notice2.style.display = 'none'
         notice3.style.display = 'block'
         next.style.color = '#8b8b8b'
         back.style.color = 'black'
     } else {
+        notice1.style.display = 'none'
+        notice2.style.display = 'none'
         notice3.style.display = 'block'
         next.style.color = '#8b8b8b'
         back.style.color = 'black'
