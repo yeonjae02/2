@@ -691,16 +691,18 @@ header .header-third .member .close-btn {
 }
 /* 최신앨범 1단 내 존재하는 앨범의 아티스트 */
 .caartist{
-    top: 346px;
+    vertical-align: bottom;
+    top: 302px;
     height: 35px;
 }
 /* 최신앨범 2단 내 존재하는 앨범의 아티스트 */
 .caartist2 {
-    top: 510px;
+    top: 465px;
     height: 35px;
 }
 /* 최신앨범  내 존재하는 앨범의 아티스트 */
 .caartist , .caartist2 {
+    padding-top: 40px;
     display: flex;
     vertical-align: bottom;
     z-index: 2;
@@ -714,6 +716,7 @@ header .header-third .member .close-btn {
     text-align: center;
     border: none;
     font-size: 12px;
+    height: 80px;
     background: linear-gradient(transparent, rgb(41, 37, 37));
 }
 /* 앨범정보 */
@@ -778,6 +781,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist {
+    padding-top: 0px;
     width: 110px;
     font-weight: bold;
     top: 245px;
@@ -791,6 +795,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist2 {
+    padding-top: 0px;
     top: 410px;
     font-weight: bold;
     display: block;
