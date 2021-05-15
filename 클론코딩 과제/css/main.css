@@ -616,6 +616,7 @@ header .header-third .member .close-btn {
     margin-top: -3px;
     width: 39px;
     height: 20px;
+    cursor: pointer;
 }
 #synthesis {
     margin-left: 15px;
@@ -643,7 +644,7 @@ header .header-third .member .close-btn {
     margin: 0 5px;
 }
 /* 최신앨범- 종합 전체  */
-.comprehensive_album{
+#entireNewAlbum, #domesticMusicAlbum, #foreignMusicAlbum{
     margin-left: 20px;
     margin-right: 20px;
     width: 980px;
@@ -661,8 +662,14 @@ header .header-third .member .close-btn {
 #domesticMusicAlbum {
     display: none;
 }
+#domesticMusicAlbum2, #domesticMusicAlbum3,#domesticMusicAlbum4,#domesticMusicAlbum5 {
+    display: none;
+}
 /* 최신앨범 - 국외 */
 #foreignMusicAlbum {
+    display: none;
+}
+#foreignMusicAlbum2, #foreignMusicAlbum3, #foreignMusicAlbum4, #foreignMusicAlbum5 {
     display: none;
 }
 /* 단마다 주는 효과 */
