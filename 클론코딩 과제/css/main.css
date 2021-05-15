@@ -573,21 +573,40 @@ header .header-third .member .close-btn {
 }
 /* 버튼의 클릭에 따라 변하는 숫자 */
 #btnresult1, #btnresult2, #btnresult3, #btnresult4, #btnresult5 {
-    margin-left: -15px;
+    margin-left: -12px;
     position: absolute;
     font-weight: bold;
+    margin-top: 12px;
 }
 #btnresult2, #btnresult3, #btnresult4, #btnresult5 {
     display: none;
 }
+#entirenumber {
+    margin-top: 12px;
+}
 /* .moreNewAlbum 내 버튼 설정 */
-.albumKind .moreNewAlbum button {
-    border: 1px solid #dde0e4 ;
-    background-color:white;
-    border-radius: 100%;
-    margin-left: 5px;
-    height: 25px;
-    width: 25px;
+#preenewalbum {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 28px;
+    height: 28px;
+    margin: 6px 2px 0 30px;
+    border: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/recent_paging.png) no-repeat 0 0;
+}
+#morenewalbum {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 28px;
+    height: 28px;
+    margin: 6px 2px 0 65px;
+    border: 0;
+    line-height: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/recent_paging.png) no-repeat -33px 0;
 }
 /* 최신앨범 위 양쪽화살표 처리 */
 #material-icons_e1, #material-icons_e2 {
@@ -611,6 +630,7 @@ header .header-third .member .close-btn {
 }
 /* .main_album 내 종합, 국내, 국외 효과주기 */
 #synthesis, #domestic ,#foreign  {
+    margin-bottom: 10px;
     background-color: transparent;
     border: 0;
     margin-top: -3px;
@@ -627,7 +647,6 @@ header .header-third .member .close-btn {
     margin-top: 12px;
     margin-left: 600px;
     display: flex;
-    margin-bottom: 20px;
 }
 /* .main_album 내 종합 국내 국외 글자 전체 효과주기 */
 .albumKind >ul {
@@ -722,9 +741,9 @@ header .header-third .member .close-btn {
 /* 앨범정보 */
 .newAlbumInfo1 {
     width: 151px;
-    height: 151px;
+    height: 154px;
     position: absolute;
-    top: 231px;
+    top: 228px;
     background: black;
     text-align: center;
     display: none;
@@ -745,13 +764,34 @@ header .header-third .member .close-btn {
 /* 앨범정보 */
 .newAlbumInfo2 {
     width: 151px;
-    height: 151px;
+    height: 154px;
     position: absolute;
-    top: 394px;
+    top: 391px;
     background: black;
     text-align: center;
     display: none;
     vertical-align: middle;
+}
+/* 매거진 아이콘 */
+.albumIcon-mg {
+    display: block;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    line-height: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/recent_icon_5.0.png) no-repeat -124px 0;
+    text-indent: -9999px;
+
+}
+/* 이벤트 아이콘 */
+.albumIcon-event {
+    display: block;
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    line-height: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/recent_icon_5.0.png) no-repeat -186px 0;
+    text-indent: -9999px;
 }
 /* 앨범 정보 내 앨범명 */
 .albumtitle2 {
@@ -781,6 +821,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist {
+    z-index: 101;
     padding-top: 0px;
     width: 110px;
     font-weight: bold;
@@ -795,6 +836,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist2 {
+    z-index: 101;
     padding-top: 0px;
     top: 410px;
     font-weight: bold;
@@ -807,11 +849,13 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
 .comprehensive_album .albumexhibiton:hover .newAlbumInfo1 {
+    z-index: 100;
     display: block;
     background: rgba(0,0,0,0.8);
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
 .comprehensive_album .albumexhibiton:hover .newAlbumInfo2 {
+    z-index: 100;
     display: block;
     background: rgba(0,0,0,0.8);
 }
@@ -829,7 +873,7 @@ header .header-third .member .close-btn {
     cursor: pointer;
 }
 /* 광고 rolling 요소 각각 정렬 */
-#banner2, #banner3, #banner4, #banner5, #banner6, #banner7, #banner8  {
+#banner2, #banner3, #banner4, #banner5, #banner6, #banner7, #banner8 , #banner9 {
     display: none;
 }
 /* 광고 내 컨텐츠 정렬 */
@@ -1109,7 +1153,7 @@ header .header-third .member .close-btn {
     margin-top: 10px;
 }
 /* hot and new 상단 scroll 그림 처리 */
-#hanf2, #hanf3, #hanf4, #hanf5 {
+#hanf2, #hanf3, #hanf4, #hanf5, #hanf6 {
     display: none;
 } 
 /* hot and new 2번째 표 정리 */
@@ -1156,6 +1200,7 @@ header .header-third .member .close-btn {
 }
 /* hot and new 정보  내 아티스트 정리 */
 .hansartist {
+    font-weight: lighter;
     color: rgb(136, 133, 133);
     font-size: 12px;
 }
@@ -1274,23 +1319,23 @@ header .header-third .member .close-btn {
 }
 /* 에디터 추천선곡,컬러 첫 번째 칸 색 지정 */
 #recommendlist1 {
-    background-color: #c4a9b6;
+    background-color: #e0afb1;
 }
 /* 에디터 추천선곡, 컬러 두 번째 칸 색 지정 */
 #recommendlist2 {
-    background-color: #b1b5b6;
+    background-color: #c4a9b6;
 }
 /* 에디터 추천선곡, 컬러 세 번째 칸 색 지정 */
 #recommendlist3 {
-    background-color: #a7beba;
+    background-color: #a7a6b6;
 }
 /* 에디터 추천선곡,컬러 첫 번째 칸 색 지정 */
 #recommendlist4 {
-    background-color: #c4a9b6;
+    background-color: #a7beba;
 }
 /* 에디터 추천선곡, 컬러 두 번째 칸 색 지정 */
 #recommendlist5 {
-    background-color: #b1b5b6;
+    background-color: #c4a9b6;
 }
 /* 에디터 추천선곡, 컬러 세 번째 칸 색 지정 */
 #recommendlist6 {

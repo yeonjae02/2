@@ -130,6 +130,9 @@ synthesis.addEventListener("click", function() {
     number3.style.display = 'none'
     number4.style.display = 'none'
     number5.style.display = 'none'
+    synthesis.style.color = '#0096ff'
+    domestic.style.color = 'black'
+    foreign.style.color = 'black'
 })
 // 국내 앨범을 눌렀을 때 생기는 변화
 domestic.addEventListener("click",function() {
@@ -142,6 +145,9 @@ domestic.addEventListener("click",function() {
     number3.style.display = 'none'
     number4.style.display = 'none'
     number5.style.display = 'none'
+    synthesis.style.color = 'black'
+    domestic.style.color = '#0096ff'
+    foreign.style.color = 'black'
 })
 // 국외 앨범을 눌렀을 때 생기는 변화
 foreign.addEventListener("click", function() {
@@ -154,6 +160,9 @@ foreign.addEventListener("click", function() {
     number3.style.display = 'none'
     number4.style.display = 'none'
     number5.style.display = 'none'
+    synthesis.style.color = 'black'
+    domestic.style.color = 'black'
+    foreign.style.color = '#0096ff'
 })
 
 // <- 버튼 클릭 시 생기는 변화 (초기상태가 아닌 버튼 클릭 시 기준)
@@ -565,7 +574,7 @@ nextnoticebtn.addEventListener("click", function() {
         notice3.style.display = 'block'
         next.style.color = '#8b8b8b'
         back.style.color = 'black'
-    } else {
+    } else   {
         notice1.style.display = 'none'
         notice2.style.display = 'none'
         notice3.style.display = 'block'
