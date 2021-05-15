@@ -84,80 +84,135 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
 
-// 헤더 아래 최신음악 전시창 js
+// 헤더 아래 종합음악 전시창 js
 const number1 = document.getElementById('btnresult1')
 const number2 = document.getElementById('btnresult2')
 const number3 = document.getElementById('btnresult3')
 const number4 = document.getElementById('btnresult4')
 const number5 = document.getElementById('btnresult5')
-const afteralbum = document.getElementById('preenewalbum')
-const beforealbum = document.getElementById('morenewalbum')
+const entireafteralbum = document.getElementById('preenewalbum')
+const entirebeforealbum = document.getElementById('morenewalbum')
+const entirenewAlbum1 = document.getElementById('entireNewAlbum1')
+const entirenewAlbum2 = document.getElementById('entireNewAlbum2')
+const entirenewAlbum3 = document.getElementById('entireNewAlbum3')
+const entirenewAlbum4 = document.getElementById('entireNewAlbum4')
+const entirenewAlbum5 = document.getElementById('entireNewAlbum5')
 
-beforealbum.addEventListener("click", function() {
+entirebeforealbum.addEventListener("click", function() {
     if (number1.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'block'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'block'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     } else if (number2.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'block'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'block'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     } else if (number3.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'block'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'block'
+        entirenewAlbum5.style.display = 'none'
     } else if (number4.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = 'block'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'block'
     } else {
         number1.style.display = 'block'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'block'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     }
 })
 
-afteralbum.addEventListener("click", function() {
+entireafteralbum.addEventListener("click", function() {
     if (number1.style.display === 'block'){
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = ' block'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'block'
     } else if (number2.style.display ==='block') {
         number1.style.display = 'block'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'block'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     } else if (number3.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'block'
         number3.style.display = 'none'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'block'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     } else if (number4.style.display === 'block') {
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'block'
         number4.style.display = 'none'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'block'
+        entirenewAlbum4.style.display = 'none'
+        entirenewAlbum5.style.display = 'none'
     } else {
         number1.style.display = 'none'
         number2.style.display = 'none'
         number3.style.display = 'none'
         number4.style.display = 'block'
         number5.style.display = 'none'
+        entirenewAlbum1.style.display = 'none'
+        entirenewAlbum2.style.display = 'none'
+        entirenewAlbum3.style.display = 'none'
+        entirenewAlbum4.style.display = 'block'
+        entirenewAlbum5.style.display = 'none'
     }
 }) 
 // srcoll to top 

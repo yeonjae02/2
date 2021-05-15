@@ -605,18 +605,19 @@ header .header-third .member .close-btn {
 }
 /* .albumKind효과주기 */
 .albumKind {
+    margin-top: -4px;
     display: flex;
     cursor: pointer;
 }
 /* .main_album 내 종합, 국내, 국외 효과주기 */
-#name1, #name2 ,#name3  {
+#synthesis, #domestic ,#foreign  {
     background-color: transparent;
     border: 0;
     margin-top: -3px;
     width: 39px;
     height: 20px;
 }
-#name1 {
+#synthesis {
     margin-left: 15px;
 }
 /* .moreNewAlbum 전체 설정 */
@@ -641,12 +642,28 @@ header .header-third .member .close-btn {
     border: 1px solid  #e8eef3;
     margin: 0 5px;
 }
-/* 최신앨범- 종합 전체1   */
-.comprehensive_album1 {
+/* 최신앨범- 종합 전체  */
+.comprehensive_album{
     margin-left: 20px;
     margin-right: 20px;
     width: 980px;
     margin: 0 auto;
+}
+/* 종합 앨범 내 2~5번째 장 */
+#entireNewAlbum2, #entireNewAlbum3, #entireNewAlbum4, #entireNewAlbum5{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 980px;
+    margin: 0 auto;
+    display: none;
+}
+/* 최신앨범- 국내 */
+#domesticMusicAlbum {
+    display: none;
+}
+/* 최신앨범 - 국외 */
+#foreignMusicAlbum {
+    display: none;
 }
 /* 단마다 주는 효과 */
 .ca1 , .ca2 {
@@ -661,7 +678,7 @@ header .header-third .member .close-btn {
     margin-bottom: 5px;
 }
 /* 최신앨범-종합 2단 */
-.ca2 {
+.ca2{
     display: flex;
     padding-top: 5px;
 }
@@ -753,7 +770,7 @@ header .header-third .member .close-btn {
     font-weight: lighter;
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
-.comprehensive_album1 .albumexhibiton:hover .caartist {
+.comprehensive_album .albumexhibiton:hover .caartist {
     width: 110px;
     font-weight: bold;
     top: 245px;
@@ -766,7 +783,7 @@ header .header-third .member .close-btn {
     text-overflow: ellipsis;
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
-.comprehensive_album1 .albumexhibiton:hover .caartist2 {
+.comprehensive_album .albumexhibiton:hover .caartist2 {
     top: 410px;
     font-weight: bold;
     display: block;
@@ -777,12 +794,12 @@ header .header-third .member .close-btn {
     text-shadow: 0px 9px 1px gray;
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
-.comprehensive_album1 .albumexhibiton:hover .newAlbumInfo1 {
+.comprehensive_album .albumexhibiton:hover .newAlbumInfo1 {
     display: block;
     background: rgba(0,0,0,0.8);
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
-.comprehensive_album1 .albumexhibiton:hover .newAlbumInfo2 {
+.comprehensive_album .albumexhibiton:hover .newAlbumInfo2 {
     display: block;
     background: rgba(0,0,0,0.8);
 }
