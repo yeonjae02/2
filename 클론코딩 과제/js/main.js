@@ -535,6 +535,44 @@ er_close.addEventListener("click", function() {
     er_close.style.display = 'none'
 
 })
+
+// 지니TV 컨텐츠 관련 JS 
+const genietvrecomm = document.getElementById('genietvrecomm')
+const tvRecommContents = document.getElementById('tvRecommContents')
+const tvmenuHOT = document.getElementById('tvmenuHOT')
+const tvHotContents = document.getElementById('tvHotContents')
+const mnetbrod = document.getElementById('mnetbrod')
+const tvMnetContents = document.getElementById('tvMnetContents')
+
+genietvrecomm.addEventListener("click",function() {
+    genietvrecomm.style.color = "#0096ff"
+    tvmenuHOT.style.color = 'black'
+    mnetbrod.style.color = 'black'
+    tvRecommContents.style.display = 'block'
+    tvHotContents.style.display = 'none'
+    tvMnetContents.style.display = 'none'
+})
+
+tvmenuHOT.addEventListener("click", function() {
+    tvmenuHOT.style.color = '#0096ff'
+    genietvrecomm.style.display = 'black'
+    mnetbrod.style.display = 'black'
+    tvRecommContents.style.display = 'none'
+    tvHotContents.style.display = 'block'
+    tvMnetContents.style.display = 'none'
+
+})
+mnetbrod.addEventListener("click", function() {
+    genietvrecomm.style.color = 'black'
+    tvmenuHOT.style.color = 'black'
+    mnetbrod.style.color = '#0096ff'
+    tvRecommContents.style.display = 'none'
+    tvHotContents.style.display = 'none'
+    tvMnetContents.style.display = 'block'
+})
+
+
+
 // 푸터 내 공지사항 관련 JS
 const backnoticebtn = document.getElementById('morenotice1') 
 const nextnoticebtn = document.getElementById('morenotice2')
@@ -546,39 +584,43 @@ const next = document.getElementById('material-icons_f2')
  
 backnoticebtn.addEventListener("click", function() {
     if (notice3.style.display === 'block') {
-        notice3.style.display = 'none'
+        notice1.style.display = 'none'
         notice2.style.display = 'block'
-        next.style.color = '#8b8b8b'
+        notice3.style.display = 'none'
+        next.style.color = 'black'
         back.style.color = 'black'
     } else if (notice2.style.display === 'block') {
-        notice2.style.display = 'none'
         notice1.style.display = 'block'
+        notice2.style.display = 'none'
+        notice3.style.display = 'none'
         back.style.color = '#8b8b8b'
         next.style.color = 'black'
     } else {
         notice1.style.display = 'block'
+        notice2.style.display = 'none'
+        notice3.style.display ='none'
         back.style.color = '#8b8b8b'
         next.style.color = 'black'
     }
 })
 nextnoticebtn.addEventListener("click", function() {
-    if (notice1.style.display === 'block') {
+    if (notice2.style.display === 'block') {
+        notice1.style.display = 'none'
+        notice2.style.display = 'none'
+        notice3.style.display = 'block'
+        next.style.color = '#8b8b8b'
+        back.style.color = '#black'
+    }else if (notice3.style.display === 'block') {
+        notice1.style.display = 'none'
+        notice2.style.display = 'none'
+        notice3.style.display = 'block'
+        next.style.color = '#8b8b8b'
+        back.style.color = 'black'
+    } else  {
         notice1.style.display = 'none'
         notice2.style.display = 'block'
         notice3.style.display = 'none'
         next.style.color = 'black'
-        back.style.color = '#8b8b8b'
-    } else if (notice2.style.display === 'block') {
-        notice1.style.display = 'none'
-        notice2.style.display = 'none'
-        notice3.style.display = 'block'
-        next.style.color = '#8b8b8b'
         back.style.color = 'black'
-    } else   {
-        notice1.style.display = 'none'
-        notice2.style.display = 'none'
-        notice3.style.display = 'block'
-        next.style.color = '#8b8b8b'
-        back.style.color = 'black'
-    }
+    } 
 })
