@@ -875,22 +875,84 @@ header .header-third .member .close-btn {
     margin-bottom: 30px;
     background-color: #e8eef3;
 }
-#banner1 {
-    cursor: pointer;
-}
-/* 광고 rolling 요소 각각 정렬 */
-#banner2, #banner3, #banner4, #banner5, #banner6, #banner7, #banner8 , #banner9 {
-    display: none;
-}
 /* 광고 내 컨텐츠 정렬 */
 .ad_contents {
     display: flex;
     width: 980px;
     margin: 0 auto;
 }
+/* 슬라이더 기능이 있는 배너  */
+.ad_contents_rolling {
+    position: absolute;
+}
+/* 슬라이드 기능이 있는 배너 내 각 요소들 */
+.ad_contents_rolling .banner {
+    width: 610px;
+    height: 104px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ad_contents_rolling .banner1  {
+    background-image: url(./../images/banner1.jpg);
+}
+.ad_contents_rolling .banner2  {
+    background-image: url(./../images/banner2.png);
+}
+.ad_contents_rolling .banner3  {
+    background-image: url(./../images/banner3.png);
+}
+.ad_contents_rolling .banner4  {
+    background-image: url(./../images/banner4.jpg);
+}
+.ad_contents_rolling .banner5  {
+    background-image: url(./../images/banner5.jpg);
+}
+.ad_contents_rolling .banner6  {
+    background-image: url(./../images/banner6.jpg);
+}
+.ad_contents_rolling .banner7  {
+    background-image: url(./../images/banner7.jpg);
+}
+.ad_contents_rolling .banner8  {
+    background-image: url(./../images/banner8.jpg);  
+}
+.ad_contents_rolling .banner9  {
+    background-image: url(./../images/banner9.jpg); 
+}
+.ad_contents .dots {
+    position: absolute;
+    margin-left: 235px;
+    margin-top: 80px;
+    display: flex;
+}
+.ad_contents .dots .dot{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat 6px 3px;
+    opacity: 1;
+    vertical-align: top;
+}
+.ad_contents .dots .dot1{
+    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat -15px 3px;
+}
+#bannerslidercontrol {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 2px 3px;
+    border: 0;
+    line-height: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) transparent no-repeat -21px -11px;
+    text-indent: -9999px;
+    vertical-align: top;
+    z-index: 10;
+}
 /* rolling ad 옆 ad */
 .ad_contents_mini {
-    margin-left: 100px;
+    margin-left: auto;
 }
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandhan {
