@@ -549,7 +549,31 @@ const autoSlide1 = () => {
     $dot[current].style.background = "url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat -15px 3px;"
 };
 
-// 배너 슬라이더 내 버튼 구동
+// hotandnew의 슬라이더 구현하기
+const $newcontents = document.querySelectorAll(".newcontents")
+let newcurrent = 0;
+
+window.addEventListener("load", function() {
+    setInterval(autoSlide2, 3000);
+});
+
+const reset2 = () => {
+    $newcontents.forEach((newcontents) => {
+        newcontents.style.display = "none";
+    });
+};
+
+const autoSlide2 = () => {
+    reset2();
+    if (newcurrent === $newcontents.length-1) {
+        newcurrent = -1;
+    } 
+    newcurrent++
+    $newcontents[newcurrent].style.display = "block"
+
+};
+
+
 // 에디터 추천 컨텐츠 더보기 버튼 관련 js 
 const er_more = document.getElementById('morecontents')
 const er_close = document.getElementById('closecontents')

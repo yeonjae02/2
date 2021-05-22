@@ -1216,14 +1216,73 @@ header .header-third .member .close-btn {
 #hotandnewtitle {
     font: bold 18px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';
 }
-/* hot and new 상단 첫번째 그림 */
-#hanf1 {
-    margin-top: 10px;
+.han_f {
+    overflow: hidden;
+    margin-top: 15px;
+    width: 306px;
+    height: 308px;
 }
-/* hot and new 상단 scroll 그림 처리 */
-#hanf2, #hanf3, #hanf4, #hanf5, #hanf6 {
-    display: none;
-} 
+/* 슬라이드 기능이 있는 배너 내 각 요소들 */
+.han_f .newcontents {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 306px;
+    height: 309px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.han_f .newcontents1 {
+    background-image: url(../images/event_1.jpg);
+}
+.han_f .newcontents2 {
+    background-image: url(../images/event_2.jpg);
+}
+.han_f .newcontents3 {
+    background-image: url(../images/event-3.jpg);
+}
+.han_f .newcontents4 {
+    background-image: url(../images/event-4.jpg);
+}
+.han_f .newcontents5{
+    background-image: url(../images/event-5.png);
+}
+.han_f .newcontents6 {
+    background-image: url(../images/event-6.png);
+}
+
+.hotandnewdot {
+    position: absolute;
+    display: flex;
+    margin-top: -24px;
+    margin-left: 14px;
+}
+.hotandnewdot .dotnew{
+    padding-top: 2px;
+    margin-top: -22px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat 3px 3px;
+    opacity: 1;
+    vertical-align: middle;
+}
+.hotandnewdot .dotnew1{
+    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat -18px 3px;
+}
+#newslidercontrol {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 2px 3px;
+    border: 0;
+    line-height: 0;
+    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) transparent no-repeat -21px -11px;
+    vertical-align: top;
+    z-index: 10;
+}
 /* hot and new 2번째 표 정리 */
 .han_s_ul {
     display: block;
