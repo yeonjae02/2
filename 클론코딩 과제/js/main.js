@@ -522,23 +522,22 @@ const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 
 // 배너의 슬라이더 구현하기
 const $banners = document.querySelectorAll(".banner")
-const $dot = document.querySelectorAll(".dot")
+const $dots = document.querySelectorAll(".dot")
+const bannerslidercontrol = document.getElementById("bannerslidercontrol")
 let current = 0;
-
+// 자동슬라이더기능
 window.addEventListener("load", function() {
-    setInterval(autoSlide1, 3000);
+    setInterval(autoSlide1, 3000);    
 });
-
 const reset1 = () => {
     $banners.forEach((banner) => {
         banner.style.display = "none";
     });
-    $dot.forEach((dot) => {
-        dot.style.background = "url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat 6px 3px;";
-        dot.style.width = "12px";
+    $dots.forEach((dot) => {
+        dot.style.background = "#FFF";
       });
 };
-
+// 해당하는 배너가 등장했을 때
 const autoSlide1 = () => {
     reset1();
     if (current === $banners.length-1) {
@@ -546,23 +545,36 @@ const autoSlide1 = () => {
     } 
     current++
     $banners[current].style.display = "block"
-    $dot[current].style.background = "url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat -15px 3px;"
+    $dots[current].style.background = "#737a7f"
 };
+// 동그라미를 눌러 자유롭게 원하는 배너 보기
+$dots.forEach((dot, idx) => {
+    dot.addEventListener("click", function() {
+        reset1();
+        current = idx;
+        $banners[current].style.display = 'block'
+        $dots[current].style.background = "#737a7f"
+    })
+})
 
 // hotandnew의 슬라이더 구현하기
 const $newcontents = document.querySelectorAll(".newcontents")
+const $hotAndNewDot =  document.querySelectorAll(".hotAndNewDot")
 let newcurrent = 0;
-
+// 자동슬라이더
 window.addEventListener("load", function() {
     setInterval(autoSlide2, 3000);
 });
-
 const reset2 = () => {
     $newcontents.forEach((newcontents) => {
         newcontents.style.display = "none";
     });
+    $hotAndNewDot.forEach((hotAndNewDot) => {
+        hotAndNewDot.style.background = 'white'
+        hotAndNewDot.style.opacity = '0.5'
+        
+    })
 };
-
 const autoSlide2 = () => {
     reset2();
     if (newcurrent === $newcontents.length-1) {
@@ -570,8 +582,19 @@ const autoSlide2 = () => {
     } 
     newcurrent++
     $newcontents[newcurrent].style.display = "block"
-
+    $hotAndNewDot[newcurrent].style.backgroundColor = 'white'
+    $hotAndNewDot[newcurrent].style.opacity = '1'
 };
+// 동그라미를 눌러 자유롭게 원하는 배너 보기
+$hotAndNewDot.forEach((hotAndNewDot, idx) => {
+    hotAndNewDot.addEventListener("click", function() {
+        reset2();
+        newcurrent = idx;
+        $newcontents[newcurrent].style.display = 'block'
+        $hotAndNewDot[newcurrent].style.background = "white"
+        $hotAndNewDot[newcurrent].style.opacity = "1"
+    })
+})
 
 
 // 에디터 추천 컨텐츠 더보기 버튼 관련 js 

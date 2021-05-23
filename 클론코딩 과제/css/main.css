@@ -420,8 +420,10 @@ header .header-third .member .loginbox .material-icons#btn--close {
     top: 123px;
     vertical-align: middle;
 }
+
 /* 클릭 시 나오는 로그인 창 내 버튼클릭 시 나오는 로그인리스트*/
 #login--list {
+    z-index: 1000;
     height: 369px;
     background: #fff;
     position: absolute;
@@ -827,7 +829,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist {
-    z-index: 101;
+    z-index: 1;
     padding-top: 0px;
     width: 110px;
     font-weight: bold;
@@ -842,7 +844,7 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
 .comprehensive_album .albumexhibiton:hover .caartist2 {
-    z-index: 101;
+    z-index: 1;
     padding-top: 0px;
     top: 410px;
     font-weight: bold;
@@ -855,13 +857,13 @@ header .header-third .member .close-btn {
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
 .comprehensive_album .albumexhibiton:hover .newAlbumInfo1 {
-    z-index: 100;
+    /* z-index: 100; */
     display: block;
     background: rgba(0,0,0,0.8);
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
 .comprehensive_album .albumexhibiton:hover .newAlbumInfo2 {
-    z-index: 100;
+    /* z-index: 100; */
     display: block;
     background: rgba(0,0,0,0.8);
 }
@@ -929,26 +931,33 @@ header .header-third .member .close-btn {
 }
 .ad_contents .dots .dot{
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat 6px 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-left: 6px;
+    background-color: white;
     opacity: 1;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
 .ad_contents .dots .dot1{
-    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) no-repeat -15px 3px;
+    width: 6px;
+    height: 6px;
+    background-color: #737a7f;
 }
 #bannerslidercontrol {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 114px;
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin: 0 0 2px 3px;
     border: 0;
     line-height: 0;
     background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) transparent no-repeat -21px -11px;
     text-indent: -9999px;
     vertical-align: top;
     z-index: 10;
+    cursor: pointer;
 }
 /* rolling ad 옆 ad */
 .ad_contents_mini {
@@ -997,7 +1006,7 @@ header .header-third .member .close-btn {
 /* 실시간 차트 각 행 */
 .musicChartContents  tr{
     box-sizing: border-box;
-    height: 10px;
+    /* height: 10px; */
     border-bottom: 1px solid #e8eef3;
 }
 /* 실시간 차트 내 첫 번째 행  */
@@ -1021,6 +1030,8 @@ header .header-third .member .close-btn {
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
+    color: #8b8b8b;
+    font-weight: 1200;
     vertical-align: middle;
     padding-left: 10px;
     font-weight: bolder;
@@ -1065,7 +1076,6 @@ header .header-third .member .close-btn {
     height: 40px;
     display: block;
     font-weight: bolder;
-    margin: 0;
     margin-left: 72px;
     margin-top: 12px;
     display: flex;
@@ -1255,28 +1265,30 @@ header .header-third .member .close-btn {
 .hotandnewdot {
     position: absolute;
     display: flex;
-    margin-top: -24px;
-    margin-left: 14px;
+    margin-top: -18px;
+    margin-left: 12px;
+    margin-right: 2px;
 }
-.hotandnewdot .dotnew{
-    padding-top: 2px;
-    margin-top: -22px;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0;
-    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat 3px 3px;
+.hotandnewdot .hotAndNewDot{
+    width: 6px;
+    margin-left: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+}
+.hotandnewdot .hotAndNewDot1{
+    margin-left: 6px;
+    background-color: white;
     opacity: 1;
-    vertical-align: middle;
-}
-.hotandnewdot .dotnew1{
-    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat -18px 3px;
 }
 #newslidercontrol {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin: 0 0 2px 3px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 80px;
     border: 0;
     line-height: 0;
     background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) transparent no-repeat -21px -11px;
