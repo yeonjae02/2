@@ -42,6 +42,7 @@ menucloseEl2.addEventListener("click", function() {
 })
 
 // 검색창 클릭 시 검색목록이 나타날 수 있도록 함
+const headersearch = document.getElementById("header-search")
 const searchmenuEl = document.getElementById('searchContents')
 const search = document.getElementById('search_box')
 const closepopular = document.getElementById('closeSearchWordList') 
@@ -73,6 +74,7 @@ popularbtn.addEventListener("click", function(){
     recentbtn.style.backgroundColor = '#f2f2f2'
     recentbtn.style.borderBottom = '1px solid #d2d2d2'
 })
+
 // 최근검색어 버튼 클릭 시 발생하는 일
 recentbtn.addEventListener("click", function(){
     popularcontents.style.display= 'none'
@@ -85,6 +87,8 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.backgroundColor = '#f2f2f2'
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
+
+
 
 // 헤더 아래 종합음악 전시창에서 버튼을 눌렀을 때 변화가 나타나게 함.
 
@@ -519,15 +523,16 @@ const scrollToTop = () => {
 // scroll to top 버튼
 const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 
-
 // 배너의 슬라이더 구현하기
 const $banners = document.querySelectorAll(".banner")
 const $dots = document.querySelectorAll(".dot")
-const bannerslidercontrol = document.getElementById("bannerslidercontrol")
+const bannerstopbtn = document.getElementById('stopbtn')
+const bannerrestartbtn = document.getElementById('releasebtn')
 let current = 0;
+
 // 자동슬라이더기능
 window.addEventListener("load", function() {
-    setInterval(autoSlide1, 3000);    
+    setInterval(autoSlide1, 3000);   
 });
 const reset1 = () => {
     $banners.forEach((banner) => {
@@ -556,15 +561,28 @@ $dots.forEach((dot, idx) => {
         $dots[current].style.background = "#737a7f"
     })
 })
+// 재시작, 멈춤 버튼
+bannerstopbtn.addEventListener("click", function() {
+    bannerstopbtn.style.display = 'none'
+    bannerrestartbtn.style.display = 'block'
+})
+bannerrestartbtn.addEventListener("click", function() {
+    bannerrestartbtn.style.display = 'none'
+    bannerstopbtn.style.display = 'block'
+})
 
 // hotandnew의 슬라이더 구현하기
 const $newcontents = document.querySelectorAll(".newcontents")
 const $hotAndNewDot =  document.querySelectorAll(".hotAndNewDot")
+const arrowBack = document.getElementById('gobackarrow')
+const arrowNext = document.getElementById('gonextarrow')
+const bannerstop__btn = document.getElementById('stop--btn')
+const bannerrestart__btn = document.getElementById('release--btn')
 let newcurrent = 0;
 // 자동슬라이더
 window.addEventListener("load", function() {
     setInterval(autoSlide2, 3000);
-});
+ });
 const reset2 = () => {
     $newcontents.forEach((newcontents) => {
         newcontents.style.display = "none";
@@ -594,6 +612,43 @@ $hotAndNewDot.forEach((hotAndNewDot, idx) => {
         $hotAndNewDot[newcurrent].style.background = "white"
         $hotAndNewDot[newcurrent].style.opacity = "1"
     })
+})
+// 화살표 클릭 시 다음 광고로 넘어가게 하기
+const slidetoNext = () => {
+    reset2();
+    if (newcurrent === $newcontents.length-1) {
+        newcurrent = -1;
+    }
+    newcurrent++
+    $newcontents[newcurrent].style.display = "block"
+    $hotAndNewDot[newcurrent].style.backgroundColor = 'white'
+    $hotAndNewDot[newcurrent].style.opacity = '1'
+}
+arrowNext.addEventListener("click", slidetoNext)
+
+// 화살표 클릭 시 이전 광고로 넘어가게 하기
+const slidetoBack = () => {
+    reset2();
+    if (newcurrent === 0) {
+        newcurrent = $newcontents.length;
+    }
+    newcurrent--
+    $newcontents[newcurrent].style.display = 'block'
+    $hotAndNewDot[newcurrent].style.background = "white"
+    $hotAndNewDot[newcurrent].style.opacity = "1"
+}
+arrowBack.addEventListener("click", slidetoBack)
+
+// 재시작, 멈춤 버튼
+bannerstop__btn.addEventListener("click", function() {
+    bannerstop__btn.style.display = 'none'
+    bannerrestart__btn.style.display = 'block'
+    clearInterval(autoSlide2)
+})
+bannerrestart__btn.addEventListener("click", function() {
+    bannerrestart__btn.style.display = 'none'
+    bannerstop__btn.style.display = 'block'
+    setInterval(autoSlide2, 30000)
 })
 
 

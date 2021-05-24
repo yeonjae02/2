@@ -949,19 +949,28 @@ header .header-third .member .close-btn {
     margin-top: -5px;
     margin-left: 114px;
     display: inline-block;
+    border: 0;
+    background-color: transparent;
+}
+#releasebtn, #stopbtn {
+    position: absolute;
     width: 16px;
     height: 16px;
     border: 0;
     line-height: 0;
-    background: url(//image.genie.co.kr/imageg/web/main/banner_paging.png) transparent no-repeat -21px -11px;
     text-indent: -9999px;
     vertical-align: top;
     z-index: 10;
     cursor: pointer;
 }
+#releasebtn {
+    display: none;
+}
+
 /* rolling ad 옆 ad */
 .ad_contents_mini {
     margin-left: auto;
+    
 }
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandhan {
@@ -1049,7 +1058,7 @@ header .header-third .member .close-btn {
 /* 차트에 호버했을 때 앨범 커버가 뜨도록 하기*/
 .musicChartContents tr:hover .chart_photo {
     display: block;
-    margin : 10px 13px 0 10px;
+    margin : 10px 13px 10px 10px;
     border: .1px solid #d8d6d6;
 }
 /* 차트 속 곡명과 아티스트 명 배열 */
@@ -1283,17 +1292,45 @@ header .header-third .member .close-btn {
     opacity: 1;
 }
 #newslidercontrol {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
     position: absolute;
     margin-top: -5px;
-    margin-left: 80px;
+    margin-left: 74px;
+    display: inline-block;
+    border: 0;
+    background-color: transparent;
+}
+#stop--btn, #release--btn {
+    position: absolute;
+    width: 16px;
+    height: 16px;
     border: 0;
     line-height: 0;
-    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) transparent no-repeat -21px -11px;
+    text-indent: -9999px;
     vertical-align: top;
     z-index: 10;
+    cursor: pointer;
+}
+#release--btn {
+    display: none;
+}
+#gobackarrow {
+    cursor: pointer;
+    position: absolute ;
+    margin-top: -173px;
+    z-index: 1;
+    width: 26px;
+    height: 44px;
+    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat 0 -32px;
+}
+#gonextarrow {
+    cursor: pointer;
+    position: absolute ;
+    margin-left: 280px;
+    margin-top: -173px;
+    z-index: 1;
+    width: 26px;
+    height: 44px;
+    background: url(//image.genie.co.kr/imageg/web/main/event_paging.png) no-repeat -31px -32px;
 }
 /* hot and new 2번째 표 정리 */
 .han_s_ul {
