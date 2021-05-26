@@ -63,9 +63,8 @@
                 <div class = "title_logo">
                     <a href="index.html"><img src="./images/logo.PNG"></a>
                 </div>
-                <div id="header-search">
                     <div>
-                        <div class="search">
+                        <div class="search" >
                             <input id="search_box" type="search" placeholder="여름의 문턱에서 듣는 상쾌한 인디록 팝" onfocus="this.placeholder=''" onblur="this.placeholder='여름의 문턱에서 듣는 상쾌한 인디록 팝'"  /> 
                             <span class="material-icons">
                             search
@@ -74,8 +73,10 @@
                     </div>
                     <div id="searchContents" class="search_word" >
                         <div class="searchWord" id="search__word">
-                            <h3 class="searchContentsBtn"><button type="button" id="popular">인기검색어</button></h3>
-                            <h3 class="searchContentsBtn"><button type="button" id="recent">최근검색어</button></h3>
+                            <div id = "btn">
+                                <h3 class="searchContentsBtn"><button type="button" id="popular">인기검색어</button></h3>
+                                <h3 class="searchContentsBtn"><button type="button" id="recent">최근검색어</button></h3>
+                            </div>
                             <div id="search-info">
                                 <div id="popularList" class="popularSearchWordList">
                                     <ol>
@@ -103,11 +104,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
-                <!-- 다크모드 & 라이트모드 버튼 -->
-                <!-- <button type="button" class="btn-darkmode" id="darkModeBtn"><span class="material-icons">nightlight_round</span>다크모드</button>
-                <button type="button" class="btn-lightmode" id="lightModeBtn"><span class="material-icons">light_mode</span>라이트모드</button> -->
             <!-- 헤더 세 번째 파트 만들기 -->
             <div class="header-third">
                 <ul class="headrThirdMain">
@@ -2943,7 +2941,7 @@
             <div class="music_chart_list" id="chart_contents">
                 <table class="musicChartContents">
                     <tbody>
-                        <tr class="chartranklist chartranklist1">
+                        <tr class="chartranklist" id="chartranklist1">
                             <td class="chart_ranking chart_ranking1">1</td>
                             <td class="chart_fluctuation chart_fluctuation1"> ㅡ </td>
                             <td class="chart_musicinfo">

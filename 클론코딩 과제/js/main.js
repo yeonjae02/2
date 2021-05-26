@@ -1,21 +1,3 @@
-// 다크모드 라이트모드 관련 js
-// const darkModeBtn = document.getElementById('darkModeBtn')
-// const lightModeBtn = document.getElementById('lightModeBtn')
-// const body = document.getElementById('body')
-
-// darkModeBtn.addEventListener("click", function(){
-//     darkModeBtn.style.display = 'none'
-//     lightModeBtn.style.display = 'block'
-//     body.style.backgroundColor = 'black'
-// })
-
-// lightModeBtn.addEventListener("click", function(){
-//     lightModeBtn.style.display = 'none'
-//     darkModeBtn.style.display = 'block'
-//     body.style.backgroundColor = 'transparent'
-// })
-
-
 // 로그인 회원가입창 아이콘 클릭 시 작은 화면이 나올 수 있게 함
 const menuopenEl = document.getElementById('btn--open')
 const menucloseEl = document.getElementById('btn--close')
@@ -41,7 +23,10 @@ menucloseEl2.addEventListener("click", function() {
     menuEl.style.display = 'none'
 })
 
+
+
 // 검색창 클릭 시 검색목록이 나타날 수 있도록 함
+const btn = document.getElementById('btn')
 const headersearch = document.getElementById("header-search")
 const searchmenuEl = document.getElementById('searchContents')
 const search = document.getElementById('search_box')
@@ -74,7 +59,16 @@ popularbtn.addEventListener("click", function(){
     recentbtn.style.backgroundColor = '#f2f2f2'
     recentbtn.style.borderBottom = '1px solid #d2d2d2'
 })
-
+// 특정 부분 제외 클릭 시 사라지도록 하기
+popularbtn.addEventListener("blur", function() {
+    searchmenuEl.style.display = 'none'
+})
+recentbtn.addEventListener("blur", function() {
+    searchmenuEl.style.display = 'none'
+})
+btn.addEventListener("blur", function() {
+    searchmenuEl.style.display = 'none'
+})
 // 최근검색어 버튼 클릭 시 발생하는 일
 recentbtn.addEventListener("click", function(){
     popularcontents.style.display= 'none'
@@ -87,7 +81,6 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.backgroundColor = '#f2f2f2'
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
-
 
 
 // 헤더 아래 종합음악 전시창에서 버튼을 눌렀을 때 변화가 나타나게 함.
@@ -643,14 +636,12 @@ arrowBack.addEventListener("click", slidetoBack)
 bannerstop__btn.addEventListener("click", function() {
     bannerstop__btn.style.display = 'none'
     bannerrestart__btn.style.display = 'block'
-    clearInterval(autoSlide2)
+
 })
 bannerrestart__btn.addEventListener("click", function() {
     bannerrestart__btn.style.display = 'none'
     bannerstop__btn.style.display = 'block'
-    setInterval(autoSlide2, 30000)
 })
-
 
 // 에디터 추천 컨텐츠 더보기 버튼 관련 js 
 const er_more = document.getElementById('morecontents')

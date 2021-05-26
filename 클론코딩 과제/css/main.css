@@ -519,6 +519,7 @@ header .header-third .member .loginbox .material-icons#btn--close {
 }
 /* 타사이트 계정 로그인 리스트 */
 .login-list>li {
+    cursor: pointer;
     margin-bottom: 6px;
     padding: 0 0 0 48px;
     border: 1px solid #d2d2d2;
