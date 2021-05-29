@@ -137,6 +137,7 @@ header .header-second .search>.material-icons {
     position: absolute;
     top: -1px;
 }
+
 /* 검색창 옆에 생기는 x 없애기 */
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-decoration{
@@ -144,7 +145,7 @@ input::-webkit-search-results-decoration{
 }
 /* 검색창 클릭 시 아래 나타나는 검색어목록 */
 .search_word {
-    display: none;
+    display : none;
     border-left: 1px solid #d2d2d2;
     border-right: 1px solid #d2d2d2;
     border-bottom: 1px solid #d2d2d2;
@@ -1011,12 +1012,11 @@ header .header-third .member .close-btn {
 .musicChartContents {
     border-top: 1px solid darkgray;
     width: 620px;
-    height: 429px;
+    height: 430px;
 }
 /* 실시간 차트 각 행 */
 .musicChartContents  tr{
     box-sizing: border-box;
-    /* height: 10px; */
     border-bottom: 1px solid #e8eef3;
 }
 /* 실시간 차트 내 첫 번째 행  */
@@ -1038,6 +1038,7 @@ header .header-third .member .close-btn {
     height: 50px;
     font-size: 20px;
 }
+
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
     color: #8b8b8b;
@@ -1053,13 +1054,14 @@ header .header-third .member .close-btn {
 .musicChartContents tr:hover td.chart_fluctuation {
     height: 50px;
 }
+/* 호버하기 전 앨범커버가 뜨지 않음 */
 .musicChartContents .chart_photo {
     display: none;
 }
 /* 차트에 호버했을 때 앨범 커버가 뜨도록 하기*/
 .musicChartContents tr:hover .chart_photo {
     display: block;
-    margin : 10px 13px 10px 10px;
+    margin : 0px 13px 10px 10px;
     border: .1px solid #d8d6d6;
 }
 /* 차트 속 곡명과 아티스트 명 배열 */
@@ -1087,7 +1089,7 @@ header .header-third .member .close-btn {
     display: block;
     font-weight: bolder;
     margin-left: 72px;
-    margin-top: 12px;
+    margin-top: 5px;
     display: flex;
     width: 300px;
 }
@@ -1109,7 +1111,7 @@ header .header-third .member .close-btn {
 } 
 /* 호버했을 때 아티스트 변화 */
 .musicChartContents tr:hover .chart_artist {
-    margin-top: 33px;
+    margin-top: 27px;
     margin-left: .01px;
     display: flex;
     width: 250px;
@@ -1150,6 +1152,18 @@ header .header-third .member .close-btn {
     height: 50px;
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
     vertical-align: middle;

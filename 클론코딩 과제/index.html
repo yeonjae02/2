@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <!-- js로 연결 -->
     <script defer src="./js/main.js"></script>
+    <!-- jquery 연결 -->
+    <script  src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 </head>
 <body id="body">
     <!-- 헤더 제작 -->
@@ -63,9 +65,10 @@
                 <div class = "title_logo">
                     <a href="index.html"><img src="./images/logo.PNG"></a>
                 </div>
+                <div class="searchArea">
                     <div>
                         <div class="search" >
-                            <input id="search_box" type="search" placeholder="여름의 문턱에서 듣는 상쾌한 인디록 팝" onfocus="this.placeholder=''" onblur="this.placeholder='여름의 문턱에서 듣는 상쾌한 인디록 팝'"  /> 
+                            <input id="search_box" type="search" class="searchContentClick" placeholder="여름의 문턱에서 듣는 상쾌한 인디록 팝" onfocus="this.placeholder=''" onblur="this.placeholder='여름의 문턱에서 듣는 상쾌한 인디록 팝'"  /> 
                             <span class="material-icons">
                             search
                             </span>
@@ -73,9 +76,9 @@
                     </div>
                     <div id="searchContents" class="search_word" >
                         <div class="searchWord" id="search__word">
-                            <div id = "btn">
-                                <h3 class="searchContentsBtn"><button type="button" id="popular">인기검색어</button></h3>
-                                <h3 class="searchContentsBtn"><button type="button" id="recent">최근검색어</button></h3>
+                            <div class = "searchContentsBtn">
+                                <h3><button type="button" id="popular" class="searchContentsbtn">인기검색어</button></h3>
+                                <h3><button type="button" id="recent" class="searchContentsbtn" >최근검색어</button></h3>
                             </div>
                             <div id="search-info">
                                 <div id="popularList" class="popularSearchWordList">
@@ -104,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
             </div>
             <!-- 헤더 세 번째 파트 만들기 -->
             <div class="header-third">
@@ -2919,8 +2922,7 @@
                 <div class="dot dot7"></div>
                 <div class="dot dot8"></div>
                 <div class="dot dot9"></div>
-                <button type="button" id="bannerslidercontrol"><img id="stopbtn" src="./images/stopbtn.png"><img id="releasebtn" src="./images/releasebtn.png">
-                </button>
+                <button type="button" id="bannerslidercontrol"><img id="stopbtn" src="./images/stopbtn.png"><img id="releasebtn" src="./images/releasebtn.png"></button>
             </div>
             <!-- 고정된 광고  -->
             <divc class="ad_contents_mini">
@@ -2941,7 +2943,7 @@
             <div class="music_chart_list" id="chart_contents">
                 <table class="musicChartContents">
                     <tbody>
-                        <tr class="chartranklist" id="chartranklist1">
+                        <tr class="chartranklist chartranklist1">
                             <td class="chart_ranking chart_ranking1">1</td>
                             <td class="chart_fluctuation chart_fluctuation1"> ㅡ </td>
                             <td class="chart_musicinfo">

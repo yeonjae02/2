@@ -24,14 +24,21 @@ menucloseEl2.addEventListener("click", function() {
 })
 
 
-
 // 검색창 클릭 시 검색목록이 나타날 수 있도록 함
 const btn = document.getElementById('btn')
 const headersearch = document.getElementById("header-search")
 const searchmenuEl = document.getElementById('searchContents')
 const search = document.getElementById('search_box')
 const closepopular = document.getElementById('closeSearchWordList') 
-const searchmenu = document.getElementById('search-info')     
+const searchmenu = document.getElementById('search-info') 
+const search__word = document.getElementById('search__word')    
+
+// 특정 부분을 제외하고 클릭했을 떄 발생하는 일 jQuery 
+$('body').click(function(e) {
+    if(!$(e.target).hasClass("searchContentClick") && !$(e.target).hasClass("searchContentsbtn") ) {
+        searchmenuEl.style.display = 'none'
+    }
+})
 
 // 검색창을 클릭했을 때 발생하는 일
 search.addEventListener("click", function() {
@@ -59,16 +66,7 @@ popularbtn.addEventListener("click", function(){
     recentbtn.style.backgroundColor = '#f2f2f2'
     recentbtn.style.borderBottom = '1px solid #d2d2d2'
 })
-// 특정 부분 제외 클릭 시 사라지도록 하기
-popularbtn.addEventListener("blur", function() {
-    searchmenuEl.style.display = 'none'
-})
-recentbtn.addEventListener("blur", function() {
-    searchmenuEl.style.display = 'none'
-})
-btn.addEventListener("blur", function() {
-    searchmenuEl.style.display = 'none'
-})
+
 // 최근검색어 버튼 클릭 시 발생하는 일
 recentbtn.addEventListener("click", function(){
     popularcontents.style.display= 'none'
@@ -81,7 +79,6 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.backgroundColor = '#f2f2f2'
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
-
 
 // 헤더 아래 종합음악 전시창에서 버튼을 눌렀을 때 변화가 나타나게 함.
 
@@ -519,9 +516,11 @@ const srcollToTopBtn = document.querySelector('.btn-scrollToTop')
 // 배너의 슬라이더 구현하기
 const $banners = document.querySelectorAll(".banner")
 const $dots = document.querySelectorAll(".dot")
-const bannerstopbtn = document.getElementById('stopbtn')
+const bannerstopbtn = document.getElementById('stopbtn');
 const bannerrestartbtn = document.getElementById('releasebtn')
+
 let current = 0;
+
 
 // 자동슬라이더기능
 window.addEventListener("load", function() {
@@ -554,14 +553,15 @@ $dots.forEach((dot, idx) => {
         $dots[current].style.background = "#737a7f"
     })
 })
-// 재시작, 멈춤 버튼
+
+
 bannerstopbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'none'
     bannerrestartbtn.style.display = 'block'
 })
 bannerrestartbtn.addEventListener("click", function() {
-    bannerrestartbtn.style.display = 'none'
     bannerstopbtn.style.display = 'block'
+    bannerrestartbtn.style.display = 'none'
 })
 
 // hotandnew의 슬라이더 구현하기
