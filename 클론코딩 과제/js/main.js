@@ -553,16 +553,30 @@ $dots.forEach((dot, idx) => {
         $dots[current].style.background = "#737a7f"
     })
 })
-
-
+// 버튼 눌러 슬라이드 멈춤/재시작 구현하기
 bannerstopbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'none'
     bannerrestartbtn.style.display = 'block'
+
 })
 bannerrestartbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'block'
     bannerrestartbtn.style.display = 'none'
 })
+
+
+
+
+// 실시간차트 1위 
+chartranklist1 = document.getElementById('chartranklist1')
+chart_ranking1 = document.getElementById('chart_ranking1')
+chart_photo1 = document.getElementById('chart_photo1')
+chart_title1 = document.getElementById('chart_title1')
+chart_artist1 = document.getElementById('chart_artist1')
+
+
+
+
 
 // hotandnew의 슬라이더 구현하기
 const $newcontents = document.querySelectorAll(".newcontents")

@@ -137,7 +137,6 @@ header .header-second .search>.material-icons {
     position: absolute;
     top: -1px;
 }
-
 /* 검색창 옆에 생기는 x 없애기 */
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-decoration{
@@ -159,7 +158,6 @@ input::-webkit-search-results-decoration{
     height: 358px;
     overflow: hidden;
 }
-
 /* 인기검색어 버튼 */
 #popular {
     float: left;
@@ -1035,10 +1033,9 @@ header .header-third .member .close-btn {
 }
 /* 호버 했을 때 순위의 변화 */
 .musicChartContents tr:hover td.chart_ranking {
-    height: 50px;
+    height: 67px;
     font-size: 20px;
 }
-
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
     color: #8b8b8b;
@@ -1052,7 +1049,7 @@ header .header-third .member .close-btn {
 }
 /* 호버 했을 때 순위변동의 변화 */
 .musicChartContents tr:hover td.chart_fluctuation {
-    height: 50px;
+    height: 67px;
 }
 /* 호버하기 전 앨범커버가 뜨지 않음 */
 .musicChartContents .chart_photo {
@@ -1085,7 +1082,7 @@ header .header-third .member .close-btn {
 /* 호버했을 때 노래 제목 변화 */
 .musicChartContents tr:hover .chart_title{
     box-sizing: border-box;
-    height: 40px;
+    height: 67px;
     display: block;
     font-weight: bolder;
     margin-left: 72px;
@@ -1111,8 +1108,9 @@ header .header-third .member .close-btn {
 } 
 /* 호버했을 때 아티스트 변화 */
 .musicChartContents tr:hover .chart_artist {
+    position: absolute;
     margin-top: 27px;
-    margin-left: .01px;
+    margin-left: 72px;
     display: flex;
     width: 250px;
 }
@@ -1152,11 +1150,35 @@ header .header-third .member .close-btn {
     height: 50px;
     color: black;
 }
-
-
-
-
-
+/* 실시간 차트 1위만 호버 기능이 적용된 상태로 있도록 하기 */
+/* .musicChartContents  td.chart_ranking1 {
+    height: 50px;
+    font-size: 20px;
+} */
+/* .musicChartContents td.chart_fluctuation1 {
+    height: 50px;
+} */
+/* .musicChartContents  .chart_photo1 {
+    display: block;
+    margin : 0px 13px 10px 10px;
+    border: .1px solid #d8d6d6;
+} */
+/* .musicChartContents .chart_title1{
+    box-sizing: border-box;
+    height: 40px;
+    display: block;
+    font-weight: bolder;
+    margin-left: 2px;
+    margin-top: 5px;
+    display: flex;
+    width: 300px;
+} */
+/* .musicChartContents .chart_artist1 {
+    margin-top: 27px;
+    margin-left: 0px;
+    display: flex;
+    width: 250px;
+} */
 
 
 
