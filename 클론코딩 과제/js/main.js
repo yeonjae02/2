@@ -34,12 +34,12 @@ const searchmenu = document.getElementById('search-info')
 const search__word = document.getElementById('search__word')    
 
 // 특정 부분을 제외하고 클릭했을 떄 발생하는 일 jQuery 
-$('body').click(function(e) {
-    if(!$(e.target).hasClass("searchContentClick") && !$(e.target).hasClass("searchContentsbtn") ) {
-        searchmenuEl.style.display = 'none'
+$('body').mouseover(function(e) {
+    if($(e.target).hasClass("musicChartContents")) {
+        removeEventListener("")
     }
 })
-
+ 
 // 검색창을 클릭했을 때 발생하는 일
 search.addEventListener("click", function() {
     searchmenuEl.style.display ='block'
@@ -521,7 +521,6 @@ const bannerrestartbtn = document.getElementById('releasebtn')
 
 let current = 0;
 
-
 // 자동슬라이더기능
 window.addEventListener("load", function() {
     setInterval(autoSlide1, 3000);   
@@ -557,15 +556,27 @@ $dots.forEach((dot, idx) => {
 bannerstopbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'none'
     bannerrestartbtn.style.display = 'block'
+    stopRolling()
 
 })
 bannerrestartbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'block'
     bannerrestartbtn.style.display = 'none'
+    restartRolling()
 })
 
+let stop = false;
+let rollingbanner;
 
+function stopRolling() {
+    clearInterval(autoSlide1)
+    stop =  true;
+}
 
+function restartRolling() {
+    stop = false;
+    setInterval(autoSlide1, 3000)
+}
 
 // 실시간차트 1위 
 chartranklist1 = document.getElementById('chartranklist1')
@@ -573,9 +584,6 @@ chart_ranking1 = document.getElementById('chart_ranking1')
 chart_photo1 = document.getElementById('chart_photo1')
 chart_title1 = document.getElementById('chart_title1')
 chart_artist1 = document.getElementById('chart_artist1')
-
-
-
 
 
 // hotandnew의 슬라이더 구현하기
