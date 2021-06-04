@@ -34,9 +34,9 @@ const searchmenu = document.getElementById('search-info')
 const search__word = document.getElementById('search__word')    
 
 // 특정 부분을 제외하고 클릭했을 떄 발생하는 일 jQuery 
-$('body').mouseover(function(e) {
-    if($(e.target).hasClass("musicChartContents")) {
-        removeEventListener("")
+$('body').click(function(e) {
+    if(!$(e.target).hasClass("searchContentClick") && !$(e.target).hasClass("searchContentsbtn") ) {
+        searchmenuEl.style.display = 'none'
     }
 })
  
@@ -80,432 +80,173 @@ recentbtn.addEventListener("click", function(){
     popularbtn.style.borderBottom = '1px solid #d2d2d2'
 })
 
-// 헤더 아래 종합음악 전시창에서 버튼을 눌렀을 때 변화가 나타나게 함.
-
-// 1,2,3,4,5 숫자
-const number1 = document.getElementById('btnresult1')
-const number2 = document.getElementById('btnresult2')
-const number3 = document.getElementById('btnresult3')
-const number4 = document.getElementById('btnresult4')
-const number5 = document.getElementById('btnresult5')
-
+// 화살표를 클릭했을 때 보여지는 페이지의 변화 (종합/국내/국외)
+const $comprehensive_albums = document.querySelectorAll(".comprehensive_album")
+const $domesticMusicAlbums = document.querySelectorAll(".domesticMusicAlbum")
+const $foreignMusicAlbums = document.querySelectorAll(".foreignMusicAlbum")
+const $albumPages = document.querySelectorAll(".albumPage")
+let currentAlbumPage = 0
+// 화살표
 const entireafteralbum = document.getElementById('preenewalbum')
 const entirebeforealbum = document.getElementById('morenewalbum')
-const entirenewAlbum1 = document.getElementById('entireNewAlbum1')
-const entirenewAlbum2 = document.getElementById('entireNewAlbum2')
-const entirenewAlbum3 = document.getElementById('entireNewAlbum3')
-const entirenewAlbum4 = document.getElementById('entireNewAlbum4')
-const entirenewAlbum5 = document.getElementById('entireNewAlbum5')
-
-const domesticMusicAlbum1 = document.getElementById('domesticMusicAlbum1')
-const domesticMusicAlbum2 = document.getElementById('domesticMusicAlbum2')
-const domesticMusicAlbum3 = document.getElementById('domesticMusicAlbum3')
-const domesticMusicAlbum4 = document.getElementById('domesticMusicAlbum4')
-const domesticMusicAlbum5 = document.getElementById('domesticMusicAlbum5')
-
-const foreignMusicAlbum1 = document.getElementById('foreignMusicAlbum1')
-const foreignMusicAlbum2 = document.getElementById('foreignMusicAlbum2')
-const foreignMusicAlbum3 = document.getElementById('foreignMusicAlbum3')
-const foreignMusicAlbum4 = document.getElementById('foreignMusicAlbum4')
-const foreignMusicAlbum5 = document.getElementById('foreignMusicAlbum5')
-
+//종합 / 국내/ 국외 단어 자체
 const synthesis = document.getElementById('synthesis')
 const domestic = document.getElementById('domestic')
 const foreign = document.getElementById('foreign')
 
-const entireNewAlbum =document.getElementById('entireNewAlbum')
-const domesticMusicAlbum = document.getElementById('domesticMusicAlbum')
-const foreignMusicAlbum = document.getElementById('foreignMusicAlbum')
+const albumPageNumberChangeForC = () => {
+    $comprehensive_albums.forEach((comprehensive_albums) => {
+        comprehensive_albums.style.display = "none";
+    });
+    $albumPages.forEach((albumPages) => {
+        albumPages.style.display = "none";
+    });
+};
+// 종합앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
+const preAlbumShowForC = () => {
+    albumPageNumberChangeForC();
+    if (currentAlbumPage === 4) {
+        currentAlbumPage = -1;
+    }
+    currentAlbumPage++
+    $comprehensive_albums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
 
-//종합 버튼을 클릭했을 때 생기는 변화
+}
+// 종합앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
+const nextAlbumShowForC = () => {
+    albumPageNumberChangeForC();
+    if (currentAlbumPage === 0) {
+        currentAlbumPage = 5;
+    }
+    currentAlbumPage--
+    $comprehensive_albums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
+
+}
+const albumPageNumberChangeForD = () => {
+    $domesticMusicAlbums.forEach((domesticMusicAlbums) => {
+        domesticMusicAlbums.style.display = "none";
+    });
+    $albumPages.forEach((albumPages) => {
+        albumPages.style.display = "none";
+    });
+};
+// 국내앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
+const preAlbumShowForD = () => {
+    albumPageNumberChangeForD();
+    if (currentAlbumPage === 4) {
+        currentAlbumPage = -1;
+    }
+    currentAlbumPage++
+    $domesticMusicAlbums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
+
+}
+// 국내앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
+const nextAlbumShowForD = () => {
+    albumPageNumberChangeForD();
+    if (currentAlbumPage === 0) {
+        currentAlbumPage = 5;
+    }
+    currentAlbumPage--
+    $domesticMusicAlbums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
+
+}
+const albumPageNumberChangeForF = () => {
+    $foreignMusicAlbums.forEach((foreignMusicAlbums) => {
+        foreignMusicAlbums.style.display = "none";
+    });
+    $albumPages.forEach((albumPages) => {
+        albumPages.style.display = "none";
+    });
+};
+// 국외앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
+const preAlbumShowForF = () => {
+    albumPageNumberChangeForF();
+    if (currentAlbumPage === 4) {
+        currentAlbumPage = -1;
+    }
+    currentAlbumPage++
+    $foreignMusicAlbums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
+
+}
+// 국외앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
+const nextAlbumShowForF = () => {
+    albumPageNumberChangeForF();
+    if (currentAlbumPage === 0) {
+        currentAlbumPage = 5;
+    }
+    currentAlbumPage--
+    $foreignMusicAlbums[currentAlbumPage].style.display = "block"
+    $albumPages[currentAlbumPage].style.display = "block"
+
+}
+entirebeforealbum.addEventListener("click", preAlbumShowForC )
+entireafteralbum.addEventListener("click", nextAlbumShowForC )
+
+///종합 버튼을 클릭했을 때 생기는 변화
 synthesis.addEventListener("click", function() {
-    entireNewAlbum.style.display = 'block'
-    entirenewAlbum1.style.display = 'block'
-    domesticMusicAlbum.style.display = 'none'
-    foreignMusicAlbum.style.display = 'none'
-    number1.style.display = 'block'
-    number2.style.display = 'none'
-    number3.style.display = 'none'
-    number4.style.display = 'none'
-    number5.style.display = 'none'
+    if (currentAlbumPage !== 0) {
+       $albumPages[currentAlbumPage].style.display = "none"
+        $albumPages[0].style.display = "block"
+    } 
+    entireafteralbum.removeEventListener("click", preAlbumShowForD)
+    entirebeforealbum.removeEventListener("click", nextAlbumShowForD )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForF )
+    entireafteralbum.removeEventListener("click", nextAlbumShowForF )
+    entirebeforealbum.addEventListener("click", preAlbumShowForC )
+    entireafteralbum.addEventListener("click", nextAlbumShowForC )
     synthesis.style.color = '#0096ff'
     domestic.style.color = 'black'
     foreign.style.color = 'black'
+    $domesticMusicAlbums[currentAlbumPage].style.display = "none"
+    $foreignMusicAlbums[currentAlbumPage].style.display = "none"
+    $comprehensive_albums[0].style.display = "block"
 })
 // 국내 앨범을 눌렀을 때 생기는 변화
 domestic.addEventListener("click",function() {
-    entireNewAlbum.style.display = 'none'
-    domesticMusicAlbum.style.display = 'block'
-    domesticMusicAlbum1.style.display = 'block'
-    foreignMusicAlbum.style.display = 'none'
-    number1.style.display = 'block'
-    number2.style.display = 'none'
-    number3.style.display = 'none'
-    number4.style.display = 'none'
-    number5.style.display = 'none'
+    if (currentAlbumPage !== 0) {
+        $albumPages[currentAlbumPage].style.display = "none"
+        $albumPages[0].style.display = "block"
+    } 
+    entirebeforealbum.removeEventListener("click", preAlbumShowForC )
+    entireafteralbum.removeEventListener("click", nextAlbumShowForC )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForF )
+    entireafteralbum.removeEventListener("click", nextAlbumShowForF )
+    entirebeforealbum.addEventListener("click", preAlbumShowForD )
+    entireafteralbum.addEventListener("click", nextAlbumShowForD )
     synthesis.style.color = 'black'
     domestic.style.color = '#0096ff'
     foreign.style.color = 'black'
+    $comprehensive_albums[currentAlbumPage].style.display = "none"
+    $foreignMusicAlbums[currentAlbumPage].style.display = "none"
+    $domesticMusicAlbums[0].style.display = "block"
+
 })
-// 국외 앨범을 눌렀을 때 생기는 변화
+
 foreign.addEventListener("click", function() {
-    entireNewAlbum.style.display = 'none'
-    domesticMusicAlbum.style.display = 'none'
-    foreignMusicAlbum.style.display = 'block'
-    foreignMusicAlbum1.style.display = 'block'
-    number1.style.display = 'block'
-    number2.style.display = 'none'
-    number3.style.display = 'none'
-    number4.style.display = 'none'
-    number5.style.display = 'none'
+    if (currentAlbumPage !== 0) {
+        $albumPages[currentAlbumPage].style.display = "none"
+       $albumPages[0].style.display = "block"
+   } 
+    entirebeforealbum.removeEventListener("click", preAlbumShowForC )
+    entireafteralbum.removeEventListener("click", nextAlbumShowForC )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForD)
+    entireafteralbum.removeEventListener("click", nextAlbumShowForD )
+    entirebeforealbum.addEventListener("click", preAlbumShowForF )
+    entireafteralbum.addEventListener("click", nextAlbumShowForF )
     synthesis.style.color = 'black'
     domestic.style.color = 'black'
     foreign.style.color = '#0096ff'
+    $comprehensive_albums[currentAlbumPage].style.display = "none"
+    $domesticMusicAlbums[currentAlbumPage].style.display = "none"
+    $foreignMusicAlbums[0].style.display = "block"
+
 })
 
-// <- 버튼 클릭 시 생기는 변화 (초기상태가 아닌 버튼 클릭 시 기준)
-// entireNewAlbum은 종합 버튼 클릭 시, domesticNewAlbum은 국내 버튼 클릭 시, 
-entirebeforealbum.addEventListener("click", function() {
-    if (number1.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'block'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'block'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none'
-    } else if (number2.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'block'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'block'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number3.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'block'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'block'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number4.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'block'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'block' 
-    } else if (number5.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'block'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'block'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number1.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'block'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'block'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    } else if (number2.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'block'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'block'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    }else if (number3.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'block'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'block'
-        foreignMusicAlbum5.style.display = 'none' 
-    }else if (number4.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'block'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'block' 
-    }else if (number5.style.display === 'block' && foreignMusicAlbum.style.display === 'block') {
-        number1.style.display = 'block'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'block'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    } else {
-        if (number1.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'block'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'block'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number2.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'block'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'block'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number3.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'block'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'block'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number4.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'block'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'block'
-        } else{
-            number1.style.display = 'block'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'block'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        }
-    }
-})
-
-entireafteralbum.addEventListener("click", function() {
-    if (number1.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'block'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'block'
-    } else if (number2.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'block'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'block'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number3.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'block'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'block'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number4.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'block'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'block'
-        domesticMusicAlbum4.style.display = 'none'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number5.style.display === 'block' && domesticMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'block'
-        number5.style.display = 'none'
-        domesticMusicAlbum1.style.display = 'none'
-        domesticMusicAlbum2.style.display = 'none'
-        domesticMusicAlbum3.style.display = 'none'
-        domesticMusicAlbum4.style.display = 'block'
-        domesticMusicAlbum5.style.display = 'none' 
-    } else if (number1.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'block'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'block' 
-    } else if (number2.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'block'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'block'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    }else if (number3.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'block'
-        number3.style.display = 'none'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'block'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    }else if (number4.style.display === 'block' && foreignMusicAlbum.style.display === 'block'){
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'block'
-        number4.style.display = 'none'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'block'
-        foreignMusicAlbum4.style.display = 'none'
-        foreignMusicAlbum5.style.display = 'none' 
-    }else if (number5.style.display === 'block' && foreignMusicAlbum.style.display === 'block') {
-        number1.style.display = 'none'
-        number2.style.display = 'none'
-        number3.style.display = 'none'
-        number4.style.display = 'block'
-        number5.style.display = 'none'
-        foreignMusicAlbum1.style.display = 'none'
-        foreignMusicAlbum2.style.display = 'none'
-        foreignMusicAlbum3.style.display = 'none'
-        foreignMusicAlbum4.style.display = 'block'
-        foreignMusicAlbum5.style.display = 'none' 
-    } else {
-        if (number5.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'block'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'block'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number2.style.display === 'block') {
-            number1.style.display = 'block'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'block'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number3.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'block'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'block'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        } else if (number4.style.display === 'block') {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'block'
-            number4.style.display = 'none'
-            number5.style.display = 'none'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'block'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'none'
-        } else {
-            number1.style.display = 'none'
-            number2.style.display = 'none'
-            number3.style.display = 'none'
-            number4.style.display = 'none'
-            number5.style.display = 'block'
-            entirenewAlbum1.style.display = 'none'
-            entirenewAlbum2.style.display = 'none'
-            entirenewAlbum3.style.display = 'none'
-            entirenewAlbum4.style.display = 'none'
-            entirenewAlbum5.style.display = 'block'
-        }
-    }
-}) 
 // srcoll to top 
 const scrollToTop = () => {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
@@ -520,10 +261,10 @@ const bannerstopbtn = document.getElementById('stopbtn');
 const bannerrestartbtn = document.getElementById('releasebtn')
 
 let current = 0;
-
 // 자동슬라이더기능
 window.addEventListener("load", function() {
-    setInterval(autoSlide1, 3000);   
+        setInterval(autoSlide1, 3000);   
+
 });
 const reset1 = () => {
     $banners.forEach((banner) => {
@@ -556,34 +297,11 @@ $dots.forEach((dot, idx) => {
 bannerstopbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'none'
     bannerrestartbtn.style.display = 'block'
-    stopRolling()
-
 })
 bannerrestartbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'block'
     bannerrestartbtn.style.display = 'none'
-    restartRolling()
 })
-
-let stop = false;
-let rollingbanner;
-
-function stopRolling() {
-    clearInterval(autoSlide1)
-    stop =  true;
-}
-
-function restartRolling() {
-    stop = false;
-    setInterval(autoSlide1, 3000)
-}
-
-// 실시간차트 1위 
-chartranklist1 = document.getElementById('chartranklist1')
-chart_ranking1 = document.getElementById('chart_ranking1')
-chart_photo1 = document.getElementById('chart_photo1')
-chart_title1 = document.getElementById('chart_title1')
-chart_artist1 = document.getElementById('chart_artist1')
 
 
 // hotandnew의 슬라이더 구현하기
@@ -628,6 +346,7 @@ $hotAndNewDot.forEach((hotAndNewDot, idx) => {
         $hotAndNewDot[newcurrent].style.opacity = "1"
     })
 })
+
 // 화살표 클릭 시 다음 광고로 넘어가게 하기
 const slidetoNext = () => {
     reset2();
@@ -654,12 +373,13 @@ const slidetoBack = () => {
 }
 arrowBack.addEventListener("click", slidetoBack)
 
+
 // 재시작, 멈춤 버튼
 bannerstop__btn.addEventListener("click", function() {
     bannerstop__btn.style.display = 'none'
     bannerrestart__btn.style.display = 'block'
-
 })
+
 bannerrestart__btn.addEventListener("click", function() {
     bannerrestart__btn.style.display = 'none'
     bannerstop__btn.style.display = 'block'
@@ -724,7 +444,6 @@ mnetbrod.addEventListener("click", function() {
 })
 
 
-
 // 푸터 내 공지사항 관련 JS
 const backnoticebtn = document.getElementById('morenotice1') 
 const nextnoticebtn = document.getElementById('morenotice2')
@@ -734,6 +453,9 @@ const notice3 = document.getElementById('firstnoticecontents3')
 const back = document.getElementById('material-icons_f1')
 const next = document.getElementById('material-icons_f2')
  
+
+
+
 // < 버튼을 클릭했을 때 생기는 일
 backnoticebtn.addEventListener("click", function() {
     if (notice3.style.display === 'block') {

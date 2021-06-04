@@ -252,30 +252,6 @@ input::-webkit-search-results-decoration{
     border: 0;
     position: relative;
 }
-/* 다크모드 & 라이트모드 */
-.btn-darkmode, .btn-lightmode {
-    margin-left: 870px;
-    width: 103px;
-    border-radius: 3px;
-    border: #969697;
-    position: absolute;
-    color: white;
-    display: flex;
-    top: 60px;
-}
-/* 다크모드 버튼 */
-.btn-darkmode {
-    background-color: black;
-}
-/* 다크모드 버튼 내 아이콘 */
-.btn-darkmode>.material-icons, .btn-lightmode>.material-icons {
-    color: yellow;
-}
-/* 라이트모드 버튼 */
-.btn-lightmode {
-    display: none;
-    background-color: #0096ff;
-}
 /*header-third에 효과주기*/
 header .header-third {
     width: 980px;
@@ -523,6 +499,7 @@ header .header-third .member .loginbox .material-icons#btn--close {
     padding: 0 0 0 48px;
     border: 1px solid #d2d2d2;
     border-radius: 2px;
+
     line-height: 40px;
 }
 /* 카카오 로그인 로고 */
@@ -580,8 +557,8 @@ header .header-third .member .close-btn {
     margin: 0 auto;
 }
 /* 버튼의 클릭에 따라 변하는 숫자 */
-#btnresult1, #btnresult2, #btnresult3, #btnresult4, #btnresult5 {
-    margin-left: -12px;
+/* #btnresult1, #btnresult2, #btnresult3, #btnresult4, #btnresult5 {
+    margin-left: 860px;
     position: absolute;
     font-weight: bold;
     margin-top: 12px;
@@ -591,8 +568,28 @@ header .header-third .member .close-btn {
 }
 #entirenumber {
     margin-top: 12px;
+} */
+#albumPageNumber {
+    margin-left: 590px;
 }
-/* .moreNewAlbum 내 버튼 설정 */
+
+.albumPage {
+    font-weight: bold;
+    position: absolute;
+    display: none;
+    font-size: 12px;
+    margin-top: 25px;
+}
+.albumPage1 {
+    display: block;
+}
+#entirenumber {
+    margin-left: 12px;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+/* .albumPage 내 버튼 설정 */
 #preenewalbum {
     position: absolute;
     top: auto;
@@ -600,7 +597,7 @@ header .header-third .member .close-btn {
     right: auto;
     width: 28px;
     height: 28px;
-    margin: 6px 2px 0 30px;
+    margin: -22px 2px 0 40px;
     border: 0;
     background: url(//image.genie.co.kr/imageg/web/main/recent_paging.png) no-repeat 0 0;
 }
@@ -611,7 +608,7 @@ header .header-third .member .close-btn {
     right: auto;
     width: 28px;
     height: 28px;
-    margin: 6px 2px 0 65px;
+    margin: -22px 2px 0 76px;
     border: 0;
     line-height: 0;
     background: url(//image.genie.co.kr/imageg/web/main/recent_paging.png) no-repeat -33px 0;
@@ -671,32 +668,22 @@ header .header-third .member .close-btn {
     margin: 0 5px;
 }
 /* 최신앨범- 종합 전체  */
-#entireNewAlbum, #domesticMusicAlbum, #foreignMusicAlbum{
+.comprehensive_album , .domesticMusicAlbum, .foreignMusicAlbum{
     margin-left: 20px;
     margin-right: 20px;
     width: 980px;
     margin: 0 auto;
 }
-/* 종합 앨범 내 2~5번째 장 */
-#entireNewAlbum2, #entireNewAlbum3, #entireNewAlbum4, #entireNewAlbum5{
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 980px;
-    margin: 0 auto;
+.comprehensive_album {
     display: none;
 }
-/* 최신앨범- 국내 */
-#domesticMusicAlbum {
+.comprehensive_album1 {
+    display: block;
+}
+.domesticMusicAlbum {
     display: none;
 }
-#domesticMusicAlbum2, #domesticMusicAlbum3,#domesticMusicAlbum4,#domesticMusicAlbum5 {
-    display: none;
-}
-/* 최신앨범 - 국외 */
-#foreignMusicAlbum {
-    display: none;
-}
-#foreignMusicAlbum2, #foreignMusicAlbum3, #foreignMusicAlbum4, #foreignMusicAlbum5 {
+.foreignMusicAlbum {
     display: none;
 }
 /* 단마다 주는 효과 */
@@ -828,7 +815,7 @@ header .header-third .member .close-btn {
     font-weight: lighter;
 }
 /*각각의 앨범을 호버했을 때  아티스트 변화 */
-.comprehensive_album .albumexhibiton:hover .caartist {
+.albumexhibiton:hover .caartist {
     z-index: 1;
     padding-top: 0px;
     width: 110px;
@@ -843,7 +830,7 @@ header .header-third .member .close-btn {
     text-overflow: ellipsis;
 }
 /*각각의 앨범을 호버했을  아티스트 변화 */
-.comprehensive_album .albumexhibiton:hover .caartist2 {
+.albumexhibiton:hover .caartist2 {
     z-index: 1;
     padding-top: 0px;
     top: 410px;
@@ -856,14 +843,12 @@ header .header-third .member .close-btn {
     text-shadow: 0px 9px 1px gray;
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
-.comprehensive_album .albumexhibiton:hover .newAlbumInfo1 {
-    /* z-index: 100; */
+.albumexhibiton:hover .newAlbumInfo1 {
     display: block;
     background: rgba(0,0,0,0.8);
 }
 /*각각의 앨범을 호버했을  앨범정보 변화 */
-.comprehensive_album .albumexhibiton:hover .newAlbumInfo2 {
-    /* z-index: 100; */
+.albumexhibiton:hover .newAlbumInfo2 {
     display: block;
     background: rgba(0,0,0,0.8);
 }
@@ -1080,7 +1065,7 @@ header .header-third .member .close-btn {
     text-overflow: ellipsis;
 }
 /* 호버했을 때 노래 제목 변화 */
-.musicChartContents tr:hover .chart_title{
+.musicChartContents tr:hover .chart_title,.musicChartContents trhover .chart_title{
     box-sizing: border-box;
     height: 67px;
     display: block;
@@ -1150,40 +1135,6 @@ header .header-third .member .close-btn {
     height: 50px;
     color: black;
 }
-/* 실시간 차트 1위만 호버 기능이 적용된 상태로 있도록 하기 */
-/* .musicChartContents  td.chart_ranking1 {
-    height: 50px;
-    font-size: 20px;
-} */
-/* .musicChartContents td.chart_fluctuation1 {
-    height: 50px;
-} */
-/* .musicChartContents  .chart_photo1 {
-    display: block;
-    margin : 0px 13px 10px 10px;
-    border: .1px solid #d8d6d6;
-} */
-/* .musicChartContents .chart_title1{
-    box-sizing: border-box;
-    height: 40px;
-    display: block;
-    font-weight: bolder;
-    margin-left: 2px;
-    margin-top: 5px;
-    display: flex;
-    width: 300px;
-} */
-/* .musicChartContents .chart_artist1 {
-    margin-top: 27px;
-    margin-left: 0px;
-    display: flex;
-    width: 250px;
-} */
-
-
-
-
-
 
 
 /* 실시간 차트 내 더보기 기능 */
