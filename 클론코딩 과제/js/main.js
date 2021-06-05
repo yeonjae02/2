@@ -23,7 +23,6 @@ menucloseEl2.addEventListener("click", function() {
     menuEl.style.display = 'none'
 })
 
-
 // 검색창 클릭 시 검색목록이 나타날 수 있도록 함
 const btn = document.getElementById('btn')
 const headersearch = document.getElementById("header-search")
@@ -205,6 +204,7 @@ synthesis.addEventListener("click", function() {
     $domesticMusicAlbums[currentAlbumPage].style.display = "none"
     $foreignMusicAlbums[currentAlbumPage].style.display = "none"
     $comprehensive_albums[0].style.display = "block"
+    currentAlbumPage = 0
 })
 // 국내 앨범을 눌렀을 때 생기는 변화
 domestic.addEventListener("click",function() {
@@ -224,6 +224,7 @@ domestic.addEventListener("click",function() {
     $comprehensive_albums[currentAlbumPage].style.display = "none"
     $foreignMusicAlbums[currentAlbumPage].style.display = "none"
     $domesticMusicAlbums[0].style.display = "block"
+    currentAlbumPage = 0
 
 })
 
@@ -244,6 +245,7 @@ foreign.addEventListener("click", function() {
     $comprehensive_albums[currentAlbumPage].style.display = "none"
     $domesticMusicAlbums[currentAlbumPage].style.display = "none"
     $foreignMusicAlbums[0].style.display = "block"
+    currentAlbumPage = 0
 
 })
 
@@ -447,13 +449,47 @@ mnetbrod.addEventListener("click", function() {
 // 푸터 내 공지사항 관련 JS
 const backnoticebtn = document.getElementById('morenotice1') 
 const nextnoticebtn = document.getElementById('morenotice2')
-const notice1 = document.getElementById('firstnoticecontents1')
-const notice2 = document.getElementById('firstnoticecontents2')
-const notice3 = document.getElementById('firstnoticecontents3')
 const back = document.getElementById('material-icons_f1')
 const next = document.getElementById('material-icons_f2')
- 
+const $footer_first_contents = document.querySelectorAll(".footer-first-contents") 
+let currentNoticeNumber = 0
 
+const noticeReset = () => {
+    $footer_first_contents.forEach((footer_first_contents) => {
+        footer_first_contents.style.display = "none";
+        back.style.color = 'black'
+        next.style.color = 'black'
+    });
+};
+
+// 화살표 클릭 시 다음 광고로 넘어가게 하기
+const clickToNextNotice = () => {
+    if (currentNoticeNumber === 1) {
+        back.style.color = 'black'
+        noticeReset();
+        currentNoticeNumber++
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
+        
+    } else {
+        next.style.color = '#8b8b8b'
+        $footer_first_contents[2].style.display = 'block'
+        noticeReset();
+    }
+    
+}
+nextnoticebtn.addEventListener("click", clickToNextNotice)
+// 화살표 클릭 시 이전 광고로 넘어가게 하기
+const clickToPreNotice = () => {
+    if (currentNoticeNumber === 0) {
+        back.style.color = '#8b8b8b'
+    } else {
+        noticeReset();
+        currentNoticeNumber--
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
+    }
+    
+}
+backnoticebtn.addEventListener("click", clickToPreNotice)
 
 
 // < 버튼을 클릭했을 때 생기는 일

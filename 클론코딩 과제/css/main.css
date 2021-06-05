@@ -1854,7 +1854,7 @@ header .header-third .member .close-btn {
     display: inline-block;
 }
 /* 첫 번째 공지사항 글자 정렬 */
-#firstnoticecontents1, #firstnoticecontents2, #firstnoticecontents3 {
+.footer-first-contents {
     margin-left: -30px;
     position: absolute;
     padding-top: 10px;
@@ -1865,16 +1865,15 @@ header .header-third .member .close-btn {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: none;
 }
-#firstnoticecontents1:hover,  #firstnoticecontents2:hover, #firstnoticecontents3:hover{
+.footer-first-contents1:hover,  .footer-first-contents2:hover, .footer-first-contents3:hover {
     text-decoration: underline;
 }
-#firstnoticecontents2{
-    display: none;
+.footer-first-contents1 {
+    display: block;
 }
-#firstnoticecontents3 {
-    display: none;
-}
+
 /* 공지사항 옆 이동버튼 */
 #morenotice1, #morenotice2 {
     border: 0.1px solid #aab1b8;
