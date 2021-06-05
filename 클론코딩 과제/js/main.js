@@ -461,78 +461,22 @@ const noticeReset = () => {
         next.style.color = 'black'
     });
 };
-
-// 화살표 클릭 시 다음 광고로 넘어가게 하기
 const clickToNextNotice = () => {
+    noticeReset();
     if (currentNoticeNumber === 1) {
-        back.style.color = 'black'
-        noticeReset();
-        currentNoticeNumber++
-        $footer_first_contents[currentNoticeNumber].style.display = 'block'
-        
-    } else {
-        next.style.color = '#8b8b8b'
-        $footer_first_contents[2].style.display = 'block'
-        noticeReset();
+        next.style.color = "#8b8b8b"
     }
-    
+    currentNoticeNumber++
+    $footer_first_contents[currentNoticeNumber].style.display = 'block'
 }
 nextnoticebtn.addEventListener("click", clickToNextNotice)
 // 화살표 클릭 시 이전 광고로 넘어가게 하기
 const clickToPreNotice = () => {
-    if (currentNoticeNumber === 0) {
-        back.style.color = '#8b8b8b'
-    } else {
-        noticeReset();
-        currentNoticeNumber--
-        $footer_first_contents[currentNoticeNumber].style.display = 'block'
+    noticeReset();
+    if (currentNoticeNumber === 1) {
+        back.style.color = "#8b8b8b"
     }
-    
+    currentNoticeNumber--
+    $footer_first_contents[currentNoticeNumber].style.display = 'block'
 }
 backnoticebtn.addEventListener("click", clickToPreNotice)
-
-
-// < 버튼을 클릭했을 때 생기는 일
-backnoticebtn.addEventListener("click", function() {
-    if (notice3.style.display === 'block') {
-        notice1.style.display = 'none'
-        notice2.style.display = 'block'
-        notice3.style.display = 'none'
-        next.style.color = 'black'
-        back.style.color = 'black'
-    } else if (notice2.style.display === 'block') {
-        notice1.style.display = 'block'
-        notice2.style.display = 'none'
-        notice3.style.display = 'none'
-        back.style.color = '#8b8b8b'
-        next.style.color = 'black'
-    } else {
-        notice1.style.display = 'block'
-        notice2.style.display = 'none'
-        notice3.style.display ='none'
-        back.style.color = '#8b8b8b'
-        next.style.color = 'black'
-    }
-})
-// > 버튼을 클릭했을 때 나타나는 변화
-nextnoticebtn.addEventListener("click", function() {
-    if (notice2.style.display === 'block') {
-        notice1.style.display = 'none'
-        notice2.style.display = 'none'
-        notice3.style.display = 'block'
-        next.style.color = '#8b8b8b'
-        back.style.color = '#black'
-    }else if (notice3.style.display === 'block') {
-        notice1.style.display = 'none'
-        notice2.style.display = 'none'
-        notice3.style.display = 'block'
-        next.style.color = '#8b8b8b'
-        back.style.color = 'black'
-    } else  {
-        notice1.style.display = 'none'
-        notice2.style.display = 'block'
-        notice3.style.display = 'none'
-        next.style.color = 'black'
-        back.style.color = 'black'
-    } 
-})
