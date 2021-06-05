@@ -461,22 +461,32 @@ const noticeReset = () => {
         next.style.color = 'black'
     });
 };
+// > 버튼을 클릭했을 때의 변화
 const clickToNextNotice = () => {
-    noticeReset();
-    if (currentNoticeNumber === 1) {
-        next.style.color = "#8b8b8b"
+    if (currentNoticeNumber !== 2) {
+        noticeReset();
+        if (currentNoticeNumber === 1) {
+            next.style.color = "#8b8b8b"
+        }
+        currentNoticeNumber++
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
+    } else {
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
     }
-    currentNoticeNumber++
-    $footer_first_contents[currentNoticeNumber].style.display = 'block'
 }
 nextnoticebtn.addEventListener("click", clickToNextNotice)
 // 화살표 클릭 시 이전 광고로 넘어가게 하기
 const clickToPreNotice = () => {
-    noticeReset();
-    if (currentNoticeNumber === 1) {
-        back.style.color = "#8b8b8b"
+    if (currentNoticeNumber !== 0) {
+        noticeReset();
+        if (currentNoticeNumber === 1) {
+            back.style.color = "#8b8b8b"
+        }
+        currentNoticeNumber--
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
+    } else {
+        $footer_first_contents[currentNoticeNumber].style.display = 'block'
     }
-    currentNoticeNumber--
-    $footer_first_contents[currentNoticeNumber].style.display = 'block'
+    
 }
 backnoticebtn.addEventListener("click", clickToPreNotice)
