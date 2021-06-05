@@ -104,7 +104,7 @@ const albumPageNumberChangeForC = () => {
 // 종합앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
 const preAlbumShowForC = () => {
     albumPageNumberChangeForC();
-    if (currentAlbumPage === 4) {
+    if (currentAlbumPage === $comprehensive_albums.length-1) {
         currentAlbumPage = -1;
     }
     currentAlbumPage++
@@ -116,7 +116,7 @@ const preAlbumShowForC = () => {
 const nextAlbumShowForC = () => {
     albumPageNumberChangeForC();
     if (currentAlbumPage === 0) {
-        currentAlbumPage = 5;
+        currentAlbumPage = $comprehensive_albums.length;
     }
     currentAlbumPage--
     $comprehensive_albums[currentAlbumPage].style.display = "block"
@@ -134,7 +134,7 @@ const albumPageNumberChangeForD = () => {
 // 국내앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
 const preAlbumShowForD = () => {
     albumPageNumberChangeForD();
-    if (currentAlbumPage === 4) {
+    if (currentAlbumPage === $domesticMusicAlbums.length-1) {
         currentAlbumPage = -1;
     }
     currentAlbumPage++
@@ -146,7 +146,7 @@ const preAlbumShowForD = () => {
 const nextAlbumShowForD = () => {
     albumPageNumberChangeForD();
     if (currentAlbumPage === 0) {
-        currentAlbumPage = 5;
+        currentAlbumPage = $domesticMusicAlbums.length;
     }
     currentAlbumPage--
     $domesticMusicAlbums[currentAlbumPage].style.display = "block"
@@ -164,7 +164,7 @@ const albumPageNumberChangeForF = () => {
 // 국외앨범에서 -> 버튼을 클릭했을 때 발생할 함수 정의
 const preAlbumShowForF = () => {
     albumPageNumberChangeForF();
-    if (currentAlbumPage === 4) {
+    if (currentAlbumPage === $foreignMusicAlbums.length-1) {
         currentAlbumPage = -1;
     }
     currentAlbumPage++
@@ -176,7 +176,7 @@ const preAlbumShowForF = () => {
 const nextAlbumShowForF = () => {
     albumPageNumberChangeForF();
     if (currentAlbumPage === 0) {
-        currentAlbumPage = 5;
+        currentAlbumPage = $foreignMusicAlbums.length;
     }
     currentAlbumPage--
     $foreignMusicAlbums[currentAlbumPage].style.display = "block"
@@ -186,16 +186,23 @@ const nextAlbumShowForF = () => {
 entirebeforealbum.addEventListener("click", preAlbumShowForC )
 entireafteralbum.addEventListener("click", nextAlbumShowForC )
 
+// 이전에 사용한 이벤트가 중첩되어 사용되면 안되므로 삭제하는 함수설정
+const removeEvent = () => {
+    entireafteralbum.removeEventListener("click", nextAlbumShowForD)
+    entireafteralbum.removeEventListener("click", nextAlbumShowForF )
+    entireafteralbum.removeEventListener("click", nextAlbumShowForC )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForD )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForF )
+    entirebeforealbum.removeEventListener("click", preAlbumShowForC )   
+}
+
 ///종합 버튼을 클릭했을 때 생기는 변화
 synthesis.addEventListener("click", function() {
     if (currentAlbumPage !== 0) {
-       $albumPages[currentAlbumPage].style.display = "none"
+        $albumPages[currentAlbumPage].style.display = "none"
         $albumPages[0].style.display = "block"
     } 
-    entireafteralbum.removeEventListener("click", preAlbumShowForD)
-    entirebeforealbum.removeEventListener("click", nextAlbumShowForD )
-    entirebeforealbum.removeEventListener("click", preAlbumShowForF )
-    entireafteralbum.removeEventListener("click", nextAlbumShowForF )
+    removeEvent();
     entirebeforealbum.addEventListener("click", preAlbumShowForC )
     entireafteralbum.addEventListener("click", nextAlbumShowForC )
     synthesis.style.color = '#0096ff'
@@ -212,10 +219,7 @@ domestic.addEventListener("click",function() {
         $albumPages[currentAlbumPage].style.display = "none"
         $albumPages[0].style.display = "block"
     } 
-    entirebeforealbum.removeEventListener("click", preAlbumShowForC )
-    entireafteralbum.removeEventListener("click", nextAlbumShowForC )
-    entirebeforealbum.removeEventListener("click", preAlbumShowForF )
-    entireafteralbum.removeEventListener("click", nextAlbumShowForF )
+    removeEvent();
     entirebeforealbum.addEventListener("click", preAlbumShowForD )
     entireafteralbum.addEventListener("click", nextAlbumShowForD )
     synthesis.style.color = 'black'
@@ -227,16 +231,13 @@ domestic.addEventListener("click",function() {
     currentAlbumPage = 0
 
 })
-
+// 국외 앨범을 눌렀을 때 생기는 변화 
 foreign.addEventListener("click", function() {
     if (currentAlbumPage !== 0) {
         $albumPages[currentAlbumPage].style.display = "none"
        $albumPages[0].style.display = "block"
    } 
-    entirebeforealbum.removeEventListener("click", preAlbumShowForC )
-    entireafteralbum.removeEventListener("click", nextAlbumShowForC )
-    entirebeforealbum.removeEventListener("click", preAlbumShowForD)
-    entireafteralbum.removeEventListener("click", nextAlbumShowForD )
+    removeEvent();
     entirebeforealbum.addEventListener("click", preAlbumShowForF )
     entireafteralbum.addEventListener("click", nextAlbumShowForF )
     synthesis.style.color = 'black'
