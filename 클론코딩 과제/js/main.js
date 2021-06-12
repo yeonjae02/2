@@ -110,7 +110,6 @@ const preAlbumShowForC = () => {
     currentAlbumPage++
     $comprehensive_albums[currentAlbumPage].style.display = "block"
     $albumPages[currentAlbumPage].style.display = "block"
-
 }
 // 종합앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
 const nextAlbumShowForC = () => {
@@ -121,7 +120,6 @@ const nextAlbumShowForC = () => {
     currentAlbumPage--
     $comprehensive_albums[currentAlbumPage].style.display = "block"
     $albumPages[currentAlbumPage].style.display = "block"
-
 }
 const albumPageNumberChangeForD = () => {
     $domesticMusicAlbums.forEach((domesticMusicAlbums) => {
@@ -140,7 +138,6 @@ const preAlbumShowForD = () => {
     currentAlbumPage++
     $domesticMusicAlbums[currentAlbumPage].style.display = "block"
     $albumPages[currentAlbumPage].style.display = "block"
-
 }
 // 국내앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
 const nextAlbumShowForD = () => {
@@ -151,7 +148,6 @@ const nextAlbumShowForD = () => {
     currentAlbumPage--
     $domesticMusicAlbums[currentAlbumPage].style.display = "block"
     $albumPages[currentAlbumPage].style.display = "block"
-
 }
 const albumPageNumberChangeForF = () => {
     $foreignMusicAlbums.forEach((foreignMusicAlbums) => {
@@ -170,7 +166,6 @@ const preAlbumShowForF = () => {
     currentAlbumPage++
     $foreignMusicAlbums[currentAlbumPage].style.display = "block"
     $albumPages[currentAlbumPage].style.display = "block"
-
 }
 // 국외앨범이 보이는 상태에서 <- 버튼을 클릭했을 때 발생할 함수 정의 
 const nextAlbumShowForF = () => {
@@ -229,7 +224,6 @@ domestic.addEventListener("click",function() {
     $foreignMusicAlbums[currentAlbumPage].style.display = "none"
     $domesticMusicAlbums[0].style.display = "block"
     currentAlbumPage = 0
-
 })
 // 국외 앨범을 눌렀을 때 생기는 변화 
 foreign.addEventListener("click", function() {
@@ -247,7 +241,6 @@ foreign.addEventListener("click", function() {
     $domesticMusicAlbums[currentAlbumPage].style.display = "none"
     $foreignMusicAlbums[0].style.display = "block"
     currentAlbumPage = 0
-
 })
 
 // srcoll to top 
@@ -262,12 +255,12 @@ const $banners = document.querySelectorAll(".banner")
 const $dots = document.querySelectorAll(".dot")
 const bannerstopbtn = document.getElementById('stopbtn');
 const bannerrestartbtn = document.getElementById('releasebtn')
-
 let current = 0;
+let stop = false
 // 자동슬라이더기능
+
 window.addEventListener("load", function() {
         setInterval(autoSlide1, 3000);   
-
 });
 const reset1 = () => {
     $banners.forEach((banner) => {
@@ -300,11 +293,25 @@ $dots.forEach((dot, idx) => {
 bannerstopbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'none'
     bannerrestartbtn.style.display = 'block'
+    stop = true
 })
+$(document).ready(function() {
+    $('#stopbtn').click(function() {
+        clearInterval(autoSlide1Function);
+    });
+});
 bannerrestartbtn.addEventListener("click", function() {
     bannerstopbtn.style.display = 'block'
     bannerrestartbtn.style.display = 'none'
+    stop = false
 })
+
+const chart_ranking1 = document.getElementById('chart_ranking1')
+const chart_fluctuation1 = document.getElementById('chart_fluctuation1')
+const chart_photo1 = document.getElementById('chart_photo1')
+const chart_title1 = document.getElementById('chart_title1')
+const chart_artist1 = document.getElementById('chart_artist1')
+
 
 
 // hotandnew의 슬라이더 구현하기
@@ -315,10 +322,14 @@ const arrowNext = document.getElementById('gonextarrow')
 const bannerstop__btn = document.getElementById('stop--btn')
 const bannerrestart__btn = document.getElementById('release--btn')
 let newcurrent = 0;
+let stopslider = false
+
 // 자동슬라이더
 window.addEventListener("load", function() {
     setInterval(autoSlide2, 3000);
- });
+})
+
+
 const reset2 = () => {
     $newcontents.forEach((newcontents) => {
         newcontents.style.display = "none";
@@ -386,6 +397,7 @@ bannerstop__btn.addEventListener("click", function() {
 bannerrestart__btn.addEventListener("click", function() {
     bannerrestart__btn.style.display = 'none'
     bannerstop__btn.style.display = 'block'
+
 })
 
 // 에디터 추천 컨텐츠 더보기 버튼 관련 js 
@@ -407,7 +419,6 @@ er_close.addEventListener("click", function() {
     line4.style.display = 'none'
     er_more.style.display = 'block'
     er_close.style.display = 'none'
-
 })
 
 // 지니TV 컨텐츠 관련 JS 
@@ -446,7 +457,6 @@ mnetbrod.addEventListener("click", function() {
     tvMnetContents.style.display = 'block'
 })
 
-
 // 푸터 내 공지사항 관련 JS
 const backnoticebtn = document.getElementById('morenotice1') 
 const nextnoticebtn = document.getElementById('morenotice2')
@@ -476,7 +486,7 @@ const clickToNextNotice = () => {
     }
 }
 nextnoticebtn.addEventListener("click", clickToNextNotice)
-// 화살표 클릭 시 이전 광고로 넘어가게 하기
+// < 버튼을 클릭했을 때의 변화
 const clickToPreNotice = () => {
     if (currentNoticeNumber !== 0) {
         noticeReset();
@@ -488,6 +498,5 @@ const clickToPreNotice = () => {
     } else {
         $footer_first_contents[currentNoticeNumber].style.display = 'block'
     }
-    
 }
 backnoticebtn.addEventListener("click", clickToPreNotice)

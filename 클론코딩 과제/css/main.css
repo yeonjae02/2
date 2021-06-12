@@ -870,10 +870,12 @@ header .header-third .member .close-btn {
 }
 /* 슬라이더 기능이 있는 배너  */
 .ad_contents_rolling {
+    transition: all ease 2s 0s;
     position: absolute;
 }
 /* 슬라이드 기능이 있는 배너 내 각 요소들 */
 .ad_contents_rolling .banner {
+    transition: ease;
     width: 610px;
     height: 104px;
     background-size: cover;
@@ -908,12 +910,14 @@ header .header-third .member .close-btn {
 .ad_contents_rolling .banner9  {
     background-image: url(./../images/banner9.jpg); 
 }
+/* 사진들 아래 있는 점들 */
 .ad_contents .dots {
     position: absolute;
     margin-left: 235px;
     margin-top: 80px;
     display: flex;
 }
+/* 점들 각각의 속성 */
 .ad_contents .dots .dot{
     display: inline-block;
     width: 6px;
@@ -922,13 +926,14 @@ header .header-third .member .close-btn {
     margin-left: 6px;
     background-color: white;
     opacity: 1;
-    /* vertical-align: top; */
 }
+/* 첫 번째 점 */
 .ad_contents .dots .dot1{
     width: 6px;
     height: 6px;
     background-color: #737a7f;
 }
+/* 멈춤, 시작 버튼 전체 */
 #bannerslidercontrol {
     position: absolute;
     margin-top: -5px;
@@ -951,11 +956,9 @@ header .header-third .member .close-btn {
 #releasebtn {
     display: none;
 }
-
 /* rolling ad 옆 ad */
 .ad_contents_mini {
     margin-left: auto;
-    
 }
 /* 광고창 아래 실시간차트와 hotandnew 전체 */
 .chartandhan {
@@ -1008,7 +1011,7 @@ header .header-third .member .close-btn {
 }
 /* 실시간 차트 내 순위 */
 .chart_ranking {
-    font: bold 13px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';
+    font: bold 15px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';
     vertical-align: middle;
     align-content: center;
     text-align: right;
@@ -1019,7 +1022,7 @@ header .header-third .member .close-btn {
 /* 호버 했을 때 순위의 변화 */
 .musicChartContents tr:hover td.chart_ranking {
     height: 67px;
-    font-size: 20px;
+    font-size: 30px;
 }
 /* 실시간 차트 내 순위 변동 */
 .chart_fluctuation {
@@ -1065,7 +1068,7 @@ header .header-third .member .close-btn {
     text-overflow: ellipsis;
 }
 /* 호버했을 때 노래 제목 변화 */
-.musicChartContents tr:hover .chart_title,.musicChartContents trhover .chart_title{
+.musicChartContents tr:hover .chart_title{
     box-sizing: border-box;
     height: 67px;
     display: block;
@@ -1135,8 +1138,6 @@ header .header-third .member .close-btn {
     height: 50px;
     color: black;
 }
-
-
 /* 실시간 차트 내 더보기 기능 */
 .chart_music_etc {
     vertical-align: middle;
@@ -1371,7 +1372,7 @@ header .header-third .member .close-btn {
 /* srcoll to top */
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: elateY(0px);
     }
     50% {
         transform: translateY(-20px);
