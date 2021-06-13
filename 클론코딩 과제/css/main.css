@@ -870,7 +870,6 @@ header .header-third .member .close-btn {
 }
 /* 슬라이더 기능이 있는 배너  */
 .ad_contents_rolling {
-    transition: all ease 2s 0s;
     position: absolute;
 }
 /* 슬라이드 기능이 있는 배너 내 각 요소들 */

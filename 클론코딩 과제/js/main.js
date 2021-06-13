@@ -32,7 +32,7 @@ const closepopular = document.getElementById('closeSearchWordList')
 const searchmenu = document.getElementById('search-info') 
 const search__word = document.getElementById('search__word')    
 
-// 특정 부분을 제외하고 클릭했을 떄 발생하는 일 jQuery 
+// 특정 부분을 제외하고 클릭했을 떄 발생하는 일 (jQuery) 
 $('body').click(function(e) {
     if(!$(e.target).hasClass("searchContentClick") && !$(e.target).hasClass("searchContentsbtn") ) {
         searchmenuEl.style.display = 'none'
@@ -181,7 +181,7 @@ const nextAlbumShowForF = () => {
 entirebeforealbum.addEventListener("click", preAlbumShowForC )
 entireafteralbum.addEventListener("click", nextAlbumShowForC )
 
-// 이전에 사용한 이벤트가 중첩되어 사용되면 안되므로 삭제하는 함수설정
+// 이전에 사용한 이벤트가 중첩되어 사용되면 안되므로 삭제하는 함수를 만듦
 const removeEvent = () => {
     entireafteralbum.removeEventListener("click", nextAlbumShowForD)
     entireafteralbum.removeEventListener("click", nextAlbumShowForF )
@@ -306,13 +306,6 @@ bannerrestartbtn.addEventListener("click", function() {
     stop = false
 })
 
-const chart_ranking1 = document.getElementById('chart_ranking1')
-const chart_fluctuation1 = document.getElementById('chart_fluctuation1')
-const chart_photo1 = document.getElementById('chart_photo1')
-const chart_title1 = document.getElementById('chart_title1')
-const chart_artist1 = document.getElementById('chart_artist1')
-
-
 
 // hotandnew의 슬라이더 구현하기
 const $newcontents = document.querySelectorAll(".newcontents")
@@ -325,10 +318,14 @@ let newcurrent = 0;
 let stopslider = false
 
 // 자동슬라이더
-window.addEventListener("load", function() {
-    setInterval(autoSlide2, 3000);
-})
-
+const playSlider2 = () => {
+    if (playstate === true) {
+        setInterval(autoSlide2, 3000)
+    } else {
+        clearInterval(autoSlide2)
+    }
+} 
+window.addEventListener("load", playSlider2)
 
 const reset2 = () => {
     $newcontents.forEach((newcontents) => {
@@ -387,18 +384,24 @@ const slidetoBack = () => {
 }
 arrowBack.addEventListener("click", slidetoBack)
 
-
+let playstate = true
 // 재시작, 멈춤 버튼
 bannerstop__btn.addEventListener("click", function() {
     bannerstop__btn.style.display = 'none'
     bannerrestart__btn.style.display = 'block'
+    playstate = false
+    clearInterval(playSlider2)
 })
 
 bannerrestart__btn.addEventListener("click", function() {
     bannerrestart__btn.style.display = 'none'
     bannerstop__btn.style.display = 'block'
+    playstate = true
 
 })
+
+
+
 
 // 에디터 추천 컨텐츠 더보기 버튼 관련 js 
 const er_more = document.getElementById('morecontents')
