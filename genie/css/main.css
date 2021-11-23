@@ -1147,7 +1147,7 @@ header .header-third .member .close-btn {
 /* 호버 했을 때 음악정보 더보기아이콘의 변화 */
 .musicChartContents tr:hover td.chart_music_etc {
     height: 50px;
-}
+} 
 /* 더보기 아이콘을 호버했을 때의 변화 */
 .musicChartContents td.chart_music_etc:hover {
     height: 50px;
